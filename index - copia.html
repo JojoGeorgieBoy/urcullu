@@ -1,0 +1,1369 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+          content="Abogados Urcullú y Asociados. Tradición jurídica, rigor estratégico y defensa legal de excelencia en Valdivia, Lanco y la Región de Los Ríos. Asesoría civil, inmobiliaria y litigios complejos.">
+    <meta name="keywords"
+          content="Abogados Valdivia, Estudio Jurídico Los Ríos, Contratos, Bienes Raíces, Sucesiones, Posesiones Efectivas, Litigios Complejos, Félix Urcullú Steffen, Abogado Lanco">
+    <meta name="author" content="Abogados Urcullú y Asociados">
+    <meta property="og:title" content="Abogados Urcullú y Asociados | Excelencia y Rigor Estratégico">
+    <meta property="og:description" content="Defensa rigurosa y asesoría legal de excelencia en el sur de Chile. Liderado por Félix Urcullú Steffen.">
+    <meta property="og:type" content="website">
+
+
+    <!-- Tailwind CSS CDN -->
+    <script src="tailwindcdn.js"></script>
+    <!--<script src="https://cdn.tailwindcss.com"></script>-->
+
+    <!-- Google Fonts: Montserrat (look & feel RTA) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Custom Stylesheet -->
+    <style type="text/css">
+
+        .borde {
+            border-bottom-style:solid; 
+            border-width: 2px; 
+            border-top-color: #eeeeee; 
+            border-left-color: #ffffff; 
+            border-top-width:1px
+        }
+
+        .input-inset {
+            border-style: inset !important;
+            border-width: 2px !important;
+        }
+
+        .panel-outset {
+            border-style: outset !important;
+            border-width: 2px !important;
+        }
+
+        .box-sombra {
+            box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .box-sombra_big {
+            box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .text-sombra {
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
+        }
+
+        /* Variables globales — paleta y tipografía estilo RTA (rta.cl) */
+        :root {
+            --color-primary: #11034b;
+            --color-secondary: #001429;
+            /*--color-accent: #1978A8;*/
+            --color-accent: #1978A8;
+            --color-bg-light: #f4f4f4;
+            --color-white: #FFFFFF;
+            --font-title: 'Montserrat', sans-serif;
+            --font-body: 'Montserrat', 'Inter', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-body);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        .font-serif {
+            font-family: var(--font-title);
+        }
+
+        /* Accessible focus states */
+        a:focus-visible,
+        button:focus-visible,
+        select:focus-visible,
+        input:focus-visible,
+        textarea:focus-visible {
+            outline: 2px solid var(--color-accent) !important;
+            outline-offset: 3px !important;
+        }
+
+        /* Los links del Nav (desktop y móvil) nunca muestran el borde de foco;
+           solo el logo ("#") conserva el comportamiento por defecto de arriba. */
+        .nav-link:focus-visible,
+        .mobile-link:focus-visible {
+            outline: none !important;
+        }
+
+        /* Header transition effects */
+        #main-header.scrolled {
+            top: 0 !important;
+            width: 100% !important;
+            max-width: 100% !important;
+            border-radius: 0 !important;
+            background-color: rgba(17, 3, 75, 0.98) !important;
+            border-bottom: 1px solid rgba(255, 107, 0, 0.3) !important;
+        }
+
+        /* Hamburger icon (no depende de librerías externas: siempre se ve en móvil) */
+        .hamburger-icon {
+            display: inline-flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            width: 24px;
+            height: 24px;
+        }
+
+            .hamburger-icon span {
+                display: block;
+                width: 24px;
+                height: 2px;
+                background-color: currentColor;
+                border-radius: 2px;
+                transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.2s ease;
+            }
+
+            .hamburger-icon.is-open span:nth-child(1) {
+                transform: translateY(7px) rotate(45deg);
+            }
+
+            .hamburger-icon.is-open span:nth-child(2) {
+                opacity: 0;
+            }
+
+            .hamburger-icon.is-open span:nth-child(3) {
+                transform: translateY(-7px) rotate(-45deg);
+            }
+
+        /* Premium Curtain Slide transition for Mobile Menu */
+        .mobile-drawer {
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease-in-out;
+        }
+
+            .mobile-drawer.active {
+                max-height: 500px;
+                opacity: 1;
+            }
+
+        /* Custom fade animation for Hero elements */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        /* Elegant radial subtle background mesh */
+        .bg-radial-gradient {
+            background: radial-gradient(circle, rgba(255, 107, 0, 0.12) 0%, transparent 70%);
+        }
+
+        /* Hover effects for Practice Cards: premium thin gold border and smooth lift */
+        .practice-card {
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease;
+        }
+
+            .practice-card:hover {
+                transform: translateY(-6px);
+                /*border-width: 2px;*/
+                border-color: var(--color-accent) !important;
+                box-shadow: 0 20px 40px -15px rgba(17, 3, 75, 0.12), 0 0 15px rgba(255, 107, 0, 0.15);
+            }
+
+        /* Ultra-fluid premium animations for Modals (fade & vertical movement) */
+        #lawyer-modal,
+        #confirmation-modal,
+        #privacy-modal {
+            transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+            #lawyer-modal > div,
+            #confirmation-modal > div,
+            #privacy-modal > div {
+                transform: translateY(25px) scale(0.97);
+                transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            }
+
+            #lawyer-modal.active,
+            #confirmation-modal.active,
+            #privacy-modal.active {
+                opacity: 1 !important;
+                pointer-events: auto !important;
+            }
+
+                #lawyer-modal.active > div,
+                #confirmation-modal.active > div,
+                #privacy-modal.active > div {
+                    transform: translateY(0) scale(1) !important;
+                }
+
+        /* Customized HTML scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #11034b;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #1978A8;
+            border-radius: 4px;
+        }
+
+            ::-webkit-scrollbar-thumb:hover {
+                background: #cc5500;
+            }
+
+        /* Mapas embebidos */
+        iframe {
+            border-style: ridge;
+            border-radius: 5px;
+            width: 800px;
+            max-width: 100%;
+            height: 380px; /* 430px -5% */
+            box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        @media (max-width: 640px) {
+            iframe {
+                height: 300px;
+            }
+        }
+    </style>
+
+</head>
+
+<body class="bg-[#fdfbd4] text-[#001429] font-sans overflow-x-hidden selection:bg-[#1978A8] selection:text-[#666666]">
+
+  <header id="main-header"
+    class="fixed top-0 md:top-8 left-1/2 -translate-x-1/2 w-full md:w-[92%] max-w-7xl z-50 transition-all duration-300">
+    <div
+      class="bg-[#1978A8]/95 backdrop-blur-md md:rounded-xl px-6 py-4 md:py-5 flex justify-between items-center shadow-2xl border">
+      <!-- Monogram Logo -->
+        <a href="#"
+           class="flex items-center space-x-3 group focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#1978A8]"
+           aria-label="Ir al inicio de Abogados Urcullú y Asociados">
+            <span class="sm:block font-serif text-2xl md:text-3xl font-bold tracking-tight text-[#ffffff] transition-transform duration-300 group-hover:scale-105 text-sombra">U&amp;A</span> <!--hidden-->
+            <div class="pl-3 sm:border-l sm:border-[#1978A8]/30">
+                <span class="block font-serif text-[13px] tracking-[0.15em] text-[#f4f4f4] leading-none uppercase text-sombra">
+                    Urcullú
+                    &amp; Asociados
+                </span>
+                <span class="block text-[9px] font-sans tracking-[0.25em] text-[#FFFFFF] uppercase mt-1 text-sombra">Abogados</span>
+            </div>
+        </a>
+
+      <!-- Desktop Navigation Menu -->
+        <nav class="hidden lg:flex items-center space-x-8 text-xs font-sans font-medium tracking-widest text-[#f4f4f4]/90 uppercase">
+            <a href="#quienes-somos"
+               class="nav-link hover:text-[#FFFFFF] transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-[#CCCCCC] hover:after:w-full after:transition-all after:duration-300 focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#1978A8] text-sombra">
+                Nuestro
+                estudio
+            </a>
+            <a href="#servicios"
+               class="nav-link hover:text-[#FFFFFF] transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-[#CCCCCC] hover:after:w-full after:transition-all after:duration-300 focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#1978A8] text-sombra">Áreas de práctica</a>
+            <a href="#historia"
+               class="nav-link hover:text-[#FFFFFF] transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-[#CCCCCC] hover:after:w-full after:transition-all after:duration-300 focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#1978A8] text-sombra">Historia</a>
+            <a href="#nuestros-abogados"
+               class="nav-link hover:text-[#FFFFFF] transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-[#CCCCCC] hover:after:w-full after:transition-all after:duration-300 focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#1978A8] text-sombra">Abogados</a>
+            <a href="#oficinas"
+               class="nav-link hover:text-[#FFFFFF] transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-[#CCCCCC] hover:after:w-full after:transition-all after:duration-300 focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#1978A8] text-sombra">Oficinas</a>
+            <a href="#contacto"
+               class="nav-link hover:text-[#FFFFFF] transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-[#CCCCCC] hover:after:w-full after:transition-all after:duration-300 focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#1978A8] text-sombra">Contáctanos</a>
+            <!--<button type="button" id="open-privacy-modal-nav-btn"
+            class="nav-link open-privacy-modal-trigger hover:text-[#FFFFFF] transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-[#CCCCCC] hover:after:w-full after:transition-all after:duration-300 focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#1978A8]"
+            aria-haspopup="dialog">
+        PÓLITICA DE PRIVACIDAD
+    </button>-->
+        </nav>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" type="button"
+        class="lg:hidden relative z-10 w-8 h-8 flex items-center justify-center shrink-0 text-white hover:text-[#FFFFFF] focus:outline-none transition-colors"
+        aria-label="Abrir Menú de Navegación" aria-expanded="false" aria-controls="mobile-menu">
+        <span id="mobile-menu-icon" class="hamburger-icon" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer Menu (Curtain Slide transition styled via CSS) -->
+    <div id="mobile-menu"
+      class="mobile-drawer absolute top-full left-0 w-full bg-[#1978A8] border-t border-[#1978A8]/20 py-8 px-6 flex flex-col space-y-5 shadow-2xl transition-all duration-300 text-center uppercase tracking-wider text-xs font-sans"
+      aria-hidden="true">
+      <a href="#quienes-somos"
+        class="mobile-link outline-none text-white hover:text-[#FFFFFF] py-2 border-b border-white/5 focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#FFFFFF] text-sombra">Nuestro
+        estudio</a>
+      <a href="#servicios"
+        class="mobile-link outline-none text-white hover:text-[#FFFFFF] py-2 border-b border-white/5 focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#FFFFFF] text-sombra">áreas de práctica</a>
+      <a href="#historia"
+         class="mobile-link outline-none text-white hover:text-[#FFFFFF] py-2 border-b border-white/5 focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#FFFFFF] text-sombra">Historia</a>
+      <a href="#nuestros-abogados"
+        class="mobile-link outline-none text-white hover:text-[#FFFFFF] py-2 border-b border-white/5 focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#FFFFFF] text-sombra">Abogados</a>
+      <a href="#oficinas"
+        class="mobile-link outline-none text-white hover:text-[#FFFFFF] py-2 border-b border-white/5 focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#FFFFFF] text-sombra">Oficinas</a>
+      <a href="#contacto"
+         class="mobile-link outline-none text-white hover:text-[#FFFFFF] py-2 border-b border-white/5 focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#FFFFFF] text-sombra">Contáctanos</a>
+      <a href="#horarios"
+         class="mobile-link outline-none text-white hover:text-[#FFFFFF] py-2 border-b border-white/5 focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#FFFFFF] text-sombra">Horarios y teléfonos</a>
+      <!--<button type="button" id="open-privacy-modal-mobile-btn"
+            class="mobile-link open-privacy-modal-trigger outline-none text-white hover:text-[#FFFFFF] py-2 border-b border-white/5 focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#FFFFFF]"
+            aria-haspopup="dialog">PÓLITICA DE PRIVACIDAD
+      </button>-->
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT CONTAINER -->
+  <main>
+      <!-- HERO SECTION -->
+      <section id="hero"
+               class="relative min-h-screen flex items-start md:items-center justify-center pt-24 md:pt-0 overflow-hidden">
+          <!-- Sophisticated Overlay Layer -->
+          <div class="absolute inset-0 bg-[#666666]/85 mix-blend-multiply z-10"></div>
+
+          <div class="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat transition-transform duration-[10000ms] scale-105 hover:scale-100"
+               style="background-image: url('assets/img_1.jpg');"></div>
+
+          <div class="relative max-w-5xl mx-auto px-6 sm:px-8 text-center z-20 pt-6 md:pt-16">
+              <!--<div class="inline-flex items-center gap-2 border border-[#1978A8] bg-[#1978A8] px-4 py-2 rounded-full mb-8 backdrop-blur-sm animate-fade-in">
+                <span class="text-xs uppercase font-sans tracking-[0.25em] text-white font-semibold">
+                    Valdivia, Lanco, Los lagos, Paillaco, San José (Mariquina) y Panguipulli.
+                </span>
+            </div>-->
+
+              <h1 class="font-serif text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-[1.15]">
+                  Asesoría legal <br class="hidden md:block">
+                  <!--<span class="text-transparent bg-clip-text bg-gradient-to-r from-[#f4f4f4] via-[#1978A8] to-[#f4f4f4]">-->
+                  <span class="font-serif text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-[1.15]">
+                      y estratégica
+                  </span>
+              </h1>
+
+              <p class="font-sans text-[1rem] sm:text-[3rem] md:text-[1.4rem] text-white/85 max-w-3xl mx-auto mb-10 leading-relaxed font-light">
+                  Somos un estudio jurídico que ofrece asesoría legal orientada a prevenir conflictos. Nuestro equipo se conforma de profesionales rigurosos y con profundo sentido ético, que entienden el impacto de su trabajo en tu vida y patrimonio
+              </p>
+              <div class="md:hidden"><br /><br /><br /><br /><br /></div>
+              <div class="inline-flex md:hidden items-center gap-2 border border-[#1978A8] bg-[#1978A8] px-4 py-2 rounded-full mb-[2.6rem] backdrop-blur-sm animate-fade-in">
+                  <span class="text-xs font-sans tracking-[0.15em] text-white font-semibold">
+                      Valdivia, Lanco, Los lagos, Paillaco, San José de la Mariquina y Panguipulli.
+                  </span>
+              </div>
+          </div>
+
+      </section>
+
+      <!-- QUIÉNES SOMOS -->
+      <section id="quienes-somos" class="py-24 md:py-32 bg-[#f4f4f4]">
+          <div class="max-w-7xl mx-auto px-6 sm:px-8">
+              <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+                  <!-- Subtitle & Main Concept -->
+                  <div class="lg:col-span-5 space-y-2 sm:space-y-4 md:space-y-6">
+                      <span class="text-xs uppercase font-sans tracking-[0.25em] text-[#1978A8] font-bold block">
+                          Nuestro estudio
+                      </span>
+                      <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-[#1978A8] leading-tight text-sombra">
+                          Confianza.
+                      </h2>
+                      <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-[#1978A8] leading-tight text-sombra">
+                          Ética.
+                      </h2>
+                      <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-[#1978A8] leading-tight text-sombra">
+                          Rigor.
+                      </h2>
+                      <div class="w-full h-[3px] bg-[#1978A8]" aria-hidden="true"></div>
+                  </div>
+
+                  <!-- Copia Corporativa -->
+                  <div class="lg:col-span-7">
+                      <p class="font-sans text-[1rem] md:text-lg text-[#001429]/90 leading-relaxed font-light mb-8">
+                          Entendemos el ejercicio del derecho como un pilar
+                          fundamental para el desarrollo de la sociedad y la seguridad de las personas. Fundada bajo principios de
+                          ética estricta, excelencia técnica y un profundo conocimiento del entorno legal del sur de Chile, nuestra
+                          firma se ha consolidado como un referente de confianza en la Región de Los Ríos.
+                      </p>
+                      <p class="font-sans text-[1rem] md:text-lg text-[#001429]/90 leading-relaxed font-light mb-8">
+                          Trabajamos estrechamente con nuestros clientes para comprender sus preocupaciones, desafíos y objetivos,
+                          con el fin de diseñar estrategias que se adapten perfectamente a sus necesidades y expectativas.
+                      </p>
+                  </div>
+              </div>
+
+          </div>
+      </section>
+
+      <!-- SERVICIOS -->
+      <section id="servicios" class="py-24 md:py-32 bg-[#f4f4f4]">
+          <div class="max-w-7xl mx-auto px-6 sm:px-8">
+              <div class="text-center max-w-3xl mx-auto mb-7 md:mb-10 space-y-3 md:space-y-4">
+
+                  <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-[#1978A8] text-sombra">
+                      Áreas de práctica
+                  </h2>
+                  <!--<div class="w-20 h-[3px] bg-[#1978A8] mx-auto" aria-hidden="true"></div>-->
+                  <p class="font-sans text-base text-[#001429]/75 font-light pt-1 md:pt-2">
+                      Soluciones de alto estándar y estrategia jurídica a la medida de sus transacciones y contingencias complejas.
+                  </p>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+                  <!-- Card 1: Familia -->
+                  <div class="practice-card rounded-lg shadow-md overflow-hidden hover:shadow-2xl transition-all duration-300 flex flex-col justify-between sombra" style="border: 5px ridge #cccccc">
+                      <a href="familia.html" class="h-64 sm:h-80 md:h-96 bg-contain bg-no-repeat bg-center" style="background-image: url('assets/familia.jpg');"
+                         role="img" aria-label="Servicio de Familia, Ley N.º 19.968">
+                      </a>
+                  </div>
+                  <!-- Card 2: Contratos -->
+                  <div class="practice-card border border-gray-200/60 rounded-lg shadow-md overflow-hidden hover:shadow-2xl transition-all duration-300 flex flex-col justify-between sombra" style="border: 5px ridge #cccccc">
+                      <a href="resumen.html" class="h-64 sm:h-80 md:h-96 bg-contain bg-no-repeat bg-center"
+                         style="background-image: url('assets/contratos.jpg');" role="img"
+                         aria-label="Código Civil, en el Libro IV: artículos 1437 y siguientes, especialmente el 1438"></a>
+                  </div>
+                  <!-- Card 3: Herencias -->
+                  <div class="practice-card border border-gray-200/60 rounded-lg shadow-md overflow-hidden hover:shadow-2xl transition-all duration-300 flex flex-col justify-between sombra" style="border: 5px ridge #cccccc">
+                      <div class="h-64 sm:h-80 md:h-96 bg-contain bg-no-repeat bg-center"
+                           style="background-image: url('assets/herencias.jpg');" role="img"
+                           aria-label="Libro III del Código Civil, artículo 951 en adelante."></div>
+                  </div>
+                  <!-- Card 4: Saneamientos -->
+                  <div class="practice-card border border-gray-200/60 rounded-lg shadow-md overflow-hidden hover:shadow-2xl transition-all duration-300 flex flex-col justify-between sombra" style="border: 5px ridge #cccccc">
+                      <div class="h-64 sm:h-80 md:h-96 bg-contain bg-no-repeat bg-center"
+                           style="background-image: url('assets/saneamientos.jpg');" role="img"
+                           aria-label="Decreto Ley N° 2.695 de 1979"></div>
+                  </div>
+                  <!-- Card 5: Laboral -->
+                  <div class="practice-card border border-gray-200/60 rounded-lg shadow-md overflow-hidden hover:shadow-2xl transition-all duration-300 flex flex-col justify-between sombra" style="border: 5px ridge #cccccc">
+                      <div class="h-64 sm:h-80 md:h-96 bg-contain bg-no-repeat bg-center" style="background-image: url('assets/laboral.jpg');"
+                           role="img" aria-label="Código del Trabajo, refundido en el DFL N° 1 de 2003 del Ministerio del Trabajo y Previsión Social"></div>
+                  </div>
+                  <!-- Card 6: Penal -->
+                  <div class="practice-card border border-gray-200/60 rounded-lg shadow-md overflow-hidden hover:shadow-2xl transition-all duration-300 flex flex-col justify-between sombra" style="border: 5px ridge #cccccc">
+                      <div class="h-64 sm:h-80 md:h-96 bg-contain bg-no-repeat bg-center" style="background-image: url('assets/penal.jpg');"
+                           role="img" aria-label="Código Penal chileno, artículo 1"></div>
+                  </div>
+              </div>
+
+          </div>
+      </section>
+
+      <!-- HISTORIA -->
+      <section id="historia" class="py-24 md:py-32 bg-[#f4f4f4]">
+          <div class="text-center max-w-3xl mx-auto mb-[1.4rem] space-y-4">
+              <!--<span class="text-xs uppercase font-sans tracking-[0.25em] text-[#1978A8] font-bold block">Abogados</span>-->
+              <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-[#1978A8] text-sombra">
+                  Nuestra historia
+              </h2>
+          </div>
+          <div class="max-w-7xl mx-auto px-6 sm:px-8">
+              <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+                  <!-- Subtitle & Main Concept -->
+                  <div class="lg:col-span-4 space-y-2 sm:space-y-4 md:space-y-6">
+                      <!-- 0. Félix Urcullú Padre -->
+                      <article class="open-modal-trigger bg-[#f4f4f4] border border-gray-100 rounded-lg overflow-hidden flex flex-col justify-between hover:border-[#1978A8]/60 hover:shadow-xl transition-all cursor-pointer focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#1978A8] box-sombra_big panel-outset" data-lawyer="urcullu-padre" role="button" tabindex="0" aria-haspopup="dialog" aria-label="Ver trayectoria completa de Félix Urcullú Padre" style="border: 5px outset #cccccc">
+                          <div class="relative overflow-hidden group h-[304px] bg-slate-200">
+                              <img src="assets/UrculluPadre.jpg" alt="Félix Urcullú Padre — Socio Fundador"
+                                   class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                              <div class="absolute bottom-0 left-0 w-full h-[3px] bg-[#1978A8]" aria-hidden="true"></div>
+                          </div>
+                          <div class="p-2">
+                              <span class="text-[8px] text-center uppercase font-sans tracking-widest text-[#1978A8] font-semibold block mb-1">
+                                  Socio fundador
+                              </span>
+                              <h3 class="font-serif text-center font-bold text-[#666666]">Félix Urcullú Padre</h3>
+                          </div>
+                      </article>
+                      <!--<div class="w-full h-[3px] bg-[#1978A8]" aria-hidden="true"></div>-->
+                  </div>
+
+                  <!-- Copia Corporativa -->
+                  <div class="lg:col-span-7">
+                      <p class="font-sans text-[1rem] md:text-lg text-[#001429]/90 leading-relaxed font-light mb-8">
+                          La Escuela de Derecho de la Universidad Austral de Chile (UACh) fue creada oficialmente en 1989, como parte de la nueva Facultad de Ciencias Jurídicas y Sociales.
+                      </p>
+                      <p class="font-sans text-[1rem] md:text-lg text-[#001429]/90 leading-relaxed font-light mb-8">
+                          La idea de crear una facultad de derecho se remonta a 1981, pero fue en 1989 cuando el entonces rector Juan Jorge Ebert encargó un proyecto a un grupo de abogados valdivianos (entre ellos Félix Urcullú, Edgardo Pineda, Teodoro Croquevielle y Karin Exss), con asesoría del jurista José Luis Cea.
+                      </p>
+                      <p class="font-sans text-[1rem] md:text-lg text-[#001429]/90 leading-relaxed font-light mb-8">
+                          El 29 de diciembre de 1989 se dictó el Decreto de Rectoría N.º 420 que creaba formalmente la Facultad y la Escuela de Derecho.
+                          Inmediatamente después, la escuela se instaló en el Campus Isla Teja en Valdivia.
+                          Félix Urcullú fue nombrado Decano de la Facultad.
+                          Karin Exss fue la primera Directora de la Escuela de Derecho, encargada de organizar los planes de estudio, contratar profesores y llamar a los primeros estudiantes.
+                      </p>
+                  </div>
+              </div>
+
+          </div>
+      </section>
+
+      <!-- NUESTRO EQUIPO -->
+      <section id="nuestros-abogados" class="pt-[5.4rem] pb-24 md:pt-[7.2rem] md:pb-32 bg-[#f4f4f4]">
+          <div class="max-w-7xl mx-auto px-6 sm:px-8">
+              <div class="text-center max-w-3xl mx-auto mb-[1.4rem] space-y-4">
+                  <!--<span class="text-xs uppercase font-sans tracking-[0.25em] text-[#1978A8] font-bold block">Abogados</span>-->
+                  <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-[#1978A8] text-sombra">
+                      Nuestros abogados
+                  </h2>
+              </div>
+
+              <!-- Grid de perfiles en el orden estrictamente obligatorio -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[1.4rem]">
+                  <!-- 1. Félix Urcullú Steffen -->
+                  <article class="open-modal-trigger bg-[#f4f4f4] border border-gray-100 rounded-lg overflow-hidden flex flex-col justify-between hover:border-[#1978A8]/60 hover:shadow-xl transition-all cursor-pointer focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#1978A8] box-sombra_big panel-outset" data-lawyer="urcullu-steffen" role="button" tabindex="0" aria-haspopup="dialog" aria-label="Ver trayectoria completa de Félix Urcullú Steffen" style="border: 5px outset #cccccc">
+                      <div class="relative overflow-hidden group h-[304px] bg-slate-200">
+                          <img src="assets/FelixUrculluSteffen.jpg" alt="Félix Urcullú Steffen — Socio Principal"
+                               class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                          <div class="absolute bottom-0 left-0 w-full h-[3px] bg-[#1978A8]" aria-hidden="true"></div>
+                      </div>
+                      <div class="p-6">
+                          <span class="text-[10px] text-center uppercase font-sans tracking-widest text-[#1978A8] font-semibold block mb-1">
+                              Socio principal
+                          </span>
+                          <h3 class="font-serif text-center font-bold text-[#666666]">Félix Urcullú Steffen</h3>
+                          <!--<p class="font-sans text-[0.7875rem] text-[#001429]/85 mt-3 line-clamp-3 font-light leading-relaxed">
+                            Pilar estratégico del estudio. Trayectoria de primer nivel en el derecho civil y resolución de litigios complejose.
+                        </p>-->
+                      </div>
+                  </article>
+
+                  <!-- 2. Agustín Soto Gidi -->
+                  <article class="open-modal-trigger bg-[#f4f4f4] border border-gray-100 rounded-lg overflow-hidden flex flex-col justify-between hover:border-[#1978A8]/60 hover:shadow-xl transition-all cursor-pointer focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#1978A8] box-sombra_big panel-outset" data-lawyer="soto-gidi" role="button" tabindex="0" aria-haspopup="dialog"
+                           aria-label="Ver trayectoria completa de Agustín Soto Gidi" style="border: 5px outset #cccccc">
+                      <div>
+                          <div class="relative overflow-hidden group h-[304px] bg-slate-200">
+                              <img src="assets/AgustinSotoGidi.jpg" alt="Agustín Soto Gidi — Abogado Asociado"
+                                   class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                              <div class="absolute bottom-0 left-0 w-full h-[3px] bg-[#1978A8]" aria-hidden="true"></div>
+                          </div>
+                          <div class="p-6">
+                              <span class="text-[10px] text-center uppercase font-sans tracking-widest text-[#1978A8] font-semibold block mb-1">
+                                  Abogado asociado
+                              </span>
+                              <h3 class="font-serif text-center font-bold text-[#666666]">Agustín Soto Gidi</h3>
+                              <!--<p class="font-sans text-[0.7875rem] text-[#001429]/85 mt-3 line-clamp-3 font-light leading-relaxed">
+                                Enfoque analítico y constitucional del derecho. Especializado en diseño estratégico de litigios y
+                                cumplimiento legal preventivo.
+                            </p>-->
+                          </div>
+                      </div>
+                  </article>
+
+                  <!-- 3. Félix Urcullú Arriagada -->
+                  <article class="open-modal-trigger bg-[#f4f4f4] border border-gray-100 rounded-lg overflow-hidden flex flex-col justify-between hover:border-[#1978A8]/60 hover:shadow-xl transition-all duration-300 cursor-pointer focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#1978A8] box-sombra_big panel-outset" data-lawyer="urcullu-arriagada" role="button" tabindex="0" aria-haspopup="dialog"
+                           aria-label="Ver trayectoria completa de Félix Urcullú Arriagada" style="border: 5px outset #cccccc">
+                      <div>
+                          <div class="relative overflow-hidden group h-[304px] bg-slate-200">
+                              <img src="assets/FelixUrculluArriagada.jpg" alt="Félix Urcullú Arriagada — Abogado Asociado"
+                                   class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                              <div class="absolute bottom-0 left-0 w-full h-[3px] bg-[#1978A8]" aria-hidden="true"></div>
+                          </div>
+                          <div class="p-6">
+                              <span class="text-[10px] text-center uppercase font-sans tracking-widest text-[#1978A8] font-semibold block mb-1">
+                                  Abogado asociado
+                              </span>
+                              <h3 class="font-serif text-center font-bold text-[#666666]">Félix Urcullú Arriagada</h3>
+                              <!--<p class="font-sans text-[0.7875rem] text-[#001429]/85 mt-3 line-clamp-3 font-light leading-relaxed">
+                                Especialista en derecho civil, obligaciones y procedimientos judiciales ordinarios con alta dedicación
+                                probatoria.
+                            </p>-->
+                          </div>
+                      </div>
+                  </article>
+
+                  <!-- 4. Nicolás Carter Holtehuer -->
+                  <article class="open-modal-trigger bg-[#f4f4f4] border border-gray-100 rounded-lg overflow-hidden flex flex-col justify-between hover:border-[#1978A8]/60 hover:shadow-xl transition-all duration-300 cursor-pointer focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#1978A8] box-sombra_big panel-outset" data-lawyer="carter-holtehuer" role="button" tabindex="0" aria-haspopup="dialog"
+                           aria-label="Ver trayectoria completa de Nicolás Carter Holtehuer" style="border: 5px outset #cccccc">
+                      <div>
+                          <div class="relative overflow-hidden group h-[304px] bg-slate-200">
+                              <img src="assets/NicolasCarterHoltehuer.jpg" alt="Nicolás Carter Holtehuer — Abogado Asociado"
+                                   class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                              <div class="absolute bottom-0 left-0 w-full h-[3px] bg-[#1978A8]" aria-hidden="true"></div>
+                          </div>
+                          <div class="p-6">
+                              <span class="text-[10px] text-center uppercase font-sans tracking-widest text-[#1978A8] font-semibold block mb-1">
+                                  Abogado asociado
+                              </span>
+                              <h3 class="font-serif text-center font-bold text-[#666666]">Nicolás Carter Holtehuer</h3>
+                              <!--<p class="font-sans text-[0.7875rem] text-[#001429]/85 mt-3 line-clamp-3 font-light leading-relaxed">
+                                Líder de práctica ambiental, derecho regulatorio, administrativo y auditorías normativas para grandes
+                                proyectos de inversión.
+                            </p>-->
+                          </div>
+                      </div>
+                  </article>
+              </div>
+          </div>
+      </section>
+
+      <!-- OFICINAS -->
+      <section id="oficinas" class="pt-2 pb-24 md:pt-[7.2rem] md:pb-32 bg-[#f4f4f4] scroll-mt-24 md:scroll-mt-0">
+          <div class="text-center max-w-7xl mx-auto px-6 sm:px-8">
+
+              <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-[#1978A8] mb-4 md:mb-0 text-sombra md:-translate-y-[20%]">Nuestras oficinas</h2>
+
+              <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 justify-items-center md:translate-y-[2%]">
+                  <!-- Mapa 1: Valdivia -->
+                  <article class="text-center space-y-[0.1rem] w-full">
+                      <h3 class="font-serif sm:text-lg font-semibold text-[#135A9E] sm:hidden">VALDIVIA <br />Calle Maipú N.° 251 <br /> Oficina 301-B</h3>
+                      <h3 class="font-serif sm:text-lg font-semibold text-[#135A9E] hidden sm:block">VALDIVIA - Calle Maipú N.º 251, Oficina 301-B</h3>
+                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3064.654842500669!2d-73.24865348886101!3d-39.8147334509071!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9615ee7666987575%3A0x329952d89825c0af!2zTWFpcMO6IDI1MSwgVmFsZGl2aWEsIExvcyBSw61vcw!5e0!3m2!1ses!2scl!4v1790495088097!5m2!1ses!2scl"
+                              style="border: 2px outset #cccccc; " allowfullscreen="" loading="lazy"
+                              referrerpolicy="strict-origin-when-cross-origin"
+                              title="Mapa de la oficina de Valdivia"></iframe>
+                  </article>
+
+                  <!-- Mapa 2: Lanco -->
+                  <article class="text-center space-y-[0.1rem] w-full">
+                      <h3 class="font-serif sm:text-lg font-semibold text-[#135A9E] sm:hidden">LANCO <br />Calle Libertad N.º 298 <br />Segundo piso</h3>
+                      <h3 class="font-serif sm:text-lg font-semibold text-[#135A9E] hidden sm:block">LANCO - Calle Libertad N.º 298, Segundo piso</h3>
+                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d770.1859910578536!2d-72.77525073045628!3d-39.45251859822564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9615ac4f336398b3%3A0x65ff7e58aa7ab781!2sLibertad%20278%2C%20%20Lanco%2C%20Los%20R%C3%ADos!5e0!3m2!1ses-419!2scl!4v1782765108186!5m2!1ses-419!2scl"
+                              style="border: 2px outset #cccccc; " allowfullscreen="" loading="lazy"
+                              referrerpolicy="strict-origin-when-cross-origin"
+                              title="Mapa de la oficina de Lanco"></iframe>
+                  </article>
+              </div>
+          </div>
+      </section>
+
+      <!-- CONTACTO -->
+      <section id="contacto" class="py-24 md:py-32 bg-[#f4f4f4]">
+          <div class="max-w-7xl mx-auto px-6 sm:px-8">
+              <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+
+                  <!-- Formulario Moderno con validaciones y A11y -->
+                  <div class="lg:col-span-7 bg-gradient-to-b from-[#cfcfcf] to-[#eeeeee] p-[1.5rem] md:p-[1.6rem] rounded-md shadow-2xl border border-gray-100 panel-outset">
+
+                      <h2 class="flex flex-nowrap font-sans bg-[#ffffff] font-semibold text-3xl sm:text-4xl md:text-4xl text-[#1978A8] mb-[1.85rem] -mt-2 sm:-mt-3 md:-mt-4 pt-[1px] pb-[10px] box-sombra text-sombra">&nbsp;Contáctanos</h2>
+
+                      <p class="font-sans text-s text-gray-600 mb-[1.35rem] font-bold">
+                          Déjanos tu mensaje y nos pondremos en contacto contigo.
+                      </p>
+
+                      <form id="legal-contact-form" class="space-y-[1.35rem]" novalidate>
+
+                          <div class="grid grid-cols-1 sm:grid-cols-2 gap-[1.35rem]">
+                              <div class="space-y-[0.45rem]">
+                                  <label for="full_name"
+                                         class="text-[11px] font-sans font-bold tracking-wider uppercase text-[#555555]">
+                                      Ingresa tu nombre
+                                      <span class="text-red-500" aria-hidden="true">*</span>
+                                  </label>
+                                  <input type="text" id="full_name" required placeholder="Nombre y apellido"
+                                         class="w-full bg-[#ffffff] border border-gray-200 input-inset px-[0.9rem] py-[0.675rem] text-xs rounded-sm focus:outline-none focus:border-[#1978A8] focus:bg-white transition-all text-[#001429]"
+                                         aria-required="true">
+                                  <span id="error_full_name" class="text-[10px] text-red-500 font-medium hidden">
+                                      Por favor ingrese su nombre de forma válida (solo letras).
+                                  </span>
+                              </div>
+
+                              <div class="space-y-[0.45rem]">
+                                  <label for="contact_phone"
+                                         class="text-[11px] font-sans font-bold tracking-wider uppercase text-[#555555]">
+                                      Teléfono de Contacto
+                                      <span class="text-red-500" aria-hidden="true">*</span>
+                                  </label>
+                                  <input type="tel" id="contact_phone" required placeholder="+56 9 XXXXXXXX"
+                                         class="w-full bg-[#ffffff] border border-gray-200 input-inset px-[0.9rem] py-[0.675rem] text-xs rounded-sm focus:outline-none focus:border-[#1978A8] focus:bg-white transition-all text-[#001429]"
+                                         aria-required="true">
+                                  <span id="error_contact_phone" class="text-[10px] text-red-500 font-medium hidden">
+                                      Ingrese un num. telefónico de 9 dígitos ej: +56 9 1234 5678.
+                                  </span>
+                              </div>
+                          </div>
+
+                          <div class="space-y-[0.45rem]">
+                              <label for="case_summary"
+                                     class="text-[11px] font-sans font-bold tracking-wider uppercase text-[#555555]">
+                                  Resumen del Caso <span class="text-red-500" aria-hidden="true">*</span>
+                              </label>
+                              <textarea id="case_summary" rows="5" required
+                                        placeholder="Por favor describa brevemente el motivo de su consulta."
+                                        class="w-full bg-[#ffffff] border border-gray-200 input-inset px-[0.9rem] py-[0.665rem] text-xs rounded-sm focus:outline-none focus:border-[#1978A8] focus:bg-white transition-all text-[#001429] resize-none h-[6.3rem]"
+                                        aria-required="true"></textarea>
+                              <span id="error_case_summary" class="text-[10px] text-red-500 font-medium hidden">
+                                  Por favor ingrese un breve resumen del caso.
+                              </span>
+                          </div>
+
+                          <button type="submit"
+                                  class="w-1/2 mx-auto block py-[1.35rem] md:py-[0.9rem] bg-[#1978A8] hover:bg-[#cc5500] text-[#ffffff] text-xs font-sans uppercase tracking-[0.2em]
+                                font-semibold rounded-lg transition-all duration-300 shadow-md focus-visible:outline-double focus-visible:outline-2
+                                focus-visible:outline-[#666666]">
+                              Enviar
+                          </button>
+
+                      </form>
+
+                  </div>
+
+                  <!-- Sedes & Teléfonos -->
+                  <div id="horarios" class="lg:col-span-4 space-y-7 scroll-mt-24 md:scroll-mt-0">
+
+                      <div class="space-y-1 bg-[#ffffff] border">
+                          <h2 class="font-sans font-semibold text-3xl sm:text-4xl md:text-4xl text-[#1978A8] mb-2 pt-[1px] pb-[10px] box-sombra text-sombra">&nbsp;Horarios y teléfonos</h2>
+                      </div>
+
+                      <div class="space-y-7">
+                          <!-- Sede Valdivia -->
+                          <div class="flex gap-4">
+                              <div class="text-[#1978A8] shrink-0">
+                                  <i data-lucide="map-pin" class="w-6 h-6" aria-hidden="true"></i>
+                              </div>
+                              <div class="space-y-1">
+                                  <h3 class="font-serif text-lg font-bold text-[#666666]">Oficina Valdivia</h3>
+                                  <div class="text-xs font-sans text-gray-500 pt-0">
+                                      <p><strong>Lunes a Viernes:</strong> 10:00 - 13:00 y 15:30 - 18:00 hrs.</p>
+                                  </div>
+                              </div>
+                          </div>
+
+                          <!-- Sede Lanco -->
+                          <div class="flex gap-4">
+                              <div class="text-[#1978A8] shrink-0">
+                                  <i data-lucide="calendar" class="w-6 h-6" aria-hidden="true"></i>
+                              </div>
+                              <div class="space-y-1">
+                                  <h3 class="font-serif text-lg font-bold text-[#666666]">Oficina Lanco</h3>
+                                  <div class="text-xs font-sans text-gray-500 pt-0">
+                                      <p><strong>Días Martes:</strong> Jornada continua de 09:00 a 14:00 hrs.</p>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+
+                      <!-- Canales de WhatsApp Directos -->
+                      <div class="bg-white p-6 rounded-sm border border-gray-100 panel-outset shadow-2xl space-y-1">
+
+                          <p class="font-sans font-bold text-gray-500 leading-relaxed">
+                              Click abajo para iniciar chat de asesoría.
+                          </p>
+                          <div class="w-full h-[3px] bg-[#BBBBBB]" aria-hidden="true"></div>
+                          <span class="block h-4"></span>
+                          <div class="space-y-2.5">
+                              <a href="https://wa.me/56997780821?text=Hola,%20deseo%20agendar%20una%20consulta%20con%20Abogados%20Urcullú%20y%20asociados."
+                                 target="_blank"
+                                 class="flex justify-between items-center px-4 py-2.5 bg-[#f4f4f4] hover:bg-emerald-50 border border-transparent hover:border-emerald-200 text-xs font-medium rounded-lg transition-all text-[#001429] focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-emerald-500"
+                                 aria-label="Escribir por WhatsApp a la línea principal de Félix Urcullú Steffen">
+                                  <img src="assets/WhatsApp.png" alt="WhatsApp" class="h-5 w-auto mr-2 object-contain" style="image-rendering: -webkit-optimize-contrast;" width="258" height="60">
+                                  <span class="text-emerald-500 text-lg font-bold flex items-center gap-1">
+                                      +56 9 9778 0821 <!--<i data-lucide="message-square" class="w-6.5 h-3.5" aria-hidden="true"></i>-->
+                                  </span>
+                              </a>
+
+                              <a href="https://wa.me/56952134108?text=Hola,%20deseo%20agendar%20una%20consulta%20con%20Abogados%20Urcullú%20y%20asociados."
+                                 target="_blank"
+                                 class="flex justify-between items-center px-4 py-2.5 bg-[#f4f4f4] hover:bg-emerald-50 border border-transparent hover:border-emerald-200 text-xs font-medium rounded-lg transition-all text-[#001429] focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-emerald-500"
+                                 aria-label="Escribir por WhatsApp a la línea civil de Félix Urcullú Arriagada">
+                                  <img src="assets/WhatsApp.png" alt="WhatsApp" class="h-5 w-auto mr-2 object-contain" style="image-rendering: -webkit-optimize-contrast;" width="258" height="60">
+                                  <span class="text-emerald-500 text-lg font-bold flex items-center gap-1">
+                                      +56 9 5213 4108 <!--<i data-lucide="message-square" class="w-6.5 h-3.5" aria-hidden="true"></i>-->
+                                  </span>
+                              </a>
+                          </div>
+                      </div>
+                  </div>
+
+              </div>
+          </div>
+      </section>
+  </main>
+
+  <!-- LAWSUIT MODAL (DYNAMIC DATA LOAD) -->
+  <div id="lawyer-modal"
+    class="fixed inset-0 bg-[#666666]/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-all duration-300"
+    role="dialog" aria-modal="true" aria-labelledby="modal-lawyer-name" aria-hidden="true">
+    <div
+      class="bg-white max-w-3xl w-full max-h-[90vh] overflow-y-auto overflow-x-hidden rounded-lg shadow-2xl border border-[#1978A8]/30 transform scale-95 transition-transform duration-300 relative">
+
+      <!-- Close Button -->
+      <button id="close-modal-btn"
+        class="absolute top-4 right-4 text-gray-400 hover:text-[#666666] transition-colors focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#666666]"
+        aria-label="Cerrar Ficha de Trayectoria">
+        <i data-lucide="x" class="w-6 h-6"></i>
+      </button>
+
+      <div class="grid grid-cols-1 md:grid-cols-12">
+        <!-- Photo and metadata -->
+        <div class="md:col-span-5 bg-[#666666] p-8 text-white flex flex-col justify-between relative">
+          <div class="absolute inset-0 bg-cover bg-center opacity-10" style="background-image: url('assets/img_1.jpg');"
+            aria-hidden="true"></div>
+
+          <div class="relative z-10 space-y-6">
+            <div
+              class="w-[168px] h-[168px] rounded-lg overflow-hidden border-2 border-[#1978A8] bg-slate-700 mx-auto md:mx-0">
+              <img id="modal-lawyer-img" src="" alt="" class="w-full h-full object-cover">
+            </div>
+            <div class="text-center md:text-left">
+              <h3 id="modal-lawyer-name" class="font-serif text-xl font-bold text-white"></h3>
+              <p id="modal-lawyer-charge" class="text-[#cccccc] text-xs uppercase tracking-widest mt-1 font-medium"></p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Academic path & details -->
+        <div class="md:col-span-7 p-8 md:p-10 space-y-6">
+          <div class="space-y-2">
+            <span class="text-[9px] uppercase font-sans tracking-[0.2em] text-[#1978A8] font-bold block"></span>
+            <p id="modal-lawyer-description"
+              class="font-sans text-[0.7875rem] text-[#001429] leading-relaxed font-light"></p>
+          </div>
+
+          <div class="space-y-3">
+            <span class="text-[9px] uppercase font-sans tracking-[0.2em] text-[#1978A8] font-bold block">Áreas de práctica</span>
+            <ul id="modal-lawyer-specialties"
+              class="space-y-2 text-[0.7875rem] font-sans text-[#001429] leading-relaxed font-light">
+              <!-- Dynamically populated -->
+            </ul>
+          </div>
+
+          <div class="pt-4 border-t border-gray-100 flex justify-between items-center">
+            <!-- Sólo visible en móviles -->
+            <button id="close-modal-mobile-btn" type="button"
+              class="md:hidden px-5 py-2.5 bg-gray-300 text-[#666666] hover:bg-gray-400 text-[10px] font-sans tracking-widest uppercase font-semibold rounded-lg transition-all duration-300"
+              aria-label="Cerrar Ficha de Trayectoria">
+              Cerrar
+            </button>
+            <a href="#contacto" id="modal-contact-link"
+              class="px-5 py-2.5 bg-[#666666] text-[#f4f4f4] hover:bg-[#1978A8] hover:text-[#FFFFFF] text-[10px] font-sans tracking-widest uppercase font-semibold rounded-lg transition-all duration-300 focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#1978A8]"
+              aria-label="Contactar a este especialista">
+              Contactar Especialista
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTACT CONFIRMATION MODAL -->
+  <div id="confirmation-modal"
+    class="fixed inset-0 bg-[#666666]/85 backdrop-blur-sm z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-all duration-300"
+    role="dialog" aria-modal="true" aria-labelledby="confirmation-title" aria-hidden="true">
+    <div
+      class="bg-white max-w-md w-full p-8 rounded-sm shadow-2xl text-center space-y-6 border border-[#1978A8] transform scale-95 transition-transform duration-300">
+      <div
+        class="w-16 h-16 bg-emerald-50 rounded-full flex items-center justify-center mx-auto border border-emerald-200"
+        aria-hidden="true">
+        <i data-lucide="check-circle" class="w-8 h-8 text-emerald-600"></i>
+      </div>
+      <div class="space-y-2">
+        <h3 id="confirmation-title" class="font-serif text-2xl font-bold text-[#666666]">Solicitud Recibida</h3>
+        <p class="font-sans text-xs text-gray-500 uppercase tracking-widest font-medium text-[#1978A8]">Abogados Urcullú
+          &amp; Asociados</p>
+      </div>
+      <p class="font-sans text-xs text-gray-700 leading-relaxed font-light">
+        Agradecemos su confianza. Los antecedentes han sido encriptados y derivados al abogado especialista
+        correspondiente. Le contactaremos en un plazo máximo de <strong>12 horas hábiles</strong>.
+      </p>
+      <button id="close-confirmation-btn"
+        class="w-full py-3 bg-[#666666] hover:bg-[#1978A8] text-white hover:text-[#666666] text-xs font-sans tracking-widest uppercase font-semibold rounded-lg transition-all duration-300 focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#666666]">
+        Entendido
+      </button>
+    </div>
+  </div>
+
+  <!-- PRIVACY POLICY MODAL -->
+  <div id="privacy-modal"
+    class="fixed inset-0 bg-[#666666]/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-all duration-300"
+    role="dialog" aria-modal="true" aria-labelledby="privacy-modal-title" aria-hidden="true">
+    <div
+      class="bg-white max-w-2xl w-full max-h-[90vh] overflow-y-auto overflow-x-hidden rounded-lg shadow-2xl border border-[#1978A8]/30 transform scale-95 transition-transform duration-300 relative p-8 md:p-10">
+
+      <!-- Close Button -->
+      <button id="close-privacy-modal-btn"
+        class="absolute top-4 right-4 text-gray-400 hover:text-[#666666] transition-colors focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#666666]"
+        aria-label="Cerrar Política de Privacidad">
+        <i data-lucide="x" class="w-6 h-6"></i>
+      </button>
+
+      <div class="space-y-4">
+        <div class="space-y-1">
+          <span class="text-[9px] uppercase font-sans tracking-[0.2em] text-[#1978A8] font-bold block">Abogados Urcullú &amp; Asociados</span>
+          <h3 id="privacy-modal-title" class="font-serif text-xl font-bold text-[#666666]">Política de Privacidad</h3>
+        </div>
+        <p class="font-sans text-xs sm:text-[0.8125rem] text-gray-700 leading-relaxed font-light">
+          Urcullú y Asociados se compromete a respetar su privacidad. Usted no está obligado a facilitar ninguna información personal al consultar nuestro sitio web. Sin embargo, puede optar por comunicarse con nosotros completando el formulario disponible en la sección "Contacto" de este sitio, en cuyo caso y para efectos de poder responderle adecuadamente, se le pedirá que proporcione su nombre y dirección de correo electrónico, y acepte en forma expresa esta política de privacidad. En ese evento, haremos tratamiento de sus datos sólo para comunicarnos con usted y poder brindarle la información que usted ha solicitado. No compartiremos su información personal con ningún tercero, excepto cuando sea requerido por ley. También podemos utilizar sus datos para comunicarnos con usted para preguntarle si le gustaría recibir información sobre otros servicios que podrían ser de su interés. Sin embargo, no lo añadiremos a ninguna de nuestras listas de distribución de correos sin su consentimiento expreso.
+        </p>
+        <div class="pt-4 border-t border-gray-100 flex justify-end">
+          <button id="close-privacy-modal-btn-bottom" type="button"
+            class="px-5 py-2.5 bg-[#666666] hover:bg-[#1978A8] text-white text-[10px] font-sans tracking-widest uppercase font-semibold rounded-lg transition-all duration-300 focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#666666]"
+            aria-label="Cerrar Política de Privacidad">
+            Entendido
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BACK TO TOP & QUICK WHATSAPP FLOATING BUTTONS -->
+  <div class="fixed bottom-6 right-6 z-40 flex flex-col gap-3">
+    <!-- Back to top -->
+    <button id="back-to-top"
+      class="w-11 h-11 bg-white hover:bg-[#666666] text-[#666666] hover:text-white rounded-full flex items-center justify-center border border-gray-200 hover:border-[#666666] shadow-lg transition-all duration-300 opacity-0 pointer-events-none translate-y-3 focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#666666]"
+      aria-label="Volver al inicio de la página">
+      <i data-lucide="arrow-up" class="w-4 h-4" aria-hidden="true"></i>
+    </button>
+    <!-- Direct WhatsApp Corporate Floating Button -->
+    <a href="https://wa.me/56997780821?text=Hola,%20deseo%20agendar%20una%20consulta%20con%20Abogados%20Urcullú%20y%20Asociados."
+      target="_blank"
+      class="w-12 h-12 bg-[#1B8A46] hover:bg-[#126833] text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-all duration-300 focus-visible:outline-double focus-visible:outline-3 focus-visible:outline-[#1978A8]"
+      aria-label="Canal preferencial de asistencia directa WhatsApp">
+      <i data-lucide="message-circle" class="w-6 h-6" aria-hidden="true"></i>
+    </a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#1978A8] border-t border-white/10 text-white/70 text-xs py-16 font-sans font-light text-center">
+      <div class="max-w-7xl mx-auto px-6 sm:px-8 grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div class="space-y-4">
+              <span class="font-serif text-4xl font-bold tracking-tight text-[#FFFFFF] block text-sombra">U&amp;A</span>
+              <span class="block font-serif text-[13px] tracking-[0.15em] text-[#f4f4f4] leading-none uppercase text-sombra">
+                  Urcullú
+                  &amp; Asociados
+              </span>
+              <span class="block text-[12px] font-sans tracking-[0.25em] text-[#FFFFFF] uppercase mt-1 text-sombra">Abogados</span>
+          </div>
+          <div>
+              <h4 class="font-serif text-sm font-bold text-white mb-4 uppercase tracking-wider p-2 text-sombra">Enlaces Rápidos</h4>
+              <ul class="space-y-2.5">
+                  <li>
+                      <a href="#quienes-somos"
+                         class="hover:text-[#FFFFFF] text-[12px] tracking-[0.15em] font-semibold font-bold transition-colors focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#eeeeee] text-sombra">
+                          NUESTRO ESTUDIO
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#servicios"
+                         class="hover:text-[#FFFFFF] text-[12px] tracking-[0.15em] font-semibold transition-colors focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#1978A8] text-sombra">
+                          ÁREAS DE PRÁCTICA
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#nuestros-abogados"
+                         class="hover:text-[#FFFFFF] text-[12px] tracking-[0.15em] font-semibold transition-colors focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#1978A8] text-sombra">
+                          ABOGADOS
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#oficinas"
+                         class="hover:text-[#FFFFFF] text-[12px] tracking-[0.15em] font-semibold transition-colors focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#1978A8] text-sombra">
+                          OFICINAS
+                      </a>
+                  </li>
+              </ul>
+          </div>
+          <div>
+              <h4 class="font-serif text-sm font-bold text-white mb-4 uppercase tracking-wider p-2 text-sombra">Contactos telefónicos</h4>
+              <ul class="space-y-4">
+                  <li>
+                      <a href="tel:+56997780821"
+                         class="hover:text-[#FFFFFF] font-semibold  transition-colors focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#1978A8] text-sombra">
+                          <span style="font-size: 18px;">+56 9 9778 0821</span>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="tel:+56952134108"
+                         class="hover:text-[#FFFFFF] font-semibold  transition-colors focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#1978A8] text-sombra">
+                          <span style="font-size: 18px;">+56 9 5213 4108</span>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="mailto:contacto@urculluyasociados.cl"
+                         class="hover:text-[#FFFFFF] font-semibold  transition-colors focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#1978A8] text-sombra">
+                          <span style="font-size: 18px;">contacto@urculluyasociados.cl</span>
+                      </a>
+                  </li>
+              </ul>
+          </div>
+          <!--<div id="politica">
+              <button type="button" id="open-privacy-modal-btn"
+                      class="open-privacy-modal-trigger w-full text-center rounded-lg transition-transform duration-300 hover:scale-105 focus-visible:outline-double 
+                      focus-visible:outline-2 focus-visible:outline-[#1978A8] pt-2"
+                      aria-haspopup="dialog" aria-label="Ver política de privacidad">
+                  <div class="h-28 sm:h-80 md:h-28 bg-contain bg-no-repeat bg-center" style="background-image: url('assets/Balanza.png');" aria-hidden="true"></div>
+                  <h4 class="font-serif text-sm text-[#cccccc] mb-1 uppercase tracking-wider p-2">Política de privacidad</h4>
+              </button>
+          </div>-->
+      </div>
+    <div class="max-w-7xl mx-auto px-6 sm:px-8 mt-16 pt-8 border-t border-white/5 text-center text-[18px] text-white/80 tracking-wider text-sombra">
+        <!-- Mobile: 3 líneas separadas -->
+        <p class="sm:hidden space-y-2">
+            <span class="block">&copy; 2026 Urcullú y Asociados.</span>
+            <span class="block">Todos los derechos reservados.</span>
+            <span class="block">
+                <button type="button" id="open-privacy-modal-nav-btn-mobile"
+                        class="nav-link open-privacy-modal-trigger hover:text-[#FFFFFF] transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-[#ffffff] hover:after:w-full after:transition-all after:duration-300 focus-visible:outline-double focus-visible:outline-2 text-sombra"
+                        aria-haspopup="dialog">Política de privacidad.
+                </button>
+            </span>
+        </p>
+        <!-- Desktop: línea única original -->
+        <p class="hidden sm:block">
+            &copy; 2026 Urcullú y Asociados. Todos los derechos reservados. &mdash;
+
+            <button type="button" id="open-privacy-modal-nav-btn"
+                    class="nav-link open-privacy-modal-trigger hover:text-[#FFFFFF] transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-[#ffffff] hover:after:w-full after:transition-all after:duration-300 focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#1978A8] text-sombra"
+                    aria-haspopup="dialog">
+                Política de privacidad.
+            </button>
+        </p>
+    </div>
+  </footer>
+
+  <!-- Main scripts -->
+  <!--<script type="module" src="app.js"></script>-->
+</body>
+
+</html>
+<script type="text/javascript">
+  const lawyersData = {
+    "urcullu-steffen": {
+      name: "Félix Urcullú Steffen",
+      charge: "Socio Principal",
+      img: "assets/FelixUrculluSteffen.jpg",
+      // description: "Félix Urcullú Steffen es el pilar estratégico y socio fundador del estudio. Cuenta con una trayectoria de primer nivel en el derecho civil y en la resolución de litigios complejos en el sur de Chile. Reconocido por su capacidad de argumentación y su profundo rigor analítico, ha liderado con éxito defensas de alta complejidad patrimonial ante las cortes más exigentes del país. Su visión del derecho inspira el estándar ético y profesional de toda la firma.",
+      specialties: [
+        "Derecho civil.",
+        "Derecho sucesorio.",
+        "Gestión de conflictos."
+      ]
+    },
+    "soto-gidi": {
+      name: "Agustín Soto Gidi",
+      charge: "Abogado Asociado",
+      img: "assets/AgustinSotoGidi.jpg",
+      //description: "Agustín Soto Gidi destaca por su enfoque analítico y constitucional del derecho. Especializado en el diseño de defensas constitucionales y el diseño estratégico de litigios, aporta un valor diferencial al estudio en la detección y prevención temprana de brechas de cumplimiento legal corporativo (compliance). Su práctica se caracteriza por estructurar defensas preventivas rigurosas que blindan a las empresas frente a contingencias judiciales de diversa índole.",
+      specialties: [
+        "Derecho constitucional.",
+        "Derecho de sociedades.",
+        "Gestión de conflictos.",
+        "Procedimientos ante juzgados de policía local."
+      ]
+    },
+    "urcullu-arriagada": {
+      name: "Félix Urcullú Arriagada",
+      charge: "Abogado Asociado",
+      img: "assets/FelixUrculluArriagada.jpg",
+      // description: "Félix Urcullú Arriagada enfoca su práctica en el área de derecho civil y la conducción estratégica de procedimientos judiciales ordinarios. Su dedicación constante al estudio minucioso de la jurisprudencia y su rigurosidad en la preparación probatoria garantizan una representación judicial sólida. Participa activamente en la representación de personas naturales y corporaciones frente a reclamaciones complejas de índole contractual y extracontractual.",
+      specialties: [
+        "Juicios ejecutivos.",
+        "Derecho sucesorio.",
+        "Gestión de conflictos."
+      ]
+    },
+    "carter-holtehuer": {
+      name: "Nicolás Carter Holtehuer",
+      charge: "Abogado Asociado",
+      img: "assets/NicolasCarterHoltehuer.jpg",
+      //description: "Nicolás Carter Holtehuer lidera el área de derecho ambiental y regulatorio de la firma. Su práctica profesional se centra en la asesoría legal preventiva de proyectos de inversión, la representación ante el Sistema de Evaluación de Impacto Ambiental (SEIA) y la tramitación administrativa ante diversos organismos del Estado. Es clave en el aseguramiento del cumplimiento normativo ambiental y la defensa frente a sanciones del ámbito público.",
+      specialties: [
+        "Derecho ambiental.",
+        "Derecho administrativo.",
+        "Derecho regulatorio."
+      ]
+    }
+  };
+
+  document.addEventListener("DOMContentLoaded", () => {
+    // Si Lucide falla al cargar desde el CDN (red lenta, bloqueo, versión distinta),
+    // esto ya NO detiene el resto del script (menú móvil, scroll, modales, formulario).
+    try {
+      lucide.createIcons();
+    } catch (err) {
+      console.error("No se pudieron cargar los íconos Lucide:", err);
+    }
+
+
+    const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const mobileMenuIcon = document.getElementById("mobile-menu-icon");
+    const mobileLinks = document.querySelectorAll(".mobile-link");
+
+    const toggleMenu = () => {
+      const isExpanded = mobileMenuBtn.getAttribute("aria-expanded") === "true";
+      mobileMenuBtn.setAttribute("aria-expanded", !isExpanded);
+      mobileMenu.setAttribute("aria-hidden", isExpanded);
+      mobileMenu.classList.toggle("active");
+      if (mobileMenuIcon) {
+        mobileMenuIcon.classList.toggle("is-open", !isExpanded);
+      }
+    };
+
+    const closeMobileMenu = () => {
+      if (!mobileMenu.classList.contains("active")) return;
+      mobileMenu.classList.remove("active");
+      mobileMenuBtn.setAttribute("aria-expanded", "false");
+      mobileMenu.setAttribute("aria-hidden", "true");
+      if (mobileMenuIcon) mobileMenuIcon.classList.remove("is-open");
+    };
+
+    mobileMenuBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      toggleMenu();
+    });
+
+    // Cerrar el menú al tocar fuera de él (comportamiento esperado en móvil)
+    document.addEventListener("click", (e) => {
+      if (mobileMenu.classList.contains("active") &&
+        !mobileMenu.contains(e.target) &&
+        !mobileMenuBtn.contains(e.target)) {
+        closeMobileMenu();
+      }
+    });
+
+    mobileLinks.forEach(link => {
+      link.addEventListener("click", closeMobileMenu);
+    });
+
+
+    const header = document.getElementById("main-header");
+    const backToTopBtn = document.getElementById("back-to-top");
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 100) {
+        header.classList.add("scrolled");
+        backToTopBtn.classList.remove("opacity-0", "pointer-events-none", "translate-y-3");
+      } else {
+        header.classList.remove("scrolled");
+        backToTopBtn.classList.add("opacity-0", "pointer-events-none", "translate-y-3");
+      }
+    });
+
+    backToTopBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+
+    const lawyerModal = document.getElementById("lawyer-modal");
+    const closeModalBtn = document.getElementById("close-modal-btn");
+    const closeMobileModalBtn = document.getElementById("close-modal-mobile-btn");
+    const modalImg = document.getElementById("modal-lawyer-img");
+    const modalName = document.getElementById("modal-lawyer-name");
+    const modalCharge = document.getElementById("modal-lawyer-charge");
+    const modalDescription = document.getElementById("modal-lawyer-description");
+    const modalSpecialties = document.getElementById("modal-lawyer-specialties");
+    const modalContactLink = document.getElementById("modal-contact-link");
+
+    let previousActiveElement = null;
+
+    const openModal = (lawyerKey, triggerBtn) => {
+      const data = lawyersData[lawyerKey];
+      if (!data) return;
+
+      previousActiveElement = triggerBtn;
+
+      modalImg.src = data.img;
+      modalImg.alt = "Fotografía profesional de " + data.name;
+      modalName.textContent = data.name;
+      modalCharge.textContent = data.charge;
+      modalDescription.textContent = data.description;
+
+      modalSpecialties.innerHTML = "";
+      data.specialties.forEach(spec => {
+        const li = document.createElement("li");
+        li.className = "flex items-start gap-2.5";
+        li.innerHTML = `<span class="w-1.5 h-1.5 rounded-full bg-[#1978A8] mt-1.5 shrink-0" aria-hidden="true"></span> <span>${spec}</span>`;
+        modalSpecialties.appendChild(li);
+      });
+
+      lawyerModal.classList.add("active");
+      lawyerModal.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+
+
+      setTimeout(() => {
+        closeModalBtn.focus();
+      }, 50);
+    };
+
+    const closeModal = () => {
+      lawyerModal.classList.remove("active");
+      lawyerModal.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "auto";
+      if (previousActiveElement) {
+        previousActiveElement.focus();
+      }
+    };
+
+    document.querySelectorAll(".open-modal-trigger").forEach(trigger => {
+      trigger.addEventListener("click", (e) => {
+        const key = e.currentTarget.getAttribute("data-lawyer");
+        openModal(key, e.currentTarget);
+      });
+      trigger.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          const key = e.currentTarget.getAttribute("data-lawyer");
+          openModal(key, e.currentTarget);
+        }
+      });
+    });
+
+    closeModalBtn.addEventListener("click", closeModal);
+    closeMobileModalBtn.addEventListener("click", closeModal);
+    modalContactLink.addEventListener("click", closeModal);
+
+    lawyerModal.addEventListener("click", (e) => {
+      if (e.target === lawyerModal) closeModal();
+    });
+
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+        if (lawyerModal.classList.contains("active")) closeModal();
+        if (confirmationModal.classList.contains("active")) closeConfirmation();
+        if (privacyModal.classList.contains("active")) closePrivacyModal();
+      }
+    });
+
+
+    const contactForm = document.getElementById("legal-contact-form");
+    const confirmationModal = document.getElementById("confirmation-modal");
+    const closeConfirmationBtn = document.getElementById("close-confirmation-btn");
+
+    const openConfirmation = () => {
+      confirmationModal.classList.add("active");
+      confirmationModal.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+      setTimeout(() => {
+        closeConfirmationBtn.focus();
+      }, 50);
+    };
+
+    const closeConfirmation = () => {
+      confirmationModal.classList.remove("active");
+      confirmationModal.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "auto";
+    };
+
+
+    const inputs = {
+      full_name: {
+        el: document.getElementById("full_name"),
+        err: document.getElementById("error_full_name"),
+        validate: (val) => new RegExp("^[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{3,50}$").test(val)
+      },
+      // contact_email: {
+      //   el: document.getElementById("contact_email"),
+      //   err: document.getElementById("error_contact_email"),
+      //   validate: (val) => new RegExp("^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$").test(val)
+      // },
+      contact_phone: {
+        el: document.getElementById("contact_phone"),
+        err: document.getElementById("error_contact_phone"),
+        validate: (val) => new RegExp("^\\+?[0-9\\s]{9,15}$").test(val)
+      },
+      // practice_area: {
+      //   el: document.getElementById("practice_area"),
+      //   err: document.getElementById("error_practice_area"),
+      //   validate: (val) => val !== ""
+      // },
+      case_summary: {
+        el: document.getElementById("case_summary"),
+        err: document.getElementById("error_case_summary"),
+        validate: (val) => val.trim().length >= 10
+      }
+    };
+
+    const checkField = (field) => {
+      const value = field.el.value;
+      const isValid = field.validate(value);
+      if (isValid) {
+        field.el.classList.remove("border-red-500");
+        field.el.classList.add("border-[#1978A8]");
+        field.err.classList.add("hidden");
+      } else {
+        field.el.classList.remove("border-[#1978A8]");
+        field.el.classList.add("border-red-500");
+        field.err.classList.remove("hidden");
+      }
+      return isValid;
+    };
+
+    Object.keys(inputs).forEach(key => {
+      const field = inputs[key];
+      field.el.addEventListener("input", () => checkField(field));
+      field.el.addEventListener("blur", () => checkField(field));
+    });
+
+    contactForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      let formValid = true;
+      Object.keys(inputs).forEach(key => {
+        const isValid = checkField(inputs[key]);
+        if (!isValid) formValid = false;
+      });
+
+      if (formValid) {
+        openConfirmation();
+        contactForm.reset();
+
+
+        Object.keys(inputs).forEach(key => {
+          inputs[key].el.classList.remove("border-[#1978A8]");
+        });
+      }
+    });
+
+    closeConfirmationBtn.addEventListener("click", closeConfirmation);
+    confirmationModal.addEventListener("click", (e) => {
+      if (e.target === confirmationModal) closeConfirmation();
+    });
+
+    const privacyModal = document.getElementById("privacy-modal");
+    const closePrivacyModalBtn = document.getElementById("close-privacy-modal-btn");
+    const closePrivacyModalBtnBottom = document.getElementById("close-privacy-modal-btn-bottom");
+    let previousPrivacyActiveElement = null;
+
+    const openPrivacyModal = (triggerBtn) => {
+      previousPrivacyActiveElement = triggerBtn || null;
+      privacyModal.classList.add("active");
+      privacyModal.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+      setTimeout(() => {
+        closePrivacyModalBtn.focus();
+      }, 50);
+    };
+
+    const closePrivacyModal = () => {
+      privacyModal.classList.remove("active");
+      privacyModal.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "auto";
+      if (previousPrivacyActiveElement) {
+        previousPrivacyActiveElement.focus();
+      }
+    };
+
+    document.querySelectorAll(".open-privacy-modal-trigger").forEach((trigger) => {
+      trigger.addEventListener("click", (e) => openPrivacyModal(e.currentTarget));
+    });
+    closePrivacyModalBtn.addEventListener("click", closePrivacyModal);
+    closePrivacyModalBtnBottom.addEventListener("click", closePrivacyModal);
+    privacyModal.addEventListener("click", (e) => {
+      if (e.target === privacyModal) closePrivacyModal();
+    });
+  });
+
+</script>

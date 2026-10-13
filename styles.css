@@ -1,0 +1,148 @@
+/* Variables globales — paleta y tipografía estilo RTA (rta.cl) */
+:root {
+  --color-primary: #11034b;
+  --color-secondary: #777b79;
+  --color-accent: #ff6b00;
+  --color-bg-light: #f4f4f4;
+  --color-white: #FFFFFF;
+  --font-title: 'Montserrat', sans-serif;
+  --font-body: 'Montserrat', 'Inter', sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+}
+
+h1, h2, h3, h4, .font-serif {
+  font-family: var(--font-title);
+}
+
+/* Accessible focus states */
+a:focus-visible, button:focus-visible, select:focus-visible, input:focus-visible, textarea:focus-visible {
+  outline: 2px solid var(--color-accent) !important;
+  outline-offset: 3px !important;
+}
+
+/* Header transition effects */
+#main-header.scrolled {
+  top: 0 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  border-radius: 0 !important;
+  background-color: rgba(17, 3, 75, 0.98) !important;
+  border-bottom: 1px solid rgba(255, 107, 0, 0.3) !important;
+}
+
+/* Hamburger icon (no depende de librerías externas: siempre se ve en móvil) */
+.hamburger-icon {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 24px;
+  height: 24px;
+}
+
+.hamburger-icon span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: currentColor;
+  border-radius: 2px;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.2s ease;
+}
+
+.hamburger-icon.is-open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger-icon.is-open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-icon.is-open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Premium Curtain Slide transition for Mobile Menu */
+.mobile-drawer {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease-in-out;
+}
+
+.mobile-drawer.active {
+  max-height: 500px;
+  opacity: 1;
+}
+
+/* Custom fade animation for Hero elements */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Elegant radial subtle background mesh */
+.bg-radial-gradient {
+  background: radial-gradient(circle, rgba(255, 107, 0, 0.12) 0%, transparent 70%);
+}
+
+/* Hover effects for Practice Cards: premium thin gold border and smooth lift */
+.practice-card {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease;
+}
+
+.practice-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--color-accent) !important;
+  box-shadow: 0 20px 40px -15px rgba(17, 3, 75, 0.12), 0 0 15px rgba(255, 107, 0, 0.15);
+}
+
+/* Ultra-fluid premium animations for Modals (fade & vertical movement) */
+#lawyer-modal, #confirmation-modal {
+  transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#lawyer-modal > div, #confirmation-modal > div {
+  transform: translateY(25px) scale(0.97);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#lawyer-modal.active, #confirmation-modal.active {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+#lawyer-modal.active > div, #confirmation-modal.active > div {
+  transform: translateY(0) scale(1) !important;
+}
+
+/* Customized HTML scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #11034b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ff6b00;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #cc5500;
+}
