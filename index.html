@@ -263,7 +263,7 @@
             </a>
 
             <!-- Desktop Navigation Menu -->
-            <nav class="hidden lg:flex items-center space-x-8 text-xs font-medium tracking-widest text-[#f4f4f4]/90 uppercase">
+            <nav class="hidden lg:flex items-start space-x-8 text-xs font-medium tracking-widest text-[#f4f4f4]/90 uppercase">
                 <a href="#quienes-somos" class="nav-link hover:text-[#FFFFFF] transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-[#CCCCCC] hover:after:w-full after:transition-all after:duration-300 focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#166D99] text-sombra">
                     Nuestro estudio
                 </a>
@@ -338,12 +338,13 @@
             Valdivia, Lanco, Los lagos, Paillaco, San José (Mariquina) y Panguipulli.
         </span>
     </div>-->
-                <div class="md:hidden"><br /><br /><br /><br /></div>
+                <div class="md:hidden"><br /><br /><br /><br /><br /></div>
+                <!--<div class="md:hidden"><br /><br /><br /><br /></div>-->
                 <h1>
                     <label class="text-3xl sm:text-2xl md:text-5xl font-light tracking-tight text-white mb-6 leading-[1.15]">URCULLÚ</label>
                     <label class="text-2xl sm:text-1xl md:text-2xl font-light tracking-tight text-white mb-6 leading-[1.15]">&nbsp;&nbsp;&nbsp;&amp;&nbsp;&nbsp;&nbsp;</label>
                     <label class="text-3xl sm:text-2xl md:text-5xl font-light tracking-tight text-white mb-6 leading-[1.15]">ASOCIADOS</label>
-                    <br class="hidden md:block"><br class="hidden md:block"><br class="hidden md:block">
+                    <br class="hidden md:block"><br class="hidden md:block">
                     <!--<span class="text-transparent bg-clip-text bg-gradient-to-r from-[#f4f4f4] via-[#166D99] to-[#f4f4f4]">-->
                     <span class="text-2xl sm:text-2xl md:text-3xl font-light tracking-tight text-white mb-6 leading-[1.15]">
                         ABOGADOS
@@ -353,13 +354,12 @@
                 <!--<p class="text-[1rem] sm:text-[3rem] md:text-[1.4rem] text-white/85 max-w-3xl mx-auto mb-10 leading-relaxed font-light">
         Somos un estudio jurídico que ofrece asesoría legal orientada a prevenir conflictos. Nuestro equipo se conforma de profesionales rigurosos y con profundo sentido ético, que entienden el impacto de su trabajo en tu vida y patrimonio
     </p>-->
-
-                <div class="md:hidden"><br /><br /><br /><br /><br /></div>
-                <div class="inline-flex md:hidden items-center gap-2 border border-[#166D99] bg-[#166D99] px-4 py-2 rounded-full mb-[2.6rem] backdrop-blur-sm animate-fade-in">
-                    <span class="text-xs tracking-[0.15em] text-white font-semibold">
-                        Valdivia, Lanco, Los lagos, Paillaco, San José de la Mariquina y Panguipulli.
-                    </span>
-                </div>
+                <!--<div class="md:hidden"><br /><br /><br /><br /><br /></div>-->
+                <!--<div class="inline-flex md:hidden items-center gap-2 border border-[#166D99] bg-[#166D99] px-4 py-2 rounded-full mb-[2.6rem] backdrop-blur-sm animate-fade-in">
+        <span class="text-xs tracking-[0.15em] text-white font-semibold">
+            Valdivia, Lanco, Los lagos, Paillaco, San José de la Mariquina y Panguipulli.
+        </span>
+    </div>-->
             </div>
 
         </section>
@@ -864,7 +864,7 @@
                     </div>
 
                     <div class="space-y-3">
-                        <span class="text-[9px] uppercase tracking-[0.2em] text-[#166D99] font-bold block">Áreas de práctica</span>
+                        <span id="modal-lawyer-specialties-title" class="text-[10px] uppercase tracking-[0.2em] text-[#166D99] font-bold block">Áreas de práctica</span>
                         <ul id="modal-lawyer-specialties"
                             class="space-y-2 text-[0.9rem] text-[#001429] leading-relaxed font-light">
                             <!-- Dynamically populated -->
@@ -1073,8 +1073,9 @@
             name: "Félix Urcullú Molina",
             charge: "Fundador",
             img: "assets/UrculluMolina.jpg",
-            // description: "Félix Urcullú Steffen es el pilar estratégico y socio fundador del estudio. Cuenta con una trayectoria de primer nivel en el derecho civil y en la resolución de litigios complejos en el sur de Chile. Reconocido por su capacidad de argumentación y su profundo rigor analítico, ha liderado con éxito defensas de alta complejidad patrimonial ante las cortes más exigentes del país. Su visión del derecho inspira el estándar ético y profesional de toda la firma.",
-            specialties: ["Félix Urcullú Molina fue una figura fundacional de la Facultad de Ciencias Jurídicas y Sociales de la Universidad Austral de Chile: como primer decano (1989–1991), ayudó a estructurar la nueva unidad académica y a consolidar la Escuela de Derecho en Valdivia.<br /><br />Urcullú también mantuvo una relación duradera con la Universidad Austral más allá de su decanía: fue ex secretario general de la UACh y luego integró su Directorio, llegando a ejercer como vicepresidente."
+            // description: "Félix Urcullú Molina es el pilar estratégico y socio fundador del estudio. Cuenta con una trayectoria de primer nivel en el derecho civil y en la resolución de litigios complejos en el sur de Chile. Reconocido por su capacidad de argumentación y su profundo rigor analítico, ha liderado con éxito defensas de alta complejidad patrimonial ante las cortes más exigentes del país. Su visión del derecho inspira el estándar ético y profesional de toda la firma.",
+            specialtiesTitle: "Carrera",
+            specialties: ["Félix Urcullú Molina fue una figura fundacional de la Facultad de Ciencias Jurídicas y Sociales de la Universidad Austral de Chile: como primer decano (1989–1991), ayudó a estructurar la nueva unidad académica y a consolidar la Escuela de Derecho en Valdivia.<br /><br />También mantuvo una relación duradera con la Universidad Austral más allá de su decanía: fue ex secretario general de la UACh y luego integró su Directorio, llegando a ejercer como vicepresidente."
             ]
         },
         "urcullu-steffen": {
@@ -1082,6 +1083,7 @@
           charge: "Socio Principal",
           img: "assets/FelixUrculluSteffen.jpg",
           // description: "Félix Urcullú Steffen es el pilar estratégico y socio fundador del estudio. Cuenta con una trayectoria de primer nivel en el derecho civil y en la resolución de litigios complejos en el sur de Chile. Reconocido por su capacidad de argumentación y su profundo rigor analítico, ha liderado con éxito defensas de alta complejidad patrimonial ante las cortes más exigentes del país. Su visión del derecho inspira el estándar ético y profesional de toda la firma.",
+          specialtiesTitle: "Especialidades",
           specialties: [
             "Derecho civil.",
             "Derecho sucesorio.",
@@ -1093,6 +1095,7 @@
           charge: "Abogado Asociado",
           img: "assets/AgustinSotoGidi.jpg",
           //description: "Agustín Soto Gidi destaca por su enfoque analítico y constitucional del derecho. Especializado en el diseño de defensas constitucionales y el diseño estratégico de litigios, aporta un valor diferencial al estudio en la detección y prevención temprana de brechas de cumplimiento legal corporativo (compliance). Su práctica se caracteriza por estructurar defensas preventivas rigurosas que blindan a las empresas frente a contingencias judiciales de diversa índole.",
+          specialtiesTitle: "Especialidades",
           specialties: [
             "Derecho constitucional.",
             "Derecho de sociedades.",
@@ -1105,6 +1108,7 @@
           charge: "Abogado Asociado",
           img: "assets/FelixUrculluArriagada.jpg",
           // description: "Félix Urcullú Arriagada enfoca su práctica en el área de derecho civil y la conducción estratégica de procedimientos judiciales ordinarios. Su dedicación constante al estudio minucioso de la jurisprudencia y su rigurosidad en la preparación probatoria garantizan una representación judicial sólida. Participa activamente en la representación de personas naturales y corporaciones frente a reclamaciones complejas de índole contractual y extracontractual.",
+          specialtiesTitle: "Especialidades",
           specialties: [
             "Juicios ejecutivos.",
             "Derecho sucesorio.",
@@ -1116,6 +1120,7 @@
           charge: "Abogado Asociado",
           img: "assets/NicolasCarterHoltehuer.jpg",
           //description: "Nicolás Carter Holtehuer lidera el área de derecho ambiental y regulatorio de la firma. Su práctica profesional se centra en la asesoría legal preventiva de proyectos de inversión, la representación ante el Sistema de Evaluación de Impacto Ambiental (SEIA) y la tramitación administrativa ante diversos organismos del Estado. Es clave en el aseguramiento del cumplimiento normativo ambiental y la defensa frente a sanciones del ámbito público.",
+          specialtiesTitle: "Especialidades",
           specialties: [
             "Derecho ambiental.",
             "Derecho administrativo.",
@@ -1125,6 +1130,7 @@
       "derecho-penal": {
           name: "Derecho Penal",
           img: "assets/Derecho Penal.jpg",
+          specialtiesTitle: "Especialidades",
           specialties: [
               "Nuestro estudio presta asesoría legal personalizada a personas que han sido acusadas de cometer un delito o han sido víctimas de cometer un delito.<br /><br />Representamos los intereses de nuestros clientes a través de un riguroso análisis de las circunstancias para determinar la mejor estrategia según el caso."
           ]
@@ -1132,6 +1138,7 @@
       "derecho-constitucional": {
           name: "Derecho Constitucional",
           img: "assets/Derecho Constitucional.jpg",
+          specialtiesTitle: "Especialidades",
           specialties: [
               "Ante vulneraciones de garantías constitucionales por parte de terceros, empresas o instituciones públicas, defendemos los derechos de nuestros clientes mediante la interposición de recursos de protección y otros mecanismos que establece la Constitución Política de la República."
           ]
@@ -1139,6 +1146,7 @@
       "derecho-laboral": {
           name: "Derecho Laboral",
           img: "assets/Derecho Laboral.jpg",
+          specialtiesTitle: "Especialidades",
           specialties: [
               "Nuestro estudio asesora a clientes en una gran variedad de materias que afectan a los empleadores y a los trabajadores.<br /><br />Prestamos asistencia en la elaboración de contratos de trabajo y finiquitos; representamos a nuestros clientes en juicios ante los tribunales laborales y la Corte de Apelaciones; y tramitamos asuntos ante la Dirección del Trabajo."
           ]
@@ -1146,6 +1154,7 @@
       "derecho-civil": {
           name: "Derecho Civil",
           img: "assets/Derecho Civil.jpg",
+          specialtiesTitle: "Especialidades",
           specialties: [
               "Entendemos la relevancia de resguardar el patrimonio de nuestros clientes. Los representamos en toda clase de juicios civiles con el objeto de defender sus derechos y nos aseguramos de proteger sus intereses a través de la revisión y redacción de contratos que se ajusten a las necesidades de sus negocios."
           ]
@@ -1225,6 +1234,7 @@
     const modalImg = document.getElementById("modal-lawyer-img");
     const modalName = document.getElementById("modal-lawyer-name");
     const modalCharge = document.getElementById("modal-lawyer-charge");
+    const modalSpecialtiesTitle = document.getElementById("modal-lawyer-specialties-title");
     const modalDescription = document.getElementById("modal-lawyer-description");
     const modalSpecialties = document.getElementById("modal-lawyer-specialties");
     const modalContactLink = document.getElementById("modal-contact-link");
@@ -1237,11 +1247,13 @@
 
       previousActiveElement = triggerBtn;
 
-      modalImg.src = data.img;
-      modalImg.alt = "Fotografía profesional de " + data.name;
-      modalName.textContent = data.name;
-      modalCharge.textContent = data.charge;
-      modalDescription.textContent = data.description;
+        modalImg.src = data.img;
+        modalImg.alt = "Fotografía profesional de " + data.name;
+        modalName.textContent = data.name;
+        modalCharge.textContent = data.charge;
+        modalSpecialtiesTitle.textContent = data.specialtiesTitle;
+        modalDescription.textContent = data.description;
+
 
       modalSpecialties.innerHTML = "";
       data.specialties.forEach(spec => {
