@@ -208,23 +208,19 @@
                     transform: translateY(0) scale(1) !important;
                 }
 
-        /* Customized HTML scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
+        /* Scrollbar oculta (el scroll sigue funcionando con rueda, teclado y táctil) */
+        html, body, * {
+            -ms-overflow-style: none;      /* IE y Edge antiguo */
+            scrollbar-width: none;         /* Firefox */
         }
 
-        ::-webkit-scrollbar-track {
-            background: #11034b;
+        html::-webkit-scrollbar,
+        body::-webkit-scrollbar,
+        *::-webkit-scrollbar {
+            display: none;                 /* Chrome, Safari, Edge, Opera */
+            width: 0;
+            height: 0;
         }
-
-        ::-webkit-scrollbar-thumb {
-            background: #166D99;
-            border-radius: 4px;
-        }
-
-            ::-webkit-scrollbar-thumb:hover {
-                background: #FFFF00;
-            }
 
         /* Mapas embebidos */
         iframe {
@@ -248,11 +244,11 @@
 <body class="bg-[#fdfbd4] text-[#001429] overflow-x-hidden selection:bg-[#166D99] selection:text-[#666666]">
 
     <header id="main-header" class="fixed top-0 md:top-8 left-1/2 -translate-x-1/2 w-full md:w-[92%] max-w-7xl z-50 transition-all duration-300">
-        <div class="bg-[#166D99]/95 backdrop-blur-md md:rounded-xl px-6 py-4 md:py-5 flex justify-between items-center shadow-2xl border">
+        <div class="bg-[#166D99]/95 backdrop-blur-md md:rounded-xl px-6 py-4 md:py-5 flex justify-between items-center shadow-2xl">
 
             <!-- Monogram Logo -->
             <a href="#" class="flex items-center space-x-3 group focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#166D99]" aria-label="Ir al inicio de Abogados Urcullú y Asociados">
-                <span class="sm:block text-2xl md:text-3xl font-bold tracking-tight text-[#ffffff] transition-transform duration-300 group-hover:scale-105 text-sombra">
+                <span class="sm:block text-2xl md:text-3xl tracking-tight text-[#ffffff] transition-transform duration-300 group-hover:scale-105 text-sombra">
                     U&amp;A
                 </span>
                 <!--hidden-->
