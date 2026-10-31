@@ -97,6 +97,14 @@
             border-bottom: 1px solid rgba(255, 107, 0, 0.3) !important;
         }
 
+        /* El div interno es el que tiene las esquinas redondeadas: se quitan al anclarse arriba */
+        #main-header > div {
+            transition: border-radius 0.3s ease;
+        }
+        #main-header.scrolled > div {
+            border-radius: 0 !important;
+        }
+
         /* Hamburger icon (no depende de librerías externas: siempre se ve en móvil) */
         .hamburger-icon {
             display: inline-flex;
@@ -243,7 +251,7 @@
 
 <body class="bg-[#166D99] text-[#001429] overflow-x-hidden selection:bg-[#166D99] selection:text-[#666666]">
 
-    <header id="main-header" class="fixed top-0 md:top-8 left-1/2 -translate-x-1/2 w-full md:w-[92%] max-w-7xl z-50 transition-all duration-300">
+    <header id="main-header" class="fixed top-0 md:top-8 left-1/2 -translate-x-1/2 w-full md:w-[92%] max-w-7xl z-50 transition-all duration-150">
 
         <!--<div class="bg-[#166D99]/95 backdrop-blur-md md:rounded-xl px-6 py-4 md:py-5 flex justify-between items-center shadow-2xl">-->
         <div class="bg-[#166D99]/95 backdrop-blur-md md:rounded-xl px-6 py-4 md:py-5 flex items-center shadow-2xl"> <!--justify-between-->
@@ -544,7 +552,6 @@
 
         </section>
 
-
         <!-- NUESTRO EQUIPO -->
         <section id="nuestros-abogados" class="pt-[5.4rem] pb-24 md:pt-[7.2rem] md:pb-32 bg-[#f4f4f4]">
             <div class="max-w-7xl mx-auto px-6 sm:px-8">
@@ -787,7 +794,7 @@
                             <div class="w-full h-[3px] bg-[#BBBBBB]" aria-hidden="true"></div>
                             <span class="block h-4"></span>
                             <div class="space-y-2.5">
-                                <a href="https://wa.me/56997780821?text=Hola,%20deseo%20agendar%20una%20consulta%20con%20Abogados%20Urcullú%20y%20asociados."
+                                <a href="https://wa.me/56977573704?text=Hola,%20deseo%20agendar%20una%20consulta%20con%20Abogados%20Urcullú%20y%20asociados."
                                    target="_blank"
                                    class="flex justify-between items-center px-4 py-2.5 bg-[#f4f4f4] hover:bg-emerald-50 border border-transparent hover:border-emerald-200 text-xs font-medium rounded-lg transition-all text-[#001429] focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-emerald-500"
                                    aria-label="Escribir por WhatsApp a la línea principal de Félix Urcullú Steffen">
