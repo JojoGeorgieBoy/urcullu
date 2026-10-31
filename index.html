@@ -84,6 +84,19 @@
             .hero-title label.hero-amp { font-size: min(6vw, 2rem); }
         }
 
+        /* WhatsApp directos (móvil): cada número en una sola línea, con fuente más angosta */
+        @media (max-width: 767px) {
+            #contacto .wa-link { padding-left: 0.75rem; padding-right: 0.75rem; }
+            #contacto .wa-link img { height: 1.1rem; margin-right: 0.5rem; flex-shrink: 0; }
+            #contacto .wa-number {
+                white-space: nowrap;
+                flex-shrink: 0;
+                font-family: 'Roboto Condensed', 'Arial Narrow', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-size: clamp(0.9rem, 4.6vw, 1.125rem);
+                letter-spacing: -0.01em;
+            }
+        }
+
         /* Accessible focus states */
         a:focus-visible,
         button:focus-visible,
@@ -811,20 +824,20 @@
                             <div class="space-y-2.5">
                                 <a href="https://wa.me/56997780821?text=Hola,%20deseo%20agendar%20una%20consulta%20con%20Abogados%20Urcullú%20y%20asociados."
                                    target="_blank"
-                                   class="flex justify-between items-center px-4 py-2.5 bg-[#f4f4f4] hover:bg-emerald-50 border border-transparent hover:border-emerald-200 text-xs font-medium rounded-lg transition-all text-[#001429] focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-emerald-500"
+                                   class="wa-link flex justify-between items-center px-4 py-2.5 bg-[#f4f4f4] hover:bg-emerald-50 border border-transparent hover:border-emerald-200 text-xs font-medium rounded-lg transition-all text-[#001429] focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-emerald-500"
                                    aria-label="Escribir por WhatsApp a la línea principal de Félix Urcullú Steffen">
                                     <img src="assets/WhatsApp.png" alt="WhatsApp" class="h-5 w-auto mr-2 object-contain" style="image-rendering: -webkit-optimize-contrast;" width="258" height="60">
-                                    <span class="text-emerald-500 text-lg font-bold flex items-center gap-1">
+                                    <span class="wa-number text-emerald-500 text-lg font-bold flex items-center gap-1">
                                         +56 9 9778 0821 <!--<i data-lucide="message-square" class="w-6.5 h-3.5" aria-hidden="true"></i>-->
                                     </span>
                                 </a>
 
                                 <a href="https://wa.me/56952134108?text=Hola,%20deseo%20agendar%20una%20consulta%20con%20Abogados%20Urcullú%20y%20asociados."
                                    target="_blank"
-                                   class="flex justify-between items-center px-4 py-2.5 bg-[#f4f4f4] hover:bg-emerald-50 border border-transparent hover:border-emerald-200 text-xs font-medium rounded-lg transition-all text-[#001429] focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-emerald-500"
+                                   class="wa-link flex justify-between items-center px-4 py-2.5 bg-[#f4f4f4] hover:bg-emerald-50 border border-transparent hover:border-emerald-200 text-xs font-medium rounded-lg transition-all text-[#001429] focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-emerald-500"
                                    aria-label="Escribir por WhatsApp a la línea civil de Félix Urcullú Arriagada">
                                     <img src="assets/WhatsApp.png" alt="WhatsApp" class="h-5 w-auto mr-2 object-contain" style="image-rendering: -webkit-optimize-contrast;" width="258" height="60">
-                                    <span class="text-emerald-500 text-lg font-bold flex items-center gap-1">
+                                    <span class="wa-number text-emerald-500 text-lg font-bold flex items-center gap-1">
                                         +56 9 5213 4108 <!--<i data-lucide="message-square" class="w-6.5 h-3.5" aria-hidden="true"></i>-->
                                     </span>
                                 </a>
