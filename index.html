@@ -1043,6 +1043,12 @@
                 aria-label="Volver al inicio de la página">
             <i data-lucide="arrow-up" class="w-4 h-4" aria-hidden="true"></i>
         </button>
+        <!-- Next section -->
+        <button id="next-section"
+                class="w-11 h-11 bg-white hover:bg-[#666666] text-[#666666] hover:text-white rounded-full flex items-center justify-center border border-gray-200 hover:border-[#666666] shadow-lg transition-all duration-300 opacity-0 pointer-events-none translate-y-3 focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#666666]"
+                aria-label="Ir a la siguiente sección">
+            <i data-lucide="arrow-down" class="w-4 h-4" aria-hidden="true"></i>
+        </button>
         <!-- Direct WhatsApp Corporate Floating Button -->
         <a href="https://wa.me/56997780821?text=Hola,%20deseo%20agendar%20una%20consulta%20con%20Abogados%20Urcullú%20y%20Asociados."
            target="_blank"
@@ -1312,6 +1318,35 @@
 
     backToTopBtn.addEventListener("click", () => {
       window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    // Botón "siguiente sección": avanza una sección por clic (secciones de <main> + footer)
+    const nextSectionBtn = document.getElementById("next-section");
+    const pageFooter = document.querySelector("footer");
+    const sectionTargets = [...document.querySelectorAll("main > section"), pageFooter];
+
+    // Posición real de cada bloque, descontando su scroll-margin-top (mismo criterio que los anclas del menú)
+    const targetTop = (el) => el.getBoundingClientRect().top - parseFloat(getComputedStyle(el).scrollMarginTop || 0);
+
+    const getNextTarget = () => sectionTargets.find(el => targetTop(el) > 10);
+
+    const updateNextSectionBtn = () => {
+      const footerVisible = pageFooter.getBoundingClientRect().top < window.innerHeight * 0.5;
+      const atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
+      if (footerVisible || atBottom) {
+        nextSectionBtn.classList.add("opacity-0", "pointer-events-none", "translate-y-3");
+      } else {
+        nextSectionBtn.classList.remove("opacity-0", "pointer-events-none", "translate-y-3");
+      }
+    };
+
+    window.addEventListener("scroll", updateNextSectionBtn, { passive: true });
+    window.addEventListener("resize", updateNextSectionBtn);
+    updateNextSectionBtn();
+
+    nextSectionBtn.addEventListener("click", () => {
+      const next = getNextTarget();
+      if (next) next.scrollIntoView({ behavior: "smooth", block: "start" });
     });
 
     const lawyerModal = document.getElementById("lawyer-modal");
