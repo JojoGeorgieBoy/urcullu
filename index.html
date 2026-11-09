@@ -2,21 +2,67 @@
 <html lang="es" class="scroll-smooth">
 
 <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="description"
-          content="Abogados Urcullú y Asociados. Tradición jurídica, rigor estratégico y defensa legal de excelencia en Valdivia, Lanco y la Región de Los Ríos. Asesoría civil, inmobiliaria y litigios complejos."/>
-    <meta name="keywords"
-          content="Abogados Valdivia, Estudio Jurídico Los Ríos, Contratos, Bienes Raíces, Sucesiones, Posesiones Efectivas, Litigios Complejos, Félix Urcullú Steffen, Abogado Lanco"/>
-    <meta name="author" content="Abogados Urcullú y Asociados"/>
-    <meta property="og:title" content="Abogados Urcullú y Asociados | Excelencia y Rigor Estratégico"/>
-    <meta property="og:description" content="Defensa rigurosa y asesoría legal de excelencia en el sur de Chile. Liderado por Félix Urcullú Steffen."/>
-    <meta property="og:type" content="website"/>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Abogados Urcullú y Asociados. Tradición jurídica, rigor estratégico y defensa legal de excelencia en Valdivia, Lanco y la Región de Los Ríos. Asesoría civil, inmobiliaria y litigios complejos." />
+    <meta name="keywords" content="Abogados Valdivia, Estudio Jurídico Los Ríos, Contratos, Bienes Raíces, Sucesiones, Posesiones Efectivas, Litigios Complejos, Félix Urcullú Steffen, Abogado Lanco" />
+    <meta name="author" content="Abogados Urcullú y Asociados" />
+    <meta property="og:title" content="Abogados Urcullú y Asociados | Excelencia y Rigor Estratégico" />
+    <meta property="og:description" content="Defensa rigurosa y asesoría legal de excelencia en el sur de Chile. Liderado por Félix Urcullú Steffen." />
+    <meta property="og:type" content="website" />
     <title>Abogados Urcullú y Asociados</title>
+
+    <style type="text/css">
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #166D99;
+            background-image: url('U&A_big.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .logo {
+            max-width: 100%;
+            max-height: 70vh;
+            width: auto;
+            height: auto;
+            display: block;
+        }
+
+        #historia, #quienes-somos, #servicios, #nuestros-abogados, #contacto {
+            max-height: 100vh;
+            min-height: 100vh;
+        }
+
+        #footer{
+            max-height: 90vh;
+            min-height: 90vh;
+        }
+
+        /* En celulares */
+        @media (max-width: 600px) {
+            .logo {
+                max-width: 90%;
+                max-height: 60vh;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body class="logo bg-[#166D99] text-[#001429] overflow-x-hidden selection:bg-[#166D99] selection:text-[#666666]">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <!-- Tailwind CSS CDN -->
     <!--<script src="tailwindcdn.js"></script>-->
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- Lucide Icons -->
@@ -26,74 +72,90 @@
     <style type="text/css">
         /* cyrillic-ext */
         @font-face {
-          font-family: 'Roboto Condensed';
-          font-style: normal;
-          font-weight: 300;
-          font-display: swap;
-          src: url(https://fonts.gstatic.com/s/robotocondensed/v31/ieVo2ZhZI2eCN5jzbjEETS9weq8-_d6T_POl0fRJeyXsosBD5XxxKA.woff2) format('woff2');
-          unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+            font-family: 'Roboto Condensed';
+            font-style: normal;
+            font-weight: 300;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/robotocondensed/v31/ieVo2ZhZI2eCN5jzbjEETS9weq8-_d6T_POl0fRJeyXsosBD5XxxKA.woff2) format('woff2');
+            unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
         }
         /* cyrillic */
         @font-face {
-          font-family: 'Roboto Condensed';
-          font-style: normal;
-          font-weight: 300;
-          font-display: swap;
-          src: url(https://fonts.gstatic.com/s/robotocondensed/v31/ieVo2ZhZI2eCN5jzbjEETS9weq8-_d6T_POl0fRJeyXsosBK5XxxKA.woff2) format('woff2');
-          unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+            font-family: 'Roboto Condensed';
+            font-style: normal;
+            font-weight: 300;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/robotocondensed/v31/ieVo2ZhZI2eCN5jzbjEETS9weq8-_d6T_POl0fRJeyXsosBK5XxxKA.woff2) format('woff2');
+            unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
         }
         /* greek-ext */
         @font-face {
-          font-family: 'Roboto Condensed';
-          font-style: normal;
-          font-weight: 300;
-          font-display: swap;
-          src: url(https://fonts.gstatic.com/s/robotocondensed/v31/ieVo2ZhZI2eCN5jzbjEETS9weq8-_d6T_POl0fRJeyXsosBC5XxxKA.woff2) format('woff2');
-          unicode-range: U+1F00-1FFF;
+            font-family: 'Roboto Condensed';
+            font-style: normal;
+            font-weight: 300;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/robotocondensed/v31/ieVo2ZhZI2eCN5jzbjEETS9weq8-_d6T_POl0fRJeyXsosBC5XxxKA.woff2) format('woff2');
+            unicode-range: U+1F00-1FFF;
         }
         /* greek */
         @font-face {
-          font-family: 'Roboto Condensed';
-          font-style: normal;
-          font-weight: 300;
-          font-display: swap;
-          src: url(https://fonts.gstatic.com/s/robotocondensed/v31/ieVo2ZhZI2eCN5jzbjEETS9weq8-_d6T_POl0fRJeyXsosBN5XxxKA.woff2) format('woff2');
-          unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+            font-family: 'Roboto Condensed';
+            font-style: normal;
+            font-weight: 300;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/robotocondensed/v31/ieVo2ZhZI2eCN5jzbjEETS9weq8-_d6T_POl0fRJeyXsosBN5XxxKA.woff2) format('woff2');
+            unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
         }
         /* vietnamese */
         @font-face {
-          font-family: 'Roboto Condensed';
-          font-style: normal;
-          font-weight: 300;
-          font-display: swap;
-          src: url(https://fonts.gstatic.com/s/robotocondensed/v31/ieVo2ZhZI2eCN5jzbjEETS9weq8-_d6T_POl0fRJeyXsosBB5XxxKA.woff2) format('woff2');
-          unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+            font-family: 'Roboto Condensed';
+            font-style: normal;
+            font-weight: 300;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/robotocondensed/v31/ieVo2ZhZI2eCN5jzbjEETS9weq8-_d6T_POl0fRJeyXsosBB5XxxKA.woff2) format('woff2');
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
         }
         /* latin-ext */
         @font-face {
-          font-family: 'Roboto Condensed';
-          font-style: normal;
-          font-weight: 300;
-          font-display: swap;
-          src: url(https://fonts.gstatic.com/s/robotocondensed/v31/ieVo2ZhZI2eCN5jzbjEETS9weq8-_d6T_POl0fRJeyXsosBA5XxxKA.woff2) format('woff2');
-          unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+            font-family: 'Roboto Condensed';
+            font-style: normal;
+            font-weight: 300;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/robotocondensed/v31/ieVo2ZhZI2eCN5jzbjEETS9weq8-_d6T_POl0fRJeyXsosBA5XxxKA.woff2) format('woff2');
+            unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
         }
         /* latin */
         @font-face {
-          font-family: 'Roboto Condensed';
-          font-style: normal;
-          font-weight: 300;
-          font-display: swap;
-          src: url(https://fonts.gstatic.com/s/robotocondensed/v31/ieVo2ZhZI2eCN5jzbjEETS9weq8-_d6T_POl0fRJeyXsosBO5Xw.woff2) format('woff2');
-          unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+            font-family: 'Roboto Condensed';
+            font-style: normal;
+            font-weight: 300;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/robotocondensed/v31/ieVo2ZhZI2eCN5jzbjEETS9weq8-_d6T_POl0fRJeyXsosBO5Xw.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        /* Variables globales — paleta y tipografía estilo RTA (rta.cl) */
+        :root {
+            --color-primary: #11034b;
+            --color-secondary: #001429;
+            --color-accent: #166D99;
+            --color-bg-light: #e9e9e9;
+            --color-white: #FFFFFF;
+        }
+
+        /* Tipografía única: Arial en todo el sitio */
+        html, body, *, *::before, *::after, input, textarea, select, button {
+            /*font-family: Arial, Helvetica, sans-serif !important;*/
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /*font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;*/
         }
 
         .borde {
-            border-bottom-style:solid; 
-            border-width: 2px; 
-            border-top-color: #eeeeee; 
-            border-left-color: #ffffff; 
-            border-top-width:1px
+            border-bottom-style: solid;
+            border-width: 2px;
+            border-top-color: #eeeeee;
+            border-left-color: #ffffff;
+            border-top-width: 1px
         }
 
         .input-inset {
@@ -118,37 +180,39 @@
             text-shadow: 1px 1px 1px rgba(0, 0, 0, 4);
         }
 
-        /* Variables globales — paleta y tipografía estilo RTA (rta.cl) */
-        :root {
-            --color-primary: #11034b;
-            --color-secondary: #001429;
-            --color-accent: #166D99;
-            --color-bg-light: #e9e9e9;
-            --color-white: #FFFFFF;
-        }
-
-        /* Tipografía única: Arial en todo el sitio */
-        html, body, *, *::before, *::after, input, textarea, select, button {
-            /*font-family: Arial, Helvetica, sans-serif !important;*/
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            /*font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;*/
-        }
-
         /* HERO móvil: "URCULLÚ & ASOCIADOS" siempre en una sola línea, con fuente más angosta */
         @media (max-width: 767px) {
-            .hero-title { white-space: nowrap; }
-            .hero-title label,
-            .hero-title span {
-                font-family: 'Roboto Condensed', 'Arial Narrow', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            .hero-title {
+                white-space: nowrap;
             }
-            .hero-title label { font-size: min(8vw, 2.6rem); }
-            .hero-title label.hero-amp { font-size: min(6vw, 2rem); }
+
+                .hero-title label,
+                .hero-title span {
+                    font-family: 'Roboto Condensed', 'Arial Narrow', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                }
+
+                .hero-title label {
+                    font-size: min(8vw, 2.6rem);
+                }
+
+                    .hero-title label.hero-amp {
+                        font-size: min(6vw, 2rem);
+                    }
         }
 
         /* WhatsApp directos (móvil): cada número en una sola línea, con fuente más angosta */
         @media (max-width: 767px) {
-            #contacto .wa-link { padding-left: 0.75rem; padding-right: 0.75rem; }
-            #contacto .wa-link img { height: 1.1rem; margin-right: 0.5rem; flex-shrink: 0; }
+            #contacto .wa-link {
+                padding-left: 0.75rem;
+                padding-right: 0.75rem;
+            }
+
+                #contacto .wa-link img {
+                    height: 1.1rem;
+                    margin-right: 0.5rem;
+                    flex-shrink: 0;
+                }
+
             #contacto .wa-number {
                 white-space: nowrap;
                 flex-shrink: 0;
@@ -189,6 +253,7 @@
         #main-header > div {
             transition: border-radius 0.3s ease;
         }
+
         #main-header.scrolled > div {
             border-radius: 0 !important;
         }
@@ -306,17 +371,17 @@
 
         /* Scrollbar oculta (el scroll sigue funcionando con rueda, teclado y táctil) */
         html, body, * {
-            -ms-overflow-style: none;      /* IE y Edge antiguo */
-            scrollbar-width: none;         /* Firefox */
+            -ms-overflow-style: none; /* IE y Edge antiguo */
+            scrollbar-width: none; /* Firefox */
         }
 
-        html::-webkit-scrollbar,
-        body::-webkit-scrollbar,
-        *::-webkit-scrollbar {
-            display: none;                 /* Chrome, Safari, Edge, Opera */
-            width: 0;
-            height: 0;
-        }
+            html::-webkit-scrollbar,
+            body::-webkit-scrollbar,
+            *::-webkit-scrollbar {
+                display: none; /* Chrome, Safari, Edge, Opera */
+                width: 0;
+                height: 0;
+            }
 
         /* Mapas embebidos */
         iframe {
@@ -333,29 +398,32 @@
                 height: 300px;
             }
         }
+        /* En celulares */
+        @media (max-width: 600px) {
+            .logo {
+                max-width: 90%;
+                max-height: 60vh;
+            }
+        }
     </style>
-
-</head>
-
-<body class="bg-[#166D99] text-[#001429] overflow-x-hidden selection:bg-[#166D99] selection:text-[#666666]">
 
     <header id="main-header" class="fixed top-0 md:top-8 left-1/2 -translate-x-1/2 w-full md:w-[92%] max-w-7xl z-50 transition-all duration-150">
 
         <!--<div class="bg-[#166D99]/95 backdrop-blur-md md:rounded-xl px-6 py-4 md:py-5 flex justify-between items-center shadow-2xl">-->
-        <div class="bg-[#166D99]/95 backdrop-blur-md md:rounded-xl px-6 py-4 md:py-5 flex items-center shadow-2xl"> <!--justify-between-->
-
+        <div class="bg-[#166D99]/95 backdrop-blur-md md:rounded-xl px-6 py-4 md:py-5 flex items-center shadow-2xl">
+            <!--justify-between-->
             <!-- Monogram Logo -->
             <a href="#" class="flex items-center space-x-3 group focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#166D99]" aria-label="Ir al inicio de Abogados Urcullú y Asociados">
-                <span class="sm:block text-2xl md:text-3xl tracking-tight text-[#ffffff] transition-transform duration-300 group-hover:scale-105 text-sombra">
+                <span class="sm:block text-2xl md:text-3xl tracking-tight text-[#ffffff] text-sombra">
                     U&amp;A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 </span>
                 <!--hidden-->
                 <!--<div class="pl-3 sm:border-l sm:border-[#166D99]/30">
-            <span class="block text-[13px] tracking-[0.15em] text-[#e9e9e9] leading-none uppercase text-sombra">
-                Urcullú &amp; Asociados
-            </span>
-            <span class="block text-[9px] tracking-[0.25em] text-[#FFFFFF] uppercase mt-1 text-sombra">Abogados</span>
-        </div>-->
+                    <span class="block text-[13px] tracking-[0.15em] text-[#e9e9e9] leading-none uppercase text-sombra">
+                        Urcullú &amp; Asociados
+                    </span>
+                    <span class="block text-[9px] tracking-[0.25em] text-[#FFFFFF] uppercase mt-1 text-sombra">Abogados</span>
+                </div>-->
             </a>
 
             <!-- Desktop Navigation Menu -->
@@ -373,10 +441,10 @@
                 <a href="#contacto"
                    class="nav-link hover:text-[#FFFFFF] transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-[#CCCCCC] hover:after:w-full after:transition-all after:duration-300 focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#166D99] text-sombra">Contáctanos</a>
                 <!--<button type="button" id="open-privacy-modal-nav-btn"
-                class="nav-link open-privacy-modal-trigger hover:text-[#FFFFFF] transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-[#CCCCCC] hover:after:w-full after:transition-all after:duration-300 focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#166D99]"
-                aria-haspopup="dialog">
-            PÓLITICA DE PRIVACIDAD
-        </button>-->
+                        class="nav-link open-privacy-modal-trigger hover:text-[#FFFFFF] transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-[#CCCCCC] hover:after:w-full after:transition-all after:duration-300 focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#166D99]"
+                        aria-haspopup="dialog">
+                    PÓLITICA DE PRIVACIDAD
+                </button>-->
             </nav>
 
             <!-- Mobile Menu Button -->
@@ -386,8 +454,8 @@
                 <span id="mobile-menu-icon" class="hamburger-icon !w-auto" aria-hidden="true">
                     Menú
                     <!--<span></span>
-            <span></span>
-            <span></span>-->
+                    <span></span>
+                    <span></span>-->
                 </span>
             </button>
 
@@ -410,10 +478,11 @@
             <a href="#horarios"
                class="mobile-link outline-none text-white hover:text-[#FFFFFF] py-2 border-b border-white/5 focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#FFFFFF] text-sombra">Horarios y teléfonos</a>
             <!--<button type="button" id="open-privacy-modal-mobile-btn"
-              class="mobile-link open-privacy-modal-trigger outline-none text-white hover:text-[#FFFFFF] py-2 border-b border-white/5 focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#FFFFFF]"
-              aria-haspopup="dialog">PÓLITICA DE PRIVACIDAD
-        </button>-->
+                  class="mobile-link open-privacy-modal-trigger outline-none text-white hover:text-[#FFFFFF] py-2 border-b border-white/5 focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#FFFFFF]"
+                  aria-haspopup="dialog">PÓLITICA DE PRIVACIDAD
+            </button>-->
         </div>
+
     </header>
 
     <!-- MAIN CONTENT CONTAINER -->
@@ -428,13 +497,12 @@
 
             <div class="relative max-w-5xl mx-auto px-6 sm:px-8 text-center z-20 pt-6 md:pt-16">
                 <div class="md:hidden"><br /><br /><br /><br /><br /><br /><br /></div>
-                <!--<div class="md:hidden"><br /><br /><br /><br /></div>-->
                 <h1 class="hero-title">
                     <label class="text-3xl sm:text-2xl md:text-5xl font-light tracking-tight text-white mb-6 leading-[1.15]">URCULLÚ</label>
                     <label class="hero-amp text-3xl sm:text-1xl md:text-4xl font-light tracking-tight text-white mb-6 leading-[1.15]">&nbsp;&nbsp;&nbsp;&amp;&nbsp;&nbsp;&nbsp;</label>
                     <label class="text-3xl sm:text-2xl md:text-5xl font-light tracking-tight text-white mb-6 leading-[1.15]">ASOCIADOS</label>
                     <br class="hidden md:block"><br class="hidden md:block">
-                    <!--<span class="text-transparent bg-clip-text bg-gradient-to-r from-[#e9e9e9] via-[#166D99] to-[#e9e9e9]">-->
+                    <!--<span id="textoDecoloración" class="text-transparent bg-clip-text bg-gradient-to-r from-[#e9e9e9] via-[#166D99] to-[#e9e9e9]"></span>-->
                     <span class="md:hidden"><br /><br /></span>
                     <span class="text-3xl sm:text-2xl md:text-5xl font-light tracking-tight text-white mb-6 leading-[1.15]">
                         ABOGADOS
@@ -442,20 +510,20 @@
                 </h1>
 
                 <!--<p class="text-[1rem] sm:text-[3rem] md:text-[1.4rem] text-white/85 max-w-3xl mx-auto mb-10 leading-relaxed font-light">
-            Somos un estudio jurídico que ofrece asesoría legal orientada a prevenir conflictos. Nuestro equipo se conforma de profesionales rigurosos y con profundo sentido ético, que entienden el impacto de su trabajo en tu vida y patrimonio
-            </p>-->
+                Somos un estudio jurídico que ofrece asesoría legal orientada a prevenir conflictos. Nuestro equipo se conforma de profesionales rigurosos y con profundo sentido ético, que entienden el impacto de su trabajo en tu vida y patrimonio
+                </p>-->
                 <!--<div class="md:hidden"><br /><br /><br /><br /><br /></div>-->
                 <!--<div class="inline-flex md:hidden items-center gap-2 border border-[#166D99] bg-[#166D99] px-4 py-2 rounded-full mb-[2.6rem] backdrop-blur-sm animate-fade-in">
-                <span class="text-xs tracking-[0.15em] text-white font-semibold">
-                    Valdivia, Lanco, Los lagos, Paillaco, San José de la Mariquina y Panguipulli.
-                </span>
-            </div>-->
+                    <span class="text-xs tracking-[0.15em] text-white font-semibold">
+                        Valdivia, Lanco, Los lagos, Paillaco, San José de la Mariquina y Panguipulli.
+                    </span>
+                </div>-->
             </div>
 
         </section>
 
         <!-- HISTORIA -->
-        <section id="historia" class="py-24 md:py-32 bg-[#e9e9e9]">
+        <section id="historia" class="py-24 md:py-32 bg-[#e9e9e9]" style="border-bottom: 1px solid rgba(255, 107, 0, 0.3) !important;">
             <div class="text-center max-w-3xl mx-auto mb-[1.4rem] space-y-4">
                 <!--<span class="text-xs uppercase tracking-[0.25em] text-[#166D99] font-bold block">Abogados</span>-->
                 <h2 class="relative -top-[15px] text-3xl sm:text-4xl md:text-5xl text-[#166D99] text-sombra">
@@ -469,8 +537,7 @@
                         <!-- 0. Félix Urcullú Molina -->
                         <article class="w-fit mx-auto border border-gray-100 rounded-lg flex flex-col justify-between transition-all focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#166D99] box-sombra_big panel-outset" data-lawyer="urcullu-molina" tabindex="0" aria-haspopup="dialog" style="border: 5px outset #cccccc">
                             <div class="relative overflow-hidden group h-[304px] bg-slate-200">
-                                <img src="UrculluMolina.jpg" alt="Félix Urcullú Molina — Socio Fundador"
-                                     class="w-auto h-full object-cover transition-transform duration-500">
+                                <img src="UrculluMolina.jpg" alt="Félix Urcullú Molina — Socio Fundador"class="w-auto h-full object-cover transition-transform duration-500">
                                 <div class="absolute bottom-0 left-0 w-full h-[3px] bg-[#166D99]"></div>
                             </div>
                             <div class="p-3 w-0 min-w-full">
@@ -485,14 +552,14 @@
 
                     <!-- Copia Corporativa -->
                     <div class="lg:col-span-7">
-                        <p class="text-[1rem] md:text-[1rem] text-[#001429]/90 leading-relaxed font-light mb-4">
+                        <p class="text-[1rem] md:text-[1rem] text-[#001429]/90 leading-relaxed font-light mb-4" style="text-align: justify;">
                             A comienzos de los años 60, don Felix Urcullú Molina, nuestro fundador, inició su ejercicio profesional independiente junto a su esposa, la señora Helga Steffen, en una oficina del edificio Prales (frente a la plaza de la republica en Valdivia), desde donde pusieron su experiencia al servicio de personas y empresas, acompañándolas en sus desafíos legales.<br />
                         </p>
-                        <p class="text-[1rem] md:text-[1rem] text-[#001429]/90 leading-relaxed font-light mb-4">
+                        <p class="text-[1rem] md:text-[1rem] text-[#001429]/90 leading-relaxed font-light mb-4" style="text-align: justify;">
                             Con los años, el estudio se amplió, abarcando desde la comuna de Temuco hasta Puerto Montt. Paralelamente fue miembro del directorio de la Universidad Austral de Chile, además de ser fundador y Decano de la carrera de Derecho en la misma casa de estudios. También se desempeñó durante mas de 10 años como abogado integrante de la Corte de Apelaciones de Valdivia.
                             Hacia el año 2020, después de una larga y sólida carrera, se retiró.
                         </p>
-                        <p class="text-[1rem] md:text-[1rem] text-[#001429]/90 leading-relaxed font-light">
+                        <p class="text-[1rem] md:text-[1rem] text-[#001429]/90 leading-relaxed font-light" style="text-align: justify;">
                             Hoy, casi siete décadas después, volvemos al edificio Prales, el lugar donde todo comenzó. Quienes formamos parte del estudio nos sentimos continuadores de la historia que Felix y Helga iniciaron. Volver a nuestros orígenes es también una forma de honrar su legado y seguir escribiendo, con la misma vocación, los próximos capítulos..
                         </p>
                     </div>
@@ -502,7 +569,7 @@
         </section>
 
         <!-- QUIÉNES SOMOS -->
-        <section id="quienes-somos" class="py-24 md:py-32 bg-[#e9e9e9]">
+        <section id="quienes-somos" class="py-24 md:py-32 bg-[#e9e9e9]" style="border-bottom: 1px solid rgba(255, 107, 0, 0.3) !important;">
             <div class="max-w-7xl mx-auto px-6 sm:px-8">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
                     <!-- Subtitle & Main Concept -->
@@ -524,11 +591,11 @@
 
                     <!-- Copia Corporativa -->
                     <div class="lg:col-span-7">
-                        <p class="text-[1rem] md:text-[1.2rem] text-[#001429]/90 leading-relaxed font-light mb-8">
+                        <p class="text-[1rem] md:text-[1.2rem] text-[#001429]/90 leading-relaxed font-light mb-8" style="text-align: justify;">
                             Entendemos el ejercicio del derecho como un pilar fundamental para el desarrollo de la sociedad y la seguridad de las personas. Fundada bajo principios de
                             ética estricta, excelencia técnica y un profundo conocimiento del entorno legal del sur de Chile, nuestra firma se ha consolidado como un referente de confianza en la Región de Los Ríos.
                         </p>
-                        <p class="text-[1rem] md:text-[1.2rem] text-[#001429]/90 leading-relaxed font-light mb-8">
+                        <p class="text-[1rem] md:text-[1.2rem] text-[#001429]/90 leading-relaxed font-light mb-8" style="text-align: justify;">
                             Trabajamos estrechamente con nuestros clientes para comprender sus preocupaciones, desafíos y objetivos,
                             con el fin de diseñar estrategias que se adapten a sus necesidades y expectativas.
                         </p>
@@ -538,11 +605,11 @@
         </section>
 
         <!-- SERVICIOS -->
-        <section id="servicios" class="py-24 md:py-32 bg-[#e9e9e9]">
+        <section id="servicios" class="py-24 md:py-32 bg-[#e9e9e9]" style="border-bottom: 1px solid rgba(255, 107, 0, 0.3) !important;">
             <div class="max-w-7xl mx-auto px-6 sm:px-8">
 
                 <div class="text-center max-w-4xl mx-auto mb-2 md:mb-6 space-y-3 md:space-y-2 -mt-[15px] pb-[15px]">
-                    <h2 class="text-4xl sm:text-3xl md:text-6xl text-[#166D99] text-sombra">
+                    <h2 class="text-4xl sm:text-3xl md:text-5xl text-[#166D99] text-sombra">
                         Áreas de práctica
                     </h2>
                 </div>
@@ -591,44 +658,44 @@
                 </div>
                 <!-- Card 1: Familia -->
                 <!--<div class="practice-card rounded-lg shadow-md overflow-hidden hover:shadow-2xl transition-all duration-300 flex flex-col justify-between sombra" style="border: 5px ridge #cccccc">
-                <a href="familia.html" class="h-64 sm:h-80 md:h-96 bg-contain bg-no-repeat bg-center" style="background-image: url('familia.jpg');"
-                   role="img" aria-label="Servicio de Familia, Ley N.º 19.968">
-                </a>
-            </div>-->
+                    <a href="familia.html" class="h-64 sm:h-80 md:h-96 bg-contain bg-no-repeat bg-center" style="background-image: url('familia.jpg');"
+                       role="img" aria-label="Servicio de Familia, Ley N.º 19.968">
+                    </a>
+                </div>-->
                 <!-- Card 2: Contratos -->
                 <!--<div class="practice-card border border-gray-200/60 rounded-lg shadow-md overflow-hidden hover:shadow-2xl transition-all duration-300 flex flex-col justify-between sombra" style="border: 5px ridge #cccccc">
-                <a href="resumen.html" class="h-64 sm:h-80 md:h-96 bg-contain bg-no-repeat bg-center"
-                   style="background-image: url('contratos.jpg');" role="img"
-                   aria-label="Código Civil, en el Libro IV: artículos 1437 y siguientes, especialmente el 1438"></a>
-            </div>-->
+                    <a href="resumen.html" class="h-64 sm:h-80 md:h-96 bg-contain bg-no-repeat bg-center"
+                       style="background-image: url('contratos.jpg');" role="img"
+                       aria-label="Código Civil, en el Libro IV: artículos 1437 y siguientes, especialmente el 1438"></a>
+                </div>-->
                 <!-- Card 3: Herencias -->
                 <!--<div class="practice-card border border-gray-200/60 rounded-lg shadow-md overflow-hidden hover:shadow-2xl transition-all duration-300 flex flex-col justify-between sombra" style="border: 5px ridge #cccccc">
-                <div class="h-64 sm:h-80 md:h-96 bg-contain bg-no-repeat bg-center"
-                     style="background-image: url('herencias.jpg');" role="img"
-                     aria-label="Libro III del Código Civil, artículo 951 en adelante."></div>
-            </div>-->
+                    <div class="h-64 sm:h-80 md:h-96 bg-contain bg-no-repeat bg-center"
+                         style="background-image: url('herencias.jpg');" role="img"
+                         aria-label="Libro III del Código Civil, artículo 951 en adelante."></div>
+                </div>-->
                 <!-- Card 4: Saneamientos -->
                 <!--<div class="practice-card border border-gray-200/60 rounded-lg shadow-md overflow-hidden hover:shadow-2xl transition-all duration-300 flex flex-col justify-between sombra" style="border: 5px ridge #cccccc">
-                <div class="h-64 sm:h-80 md:h-96 bg-contain bg-no-repeat bg-center"
-                     style="background-image: url('saneamientos.jpg');" role="img"
-                     aria-label="Decreto Ley N° 2.695 de 1979"></div>
-            </div>-->
+                    <div class="h-64 sm:h-80 md:h-96 bg-contain bg-no-repeat bg-center"
+                         style="background-image: url('saneamientos.jpg');" role="img"
+                         aria-label="Decreto Ley N° 2.695 de 1979"></div>
+                </div>-->
                 <!-- Card 5: Laboral -->
                 <!--<div class="practice-card border border-gray-200/60 rounded-lg shadow-md overflow-hidden hover:shadow-2xl transition-all duration-300 flex flex-col justify-between sombra" style="border: 5px ridge #cccccc">
-                <div class="h-64 sm:h-80 md:h-96 bg-contain bg-no-repeat bg-center" style="background-image: url('laboral.jpg');"
-                     role="img" aria-label="Código del Trabajo, refundido en el DFL N° 1 de 2003 del Ministerio del Trabajo y Previsión Social"></div>
-            </div>-->
+                    <div class="h-64 sm:h-80 md:h-96 bg-contain bg-no-repeat bg-center" style="background-image: url('laboral.jpg');"
+                         role="img" aria-label="Código del Trabajo, refundido en el DFL N° 1 de 2003 del Ministerio del Trabajo y Previsión Social"></div>
+                </div>-->
                 <!-- Card 6: Penal -->
                 <!--<div class="practice-card border border-gray-200/60 rounded-lg shadow-md overflow-hidden hover:shadow-2xl transition-all duration-300 flex flex-col justify-between sombra" style="border: 5px ridge #cccccc">
-                <div class="h-64 sm:h-80 md:h-96 bg-contain bg-no-repeat bg-center" style="background-image: url('penal.jpg');"
-                     role="img" aria-label="Código Penal chileno, artículo 1"></div>
-            </div>-->
+                    <div class="h-64 sm:h-80 md:h-96 bg-contain bg-no-repeat bg-center" style="background-image: url('penal.jpg');"
+                         role="img" aria-label="Código Penal chileno, artículo 1"></div>
+                </div>-->
             </div>
 
         </section>
 
         <!-- NUESTRO EQUIPO -->
-        <section id="nuestros-abogados" class="pt-[5.4rem] pb-24 md:pt-[7.2rem] md:pb-32 bg-[#e9e9e9]">
+        <section id="nuestros-abogados" class="pt-[5.4rem] pb-24 md:pt-[7.2rem] md:pb-32 bg-[#e9e9e9]" style="border-bottom: 1px solid rgba(255, 107, 0, 0.3) !important;">
             <div class="max-w-7xl mx-auto px-6 sm:px-8">
                 <div class="text-center max-w-3xl mx-auto mb-[1.4rem] space-y-4">
                     <!--<span class="text-xs uppercase tracking-[0.25em] text-[#166D99] font-bold block">Abogados</span>-->
@@ -640,30 +707,23 @@
                 <!-- Grid de perfiles en el orden estrictamente obligatorio -->
                 <div class="relative -top-[15px] md:top-0 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[1.4rem]">
                     <!-- 1. Félix Urcullú Steffen -->
-                    <article class="open-modal-trigger bg-[#e9e9e9] border border-gray-100 rounded-lg overflow-hidden flex flex-col justify-between hover:border-[#166D99]/60 transition-all cursor-pointer focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#166D99] box-sombra_big panel-outset" data-lawyer="urcullu-steffen" role="button" tabindex="0" aria-haspopup="dialog" aria-label="Ver trayectoria completa de Félix Urcullú Steffen" style="border: 5px outset #cccccc">
+                    <article class="open-modal-trigger bg-[#e9e9e9] border border-gray-100 rounded-lg overflow-hidden flex flex-col justify-between hover:border-[#166D99]/60 transition-all focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#166D99] box-sombra_big panel-outset" tabindex="0" aria-haspopup="dialog" aria-label="Ver trayectoria completa de Félix Urcullú Steffen" style="border: 5px outset #cccccc">
                         <div class="relative overflow-hidden group h-[304px] bg-slate-200">
-                            <img src="FelixUrculluSteffen.jpg" alt="Félix Urcullú Steffen — Socio Principal"
-                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                            <img src="FelixUrculluSteffen.jpg" alt="Félix Urcullú Steffen — Socio Principal" class="w-full h-full object-cover">
                             <div class="absolute bottom-0 left-0 w-full h-[3px] bg-[#166D99]" aria-hidden="true"></div>
                         </div>
                         <div class="p-6">
                             <span class="text-[10px] text-center uppercase tracking-widest text-[#166D99] font-semibold block mb-1">
-                                Socio principal
+                                Socio
                             </span>
                             <h3 class="text-center font-bold text-[#666666]">Félix Urcullú Steffen</h3>
-                            <!--<p class="text-[0.7875rem] text-[#001429]/85 mt-3 line-clamp-3 font-light leading-relaxed">
-                            Pilar estratégico del estudio. Trayectoria de primer nivel en el derecho civil y resolución de litigios complejose.
-                        </p>-->
                         </div>
                     </article>
 
                     <!-- 2. Agustín Soto Gidi -->
-                    <article class="open-modal-trigger bg-[#e9e9e9] border border-gray-100 rounded-lg overflow-hidden flex flex-col justify-between hover:border-[#166D99]/60 transition-all cursor-pointer focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#166D99] box-sombra_big panel-outset" data-lawyer="soto-gidi" role="button" tabindex="0" aria-haspopup="dialog"
-                             aria-label="Ver trayectoria completa de Agustín Soto Gidi" style="border: 5px outset #cccccc">
-                        <div>
+                    <article class="open-modal-trigger bg-[#e9e9e9] border border-gray-100 rounded-lg overflow-hidden flex flex-col justify-between hover:border-[#166D99]/60 transition-all focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#166D99] box-sombra_big panel-outset" tabindex="0" aria-haspopup="dialog" aria-label="Ver trayectoria completa de Agustín Soto Gidi" style="border: 5px outset #cccccc">
                             <div class="relative overflow-hidden group h-[304px] bg-slate-200">
-                                <img src="AgustinSotoGidi.jpg" alt="Agustín Soto Gidi — Abogado Asociado"
-                                     class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                                <img src="AgustinSotoGidi.jpg" alt="Agustín Soto Gidi — Abogado Asociado" class="w-full h-full object-cover">
                                 <div class="absolute bottom-0 left-0 w-full h-[3px] bg-[#166D99]" aria-hidden="true"></div>
                             </div>
                             <div class="p-6">
@@ -671,21 +731,14 @@
                                     Abogado asociado
                                 </span>
                                 <h3 class="text-center font-bold text-[#666666]">Agustín Soto Gidi</h3>
-                                <!--<p class="text-[0.7875rem] text-[#001429]/85 mt-3 line-clamp-3 font-light leading-relaxed">
-                                Enfoque analítico y constitucional del derecho. Especializado en diseño estratégico de litigios y
-                                cumplimiento legal preventivo.
-                            </p>-->
                             </div>
-                        </div>
                     </article>
 
                     <!-- 3. Félix Urcullú Arriagada -->
-                    <article class="open-modal-trigger bg-[#e9e9e9] border border-gray-100 rounded-lg overflow-hidden flex flex-col justify-between hover:border-[#166D99]/60 transition-all duration-300 cursor-pointer focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#166D99] box-sombra_big panel-outset" data-lawyer="urcullu-arriagada" role="button" tabindex="0" aria-haspopup="dialog"
-                             aria-label="Ver trayectoria completa de Félix Urcullú Arriagada" style="border: 5px outset #cccccc">
+                    <article class="open-modal-trigger bg-[#e9e9e9] border border-gray-100 rounded-lg overflow-hidden flex flex-col justify-between hover:border-[#166D99]/60 transition-all focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#166D99] box-sombra_big panel-outset" tabindex="0" aria-haspopup="dialog" aria-label="Ver trayectoria completa de Félix Urcullú Arriagada" style="border: 5px outset #cccccc">
                         <div>
                             <div class="relative overflow-hidden group h-[304px] bg-slate-200">
-                                <img src="FelixUrculluArriagada.jpg" alt="Félix Urcullú Arriagada — Abogado Asociado"
-                                     class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                                <img src="FelixUrculluArriagada.jpg" alt="Félix Urcullú Arriagada — Abogado Asociado" class="w-full h-full object-cover">
                                 <div class="absolute bottom-0 left-0 w-full h-[3px] bg-[#166D99]" aria-hidden="true"></div>
                             </div>
                             <div class="p-6">
@@ -693,33 +746,21 @@
                                     Abogado asociado
                                 </span>
                                 <h3 class="text-center font-bold text-[#666666]">Félix Urcullú Arriagada</h3>
-                                <!--<p class="text-[0.7875rem] text-[#001429]/85 mt-3 line-clamp-3 font-light leading-relaxed">
-                                Especialista en derecho civil, obligaciones y procedimientos judiciales ordinarios con alta dedicación
-                                probatoria.
-                            </p>-->
                             </div>
                         </div>
                     </article>
 
                     <!-- 4. Nicolás Carter Holtehuer -->
-                    <article class="open-modal-trigger bg-[#e9e9e9] border border-gray-100 rounded-lg overflow-hidden flex flex-col justify-between hover:border-[#166D99]/60 transition-all duration-300 cursor-pointer focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#166D99] box-sombra_big panel-outset" data-lawyer="carter-holtehuer" role="button" tabindex="0" aria-haspopup="dialog"
-                             aria-label="Ver trayectoria completa de Nicolás Carter Holtehuer" style="border: 5px outset #cccccc">
-                        <div>
-                            <div class="relative overflow-hidden group h-[304px] bg-slate-200">
-                                <img src="NicolasCarterHoltehuer.jpg" alt="Nicolás Carter Holtehuer — Abogado Asociado"
-                                     class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-                                <div class="absolute bottom-0 left-0 w-full h-[3px] bg-[#166D99]" aria-hidden="true"></div>
-                            </div>
-                            <div class="p-6">
-                                <span class="text-[10px] text-center uppercase tracking-widest text-[#166D99] font-semibold block mb-1">
-                                    Abogado asociado
-                                </span>
-                                <h3 class="text-center font-bold text-[#666666]">Nicolás Carter Holtehuer</h3>
-                                <!--<p class="text-[0.7875rem] text-[#001429]/85 mt-3 line-clamp-3 font-light leading-relaxed">
-                                Líder de práctica ambiental, derecho regulatorio, administrativo y auditorías normativas para grandes
-                                proyectos de inversión.
-                            </p>-->
-                            </div>
+                    <article class="open-modal-trigger bg-[#e9e9e9] border border-gray-100 rounded-lg overflow-hidden flex flex-col justify-between hover:border-[#166D99]/60 transition-all focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#166D99] box-sombra_big panel-outset" tabindex="0" aria-haspopup="dialog" aria-label="Ver trayectoria completa de Félix Urcullú Steffen" style="border: 5px outset #cccccc">
+                        <div class="relative overflow-hidden group h-[304px] bg-slate-200">
+                            <img src="NicolasCarterHoltehuer.jpg" alt="Nicolás Carter Holtehuer — Abogado Asociado" class="w-full h-full object-cover">
+                            <div class="absolute bottom-0 left-0 w-full h-[3px] bg-[#166D99]" aria-hidden="true"></div>
+                        </div>
+                        <div class="p-6">
+                            <span class="text-[10px] text-center uppercase tracking-widest text-[#166D99] font-semibold block mb-1">
+                                Abogado asociado
+                            </span>
+                            <h3 class="text-center font-bold text-[#666666]">Nicolás Carter Holtehuer</h3>
                         </div>
                     </article>
                 </div>
@@ -727,7 +768,7 @@
         </section>
 
         <!-- OFICINAS -->
-        <section id="oficinas" class="pt-2 pb-24 md:pt-[7.2rem] md:pb-32 bg-[#e9e9e9] scroll-mt-24 md:scroll-mt-0" style="background-image: url('Fondo 2.jpeg'); background-repeat: no-repeat; background-size: cover">
+        <section id="oficinas" class="pt-2 pb-24 md:pt-[7.2rem] md:pb-32 bg-[#e9e9e9] scroll-mt-24 md:scroll-mt-0" style="background-image: url('Fondo 2.jpg'); margin: 0; min-height: 100vh; display: flex; justify-content: center; align-items: center; background-repeat: no-repeat; background-size: cover; background-position: center; ">
             <div class="text-center max-w-7xl mx-auto px-6 sm:px-8">
 
                 <h2 class="text-3xl sm:text-4xl md:text-5xl text-[#ffffff] mb-4 md:mb-0 md:-translate-y-[20%] text-sombra">Nuestras oficinas</h2>
@@ -757,20 +798,20 @@
         </section>
 
         <!-- CONTACTO -->
-        <section id="contacto" class="py-24 md:py-32 lg:pt-[118px] bg-[#e9e9e9]">
+        <section id="contacto" class="py-24 md:py-32 lg:pt-[105px] bg-[#e9e9e9]">
             <div class="max-w-7xl mx-auto px-6 sm:px-8">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
 
-                    <!-- Formulario Moderno con validaciones y A11y -->
-                    <div class="lg:col-span-7 bg-gradient-to-b from-[#cfcfcf] to-[#eeeeee] p-[1.5rem] md:p-[1.6rem] rounded-md shadow-2xl border border-gray-100 panel-outset">
+                    <!-- Formulario Moderno con validaciones -->
+                    <div class="lg:col-span-7 p-[1.5rem] md:p-[1.6rem]" style="border-right: 2px solid #cccccc; padding-right: 40px;">
 
-                        <h2 class="flex flex-nowrap bg-[#ffffff] text-3xl sm:text-4xl md:text-4xl text-[#166D99] mb-[1.85rem] -mt-2 sm:-mt-3 md:-mt-4 pt-[1px] pb-[10px] box-sombra text-sombra">&nbsp;Contáctanos</h2>
+                        <h2 class="flex flex-nowrap text-3xl sm:text-4xl md:text-4xl text-[#166D99] -mt-2 sm:-mt-3 md:-mt-4  pb-[10px] text-sombra">Contáctanos</h2>
 
-                        <p class="text-s text-gray-600 mb-[1.35rem] font-bold">
+                        <p class="text-s text-gray-600 mb-[1.35rem] font-semibold">
                             Déjanos tu mensaje y nos pondremos en contacto contigo.
                         </p>
 
-                        <form id="legal-contact-form" class="space-y-[1.35rem]" novalidate>
+                        <form id="legal-contact-form" class="space-y-[1.35rem] bg-[#ffffff] p-[24px]" style="border-radius: 8px;" novalidate>
 
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-[1.35rem]">
                                 <div class="space-y-[0.45rem]">
@@ -779,8 +820,8 @@
                                         Ingresa tu nombre
                                         <span class="text-red-500" aria-hidden="true">*</span>
                                     </label>
-                                    <input type="text" id="full_name" required placeholder="Nombre y apellido"
-                                           class="w-full bg-[#ffffff] border border-gray-200 input-inset px-[0.9rem] py-[0.675rem] text-xs rounded-sm focus:outline-none focus:border-[#166D99] focus:bg-white transition-all text-[#001429]"
+                                    <input type="text" id="full_name" required placeholder="Nombre y apellido" style="border-radius: 4px;"
+                                           class="w-full bg-[#ffffff] border border-gray-400 px-[0.9rem] py-[0.675rem] text-xs rounded-sm focus:outline-none focus:border-[#166D99] focus:bg-white transition-all text-[#001429]"
                                            aria-required="true">
                                     <span id="error_full_name" class="text-[10px] text-red-500 font-medium hidden">
                                         Por favor ingrese su nombre de forma válida (solo letras).
@@ -793,8 +834,8 @@
                                         Teléfono de Contacto
                                         <span class="text-red-500" aria-hidden="true">*</span>
                                     </label>
-                                    <input type="tel" id="contact_phone" required placeholder="+56 9 XXXXXXXX"
-                                           class="w-full bg-[#ffffff] border border-gray-200 input-inset px-[0.9rem] py-[0.675rem] text-xs rounded-sm focus:outline-none focus:border-[#166D99] focus:bg-white transition-all text-[#001429]"
+                                    <input type="tel" id="contact_phone" required placeholder="+56 9 XXXX0XXX" style="border-radius: 4px;"
+                                           class="w-full bg-[#ffffff] border border-gray-400 px-[0.9rem] py-[0.675rem] text-xs rounded-sm focus:outline-none focus:border-[#166D99] focus:bg-white transition-all text-[#001429]"
                                            aria-required="true">
                                     <span id="error_contact_phone" class="text-[10px] text-red-500 font-medium hidden">
                                         Ingrese un num. telefónico de 9 dígitos ej: +56 9 1234 5678.
@@ -807,9 +848,9 @@
                                        class="text-[11px] font-bold tracking-wider uppercase text-[#555555]">
                                     Resumen del Caso <span class="text-red-500" aria-hidden="true">*</span>
                                 </label>
-                                <textarea id="case_summary" rows="5" required
+                                <textarea id="case_summary" rows="5" required style="border-radius: 4px;"
                                           placeholder="Por favor describa brevemente el motivo de su consulta."
-                                          class="w-full bg-[#ffffff] border border-gray-200 input-inset px-[0.9rem] py-[0.665rem] text-xs rounded-sm focus:outline-none focus:border-[#166D99] focus:bg-white transition-all text-[#001429] resize-none h-[6.3rem]"
+                                          class="w-full bg-[#ffffff] border border-gray-400 px-[0.9rem] py-[0.665rem] text-xs rounded-sm focus:outline-none focus:border-[#166D99] focus:bg-white transition-all text-[#001429] resize-none h-[6.3rem]"
                                           aria-required="true"></textarea>
                                 <span id="error_case_summary" class="text-[10px] text-red-500 font-medium hidden">
                                     Por favor ingrese un breve resumen del caso.
@@ -828,11 +869,11 @@
                     <!-- Sedes & Teléfonos -->
                     <div id="horarios" class="lg:col-span-4 space-y-7 scroll-mt-24 md:scroll-mt-0">
 
-                        <div class="space-y-1 bg-[#ffffff] border">
-                            <h2 class="text-3xl sm:text-4xl md:text-4xl text-[#166D99] mb-2 pt-[1px] pb-[10px] box-sombra text-sombra">&nbsp;Horarios y teléfonos</h2>
+                        <div class="space-y-1 border">
+                            <h2 class="text-3xl sm:text-4xl md:text-4xl text-[#166D99] mb-1 lg:mt-[7.6px] pt-[1px] pb-[10px] text-sombra">&nbsp;Horarios y teléfonos</h2>
                         </div>
 
-                        <div class="space-y-7">
+                        <div class="space-y-6">
                             <!-- Sede Valdivia -->
                             <div class="flex gap-4">
                                 <div class="text-[#166D99] shrink-0">
@@ -841,7 +882,7 @@
                                 <div class="space-y-1">
                                     <h3 class="text-lg font-bold text-[#666666]">Oficina Valdivia</h3>
                                     <div class="text-xs text-gray-500 pt-0">
-                                        <p><strong>Lunes a Viernes:</strong> 10:00 - 13:00 y 15:30 - 18:00 hrs.</p>
+                                        <p><strong>Lunes a Viernes: 10:00 - 13:00 y 15:30 - 18:00 hrs.</strong></p>
                                     </div>
                                 </div>
                             </div>
@@ -854,37 +895,36 @@
                                 <div class="space-y-1">
                                     <h3 class="text-lg font-bold text-[#666666]">Oficina Lanco</h3>
                                     <div class="text-xs text-gray-500 pt-0">
-                                        <p><strong>Días Martes:</strong> Jornada continua de 09:00 a 14:00 hrs.</p>
+                                        <p><strong>Días Martes: Jornada continua de 09:00 a 14:00 hrs.</strong></p>
                                     </div>
                                 </div>
                             </div>
+
                         </div>
 
                         <!-- Canales de WhatsApp Directos -->
-                        <div class="bg-white p-6 rounded-sm border border-gray-100 panel-outset shadow-2xl space-y-1">
+                        <div class="p-6 space-y-1"style="border-bottom-style: solid; border-width: 2px; border-top-color: #cccccc;">
 
                             <p class="font-bold text-gray-500 leading-relaxed">
                                 Click abajo para iniciar chat de asesoría.
                             </p>
-                            <div class="w-full h-[3px] bg-[#BBBBBB]" aria-hidden="true"></div>
-                            <span class="block h-4"></span>
-                            <div class="space-y-2.5">
+                             <div class="space-y-2.5">
                                 <a href="https://wa.me/56997780821?text=Hola,%20deseo%20agendar%20una%20consulta%20con%20Abogados%20Urcullú%20y%20asociados."
                                    target="_blank"
-                                   class="wa-link flex justify-between items-center px-4 py-2.5 bg-[#e9e9e9] hover:bg-emerald-50 border border-transparent hover:border-emerald-200 text-xs font-medium rounded-lg transition-all text-[#001429] focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-emerald-500"
+                                   class="wa-link flex justify-between items-center px-4 py-2.5 bg-[#DDDDDD] hover:bg-emerald-50 border border-transparent hover:border-emerald-200 text-xs font-medium rounded-lg transition-all text-[#001429] focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-emerald-500"
                                    aria-label="Escribir por WhatsApp a la línea principal de Félix Urcullú Steffen">
                                     <img src="WhatsApp.png" alt="WhatsApp" class="h-5 w-auto mr-2 object-contain" style="image-rendering: -webkit-optimize-contrast;" width="258" height="60">
-                                    <span class="wa-number text-emerald-500 text-lg font-bold flex items-center gap-1">
+                                    <span class="wa-number text-lg font-bold flex items-center gap-1" style="color: #00009a;">
                                         +56 9 9778 0821 <!--<i data-lucide="message-square" class="w-6.5 h-3.5" aria-hidden="true"></i>-->
                                     </span>
                                 </a>
 
                                 <a href="https://wa.me/56952134108?text=Hola,%20deseo%20agendar%20una%20consulta%20con%20Abogados%20Urcullú%20y%20asociados."
                                    target="_blank"
-                                   class="wa-link flex justify-between items-center px-4 py-2.5 bg-[#e9e9e9] hover:bg-emerald-50 border border-transparent hover:border-emerald-200 text-xs font-medium rounded-lg transition-all text-[#001429] focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-emerald-500"
+                                   class="wa-link flex justify-between items-center px-4 py-2.5 bg-[#DDDDDD] hover:bg-emerald-50 border border-transparent hover:border-emerald-200 text-xs font-medium rounded-lg transition-all text-[#001429] focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-emerald-500"
                                    aria-label="Escribir por WhatsApp a la línea civil de Félix Urcullú Arriagada">
                                     <img src="WhatsApp.png" alt="WhatsApp" class="h-5 w-auto mr-2 object-contain" style="image-rendering: -webkit-optimize-contrast;" width="258" height="60">
-                                    <span class="wa-number text-emerald-500 text-lg font-bold flex items-center gap-1">
+                                    <span class="wa-number text-lg font-bold flex items-center gap-1" style="color: #00009a;">
                                         +56 9 5213 4108 <!--<i data-lucide="message-square" class="w-6.5 h-3.5" aria-hidden="true"></i>-->
                                     </span>
                                 </a>
@@ -898,165 +938,168 @@
 
     </main>
 
-    <!-- LAWSUIT MODAL (DYNAMIC DATA LOAD) -->
-    <div id="lawyer-modal"
-         class="fixed inset-0 bg-[#666666]/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-all duration-300"
-         role="dialog" aria-modal="true" aria-labelledby="modal-lawyer-name" aria-hidden="true">
-        <div class="bg-white max-w-3xl w-full max-h-[90vh] overflow-y-auto overflow-x-hidden rounded-lg shadow-2xl border border-[#166D99]/30 transform scale-95 transition-transform duration-300 relative">
+    <!-- POPUPS -->
+    <section id="popups">
+        <!-- LAWSUIT MODAL (DYNAMIC DATA LOAD) -->
+        <div id="lawyer-modal"
+             class="fixed inset-0 bg-[#666666]/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-all duration-300"
+             role="dialog" aria-modal="true" aria-labelledby="modal-lawyer-name" aria-hidden="true">
+            <div class="bg-white max-w-3xl w-full max-h-[90vh] overflow-y-auto overflow-x-hidden rounded-lg shadow-2xl border border-[#166D99]/30 transform scale-95 transition-transform duration-300 relative">
 
-            <!-- Close Button -->
-            <button id="close-modal-btn"
-                    class="absolute top-4 right-4 text-gray-400 hover:text-[#666666] transition-colors focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#666666]"
-                    aria-label="Cerrar Ficha de Trayectoria">
-                <i data-lucide="x" class="w-6 h-6"></i>
-            </button>
+                <!-- Close Button -->
+                <button id="close-modal-btn"
+                        class="absolute top-4 right-4 text-gray-400 hover:text-[#666666] transition-colors focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#666666]"
+                        aria-label="Cerrar Ficha de Trayectoria">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
 
-            <div class="grid grid-cols-1 md:grid-cols-12">
+                <div class="grid grid-cols-1 md:grid-cols-12">
 
-                <!-- Photo and metadata -->
-                <div class="md:col-span-5 bg-[#666666] p-8 text-white flex flex-col justify-between relative">
+                    <!-- Photo and metadata -->
+                    <div class="md:col-span-5 bg-[#666666] p-8 text-white flex flex-col justify-between relative">
 
-                    <div class="absolute inset-0 bg-cover bg-center opacity-10"
-                         aria-hidden="true"></div>
+                        <div class="absolute inset-0 bg-cover bg-center opacity-10"
+                             aria-hidden="true"></div>
 
-                    <div class="relative z-10 space-y-6">
+                        <div class="relative z-10 space-y-6">
 
-                        <div class="w-[256px] h-[256px] rounded-lg overflow-hidden border-2 border-[#166D99] bg-slate-700 mx-auto md:mx-0">
+                            <div class="w-[256px] h-[256px] rounded-lg overflow-hidden border-2 border-[#166D99] bg-slate-700 mx-auto md:mx-0">
 
-                            <img id="modal-lawyer-img" src="" alt="" class="w-full h-full object-cover">
+                                <img id="modal-lawyer-img" src="" alt="" class="w-full h-full object-cover">
 
+                            </div>
+
+                            <div class="text-center">
+
+                                <h3 id="modal-lawyer-name" class="text-xl font-bold text-white"></h3>
+                                <p id="modal-lawyer-charge" class="text-[#cccccc] text-xs uppercase tracking-widest mt-1 font-medium"></p>
+
+                            </div>
                         </div>
 
-                        <div class="text-center">
+                    </div>
 
-                            <h3 id="modal-lawyer-name" class="text-xl font-bold text-white"></h3>
-                            <p id="modal-lawyer-charge" class="text-[#cccccc] text-xs uppercase tracking-widest mt-1 font-medium"></p>
+                    <!-- Academic path & details -->
+                    <div class="md:col-span-7 px-8 pb-8 pt-3 md:p-10 space-y-[1.35rem] md:space-y-6">
 
+                        <div class="space-y-2">
+                            <span class="text-[9px] uppercase tracking-[0.2em] text-[#166D99] font-bold block"></span>
+                            <p id="modal-lawyer-description" class="text-[0.7875rem] text-[#001429] leading-relaxed font-light"></p>
                         </div>
-                    </div>
 
-                </div>
+                        <div class="space-y-3">
+                            <span id="modal-lawyer-specialties-title" class="text-[10px] uppercase tracking-[0.4em] text-[#166D99] font-bold block border-b border-black-100"></span>
+                            <ul id="modal-lawyer-specialties" class="space-y-2 text-[0.9rem] text-[#001429] leading-relaxed font-light" style="text-align: justify;">
+                                <!-- Dynamically populated -->
+                            </ul>
+                        </div>
 
-                <!-- Academic path & details -->
-                <div class="md:col-span-7 px-8 pb-8 pt-3 md:p-10 space-y-[1.35rem] md:space-y-6">
-
-                    <div class="space-y-2">
-                        <span class="text-[9px] uppercase tracking-[0.2em] text-[#166D99] font-bold block"></span>
-                        <p id="modal-lawyer-description" class="text-[0.7875rem] text-[#001429] leading-relaxed font-light"></p>
-                    </div>
-
-                    <div class="space-y-3">
-                        <span id="modal-lawyer-specialties-title" class="text-[10px] uppercase tracking-[0.4em] text-[#166D99] font-bold block border-b border-black-100"></span>
-                        <ul id="modal-lawyer-specialties" class="space-y-2 text-[0.9rem] text-[#001429] leading-relaxed font-light">
-                            <!-- Dynamically populated -->
-                        </ul>
-                    </div>
-
-                    <div class="md:hidden pt-4 border-t border-black-100 flex justify-between items-center">
-                        <!-- Sólo visible en móviles -->
-                        <button id="close-modal-mobile-btn" type="button"
-                                class="px-5 py-2.5 bg-gray-300 text-[#666666] hover:bg-gray-400 text-[10px] tracking-widest uppercase font-semibold rounded-lg transition-all duration-300" aria-label="Cerrar Ficha de Trayectoria">
+                        <div class="md:hidden pt-4 border-t border-black-100 flex justify-between items-center">
+                            <!-- Sólo visible en móviles -->
+                            <button id="close-modal-mobile-btn" type="button"
+                                    class="px-5 py-2.5 bg-gray-300 text-[#666666] hover:bg-gray-400 text-[10px] tracking-widest uppercase font-semibold rounded-lg transition-all duration-300" aria-label="Cerrar Ficha de Trayectoria">
                                 Cerrar
-                        </button>
-                        <!--<a href="#contacto" id="modal-contact-link"
-                           class="px-5 py-2.5 bg-[#666666] text-[#e9e9e9] hover:bg-[#166D99] hover:text-[#FFFFFF] text-[10px] tracking-widest uppercase font-semibold rounded-lg transition-all duration-300 focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#166D99]"
-                           aria-label="Contactar a este especialista">
-                            Contactar Especialista
-                        </a>-->
+                            </button>
+                            <!--<a href="#contacto" id="modal-contact-link"
+                               class="px-5 py-2.5 bg-[#666666] text-[#e9e9e9] hover:bg-[#166D99] hover:text-[#FFFFFF] text-[10px] tracking-widest uppercase font-semibold rounded-lg transition-all duration-300 focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#166D99]"
+                               aria-label="Contactar a este especialista">
+                                Contactar Especialista
+                            </a>-->
+                        </div>
+
                     </div>
-
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- CONTACT CONFIRMATION MODAL -->
-    <div id="confirmation-modal"
-         class="fixed inset-0 bg-[#666666]/85 backdrop-blur-sm z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-all duration-300"
-         role="dialog" aria-modal="true" aria-labelledby="confirmation-title" aria-hidden="true">
-        <div class="bg-white max-w-md w-full p-8 rounded-sm shadow-2xl text-center space-y-6 border border-[#166D99] transform scale-95 transition-transform duration-300">
-            <div class="w-16 h-16 bg-emerald-50 rounded-full flex items-center justify-center mx-auto border border-emerald-200"
-                 aria-hidden="true">
-                <i data-lucide="check-circle" class="w-8 h-8 text-emerald-600"></i>
-            </div>
-            <div class="space-y-2">
-                <h3 id="confirmation-title" class="text-2xl font-bold text-[#666666]">Solicitud Recibida</h3>
-                <p class="text-xs text-gray-500 uppercase tracking-widest font-medium text-[#166D99]">
-                    Abogados Urcullú
-                    &amp; Asociados
+        <!-- CONTACT CONFIRMATION MODAL -->
+        <div id="confirmation-modal"
+             class="fixed inset-0 bg-[#666666]/85 backdrop-blur-sm z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-all duration-300"
+             role="dialog" aria-modal="true" aria-labelledby="confirmation-title" aria-hidden="true">
+            <div class="bg-white max-w-md w-full p-8 rounded-sm shadow-2xl text-center space-y-6 border border-[#166D99] transform scale-95 transition-transform duration-300">
+                <div class="w-16 h-16 bg-emerald-50 rounded-full flex items-center justify-center mx-auto border border-emerald-200"
+                     aria-hidden="true">
+                    <i data-lucide="check-circle" class="w-8 h-8 text-emerald-600"></i>
+                </div>
+                <div class="space-y-2">
+                    <h3 id="confirmation-title" class="text-2xl font-bold text-[#666666]">Solicitud Recibida</h3>
+                    <p class="text-xs text-gray-500 uppercase tracking-widest font-medium text-[#166D99]">
+                        Abogados Urcullú
+                        &amp; Asociados
+                    </p>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed font-light">
+                    Agradecemos su confianza. Los antecedentes han sido encriptados y derivados al abogado especialista
+                    correspondiente. Le contactaremos en un plazo máximo de <strong>12 horas hábiles</strong>.
                 </p>
+                <button id="close-confirmation-btn"
+                        class="w-full py-3 bg-[#666666] hover:bg-[#166D99] text-white hover:text-[#666666] text-xs tracking-widest uppercase font-semibold rounded-lg transition-all duration-300 focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#666666]">
+                    Entendido
+                </button>
             </div>
-            <p class="text-xs text-gray-700 leading-relaxed font-light">
-                Agradecemos su confianza. Los antecedentes han sido encriptados y derivados al abogado especialista
-                correspondiente. Le contactaremos en un plazo máximo de <strong>12 horas hábiles</strong>.
-            </p>
-            <button id="close-confirmation-btn"
-                    class="w-full py-3 bg-[#666666] hover:bg-[#166D99] text-white hover:text-[#666666] text-xs tracking-widest uppercase font-semibold rounded-lg transition-all duration-300 focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#666666]">
-                Entendido
-            </button>
         </div>
-    </div>
 
-    <!-- PRIVACY POLICY MODAL -->
-    <div id="privacy-modal"
-         class="fixed inset-0 bg-[#666666]/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-all duration-300"
-         role="dialog" aria-modal="true" aria-labelledby="privacy-modal-title" aria-hidden="true">
-        <div class="bg-white max-w-2xl w-full max-h-[90vh] overflow-y-auto overflow-x-hidden rounded-lg shadow-2xl border border-[#166D99]/30 transform scale-95 transition-transform duration-300 relative p-8 md:p-10">
+        <!-- PRIVACY POLICY MODAL -->
+        <div id="privacy-modal"
+             class="fixed inset-0 bg-[#666666]/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-all duration-300"
+             role="dialog" aria-modal="true" aria-labelledby="privacy-modal-title" aria-hidden="true">
+            <div class="bg-white max-w-2xl w-full max-h-[90vh] overflow-y-auto overflow-x-hidden rounded-lg shadow-2xl border border-[#166D99]/30 transform scale-95 transition-transform duration-300 relative p-8 md:p-10">
 
-            <!-- Close Button -->
-            <button id="close-privacy-modal-btn"
-                    class="absolute top-4 right-4 text-gray-400 hover:text-[#666666] transition-colors focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#666666]"
-                    aria-label="Cerrar Política de Privacidad">
-                <i data-lucide="x" class="w-6 h-6"></i>
-            </button>
+                <!-- Close Button -->
+                <button id="close-privacy-modal-btn"
+                        class="absolute top-4 right-4 text-gray-400 hover:text-[#666666] transition-colors focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#666666]"
+                        aria-label="Cerrar Política de Privacidad">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
 
-            <div class="space-y-4">
-                <div class="space-y-1">
-                    <span class="text-[9px] uppercase tracking-[0.2em] text-[#166D99] font-bold block">Abogados Urcullú &amp; Asociados</span>
-                    <h3 id="privacy-modal-title" class="text-xl font-bold text-[#666666]">Política de Privacidad</h3>
-                </div>
-                <p class="text-xs sm:text-[0.8125rem] text-gray-700 leading-relaxed font-light">
-                    Urcullú y Asociados se compromete a respetar su privacidad. Usted no está obligado a facilitar ninguna información personal al consultar nuestro sitio web. Sin embargo, puede optar por comunicarse con nosotros completando el formulario disponible en la sección "Contacto" de este sitio, en cuyo caso y para efectos de poder responderle adecuadamente, se le pedirá que proporcione su nombre y dirección de correo electrónico, y acepte en forma expresa esta política de privacidad. En ese evento, haremos tratamiento de sus datos sólo para comunicarnos con usted y poder brindarle la información que usted ha solicitado. No compartiremos su información personal con ningún tercero, excepto cuando sea requerido por ley. También podemos utilizar sus datos para comunicarnos con usted para preguntarle si le gustaría recibir información sobre otros servicios que podrían ser de su interés. Sin embargo, no lo añadiremos a ninguna de nuestras listas de distribución de correos sin su consentimiento expreso.
-                </p>
-                <div class="pt-4 border-t border-gray-100 flex justify-end">
-                    <button id="close-privacy-modal-btn-bottom" type="button"
-                            class="px-5 py-2.5 bg-[#666666] hover:bg-[#166D99] text-white text-[10px] tracking-widest uppercase font-semibold rounded-lg transition-all duration-300 focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#666666]"
-                            aria-label="Cerrar Política de Privacidad">
-                        Entendido
-                    </button>
+                <div class="space-y-4">
+                    <div class="space-y-1">
+                        <span class="text-[9px] uppercase tracking-[0.2em] text-[#166D99] font-bold block">Abogados Urcullú &amp; Asociados</span>
+                        <h3 id="privacy-modal-title" class="text-xl font-bold text-[#666666]">Política de Privacidad</h3>
+                    </div>
+                    <p class="text-xs sm:text-[0.8125rem] text-gray-700 leading-relaxed font-light" style="text-align: justify;">
+                        Urcullú y Asociados se compromete a respetar su privacidad. Usted no está obligado a facilitar ninguna información personal al consultar nuestro sitio web. Sin embargo, puede optar por comunicarse con nosotros completando el formulario disponible en la sección "Contacto" de este sitio, en cuyo caso y para efectos de poder responderle adecuadamente, se le pedirá que proporcione su nombre y dirección de correo electrónico, y acepte en forma expresa esta política de privacidad. En ese evento, haremos tratamiento de sus datos sólo para comunicarnos con usted y poder brindarle la información que usted ha solicitado. No compartiremos su información personal con ningún tercero, excepto cuando sea requerido por ley. También podemos utilizar sus datos para comunicarnos con usted para preguntarle si le gustaría recibir información sobre otros servicios que podrían ser de su interés. Sin embargo, no lo añadiremos a ninguna de nuestras listas de distribución de correos sin su consentimiento expreso.
+                    </p>
+                    <div class="pt-4 border-t border-gray-100 flex justify-end">
+                        <button id="close-privacy-modal-btn-bottom" type="button"
+                                class="px-5 py-2.5 bg-[#666666] hover:bg-[#166D99] text-white text-[10px] tracking-widest uppercase font-semibold rounded-lg transition-all duration-300 focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#666666]"
+                                aria-label="Cerrar Política de Privacidad">
+                            Entendido
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- BACK TO TOP & QUICK WHATSAPP FLOATING BUTTONS -->
-    <div class="fixed bottom-6 right-6 z-40 flex flex-col gap-3">
-        <!-- Back to top -->
-        <button id="back-to-top"
-                class="w-11 h-11 bg-white hover:bg-[#666666] text-[#666666] hover:text-white rounded-full flex items-center justify-center border border-gray-200 hover:border-[#666666] shadow-lg transition-all duration-300 opacity-0 pointer-events-none translate-y-3 focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#666666]"
-                aria-label="Volver al inicio de la página">
-            <i data-lucide="arrow-up" class="w-4 h-4" aria-hidden="true"></i>
-        </button>
-        <!-- Next section -->
-        <button id="next-section"
-                class="w-11 h-11 bg-white hover:bg-[#666666] text-[#666666] hover:text-white rounded-full flex items-center justify-center border border-gray-200 hover:border-[#666666] shadow-lg transition-all duration-300 opacity-0 pointer-events-none translate-y-3 focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#666666]"
-                aria-label="Ir a la siguiente sección">
-            <i data-lucide="arrow-down" class="w-4 h-4" aria-hidden="true"></i>
-        </button>
-        <!-- Direct WhatsApp Corporate Floating Button -->
-        <a href="https://wa.me/56997780821?text=Hola,%20deseo%20agendar%20una%20consulta%20con%20Abogados%20Urcullú%20y%20Asociados."
-           target="_blank"
-           class="w-12 h-12 bg-[#1B8A46] hover:bg-[#126833] text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-all duration-300 focus-visible:outline-double focus-visible:outline-3 focus-visible:outline-[#166D99]"
-           aria-label="Canal preferencial de asistencia directa WhatsApp">
-            <i data-lucide="message-circle" class="w-6 h-6" aria-hidden="true"></i>
-        </a>
-    </div>
+        <!-- BACK TO TOP & QUICK WHATSAPP FLOATING BUTTONS -->
+        <div class="fixed bottom-6 right-6 z-40 flex flex-col gap-3">
+            <!-- Back to top -->
+            <button id="back-to-top"
+                    class="w-11 h-11 bg-white hover:bg-[#666666] text-[#666666] hover:text-white rounded-full flex items-center justify-center border border-gray-200 hover:border-[#666666] shadow-lg transition-all duration-300 opacity-0 pointer-events-none translate-y-3 focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#666666]"
+                    aria-label="Volver al inicio de la página">
+                <i data-lucide="arrow-up" class="w-4 h-4" aria-hidden="true"></i>
+            </button>
+            <!-- Next section -->
+            <button id="next-section"
+                    class="w-11 h-11 bg-white hover:bg-[#666666] text-[#666666] hover:text-white rounded-full flex items-center justify-center border border-gray-200 hover:border-[#666666] shadow-lg transition-all duration-300 opacity-0 pointer-events-none translate-y-3 focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#666666]"
+                    aria-label="Ir a la siguiente sección">
+                <i data-lucide="arrow-down" class="w-4 h-4" aria-hidden="true"></i>
+            </button>
+            <!-- Direct WhatsApp Corporate Floating Button -->
+            <a href="https://wa.me/56997780821?text=Hola,%20deseo%20agendar%20una%20consulta%20con%20Abogados%20Urcullú%20y%20Asociados."
+               target="_blank"
+               class="w-12 h-12 bg-[#1B8A46] hover:bg-[#126833] text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-all duration-300 focus-visible:outline-double focus-visible:outline-3 focus-visible:outline-[#166D99]"
+               aria-label="Canal preferencial de asistencia directa WhatsApp">
+                <i data-lucide="message-circle" class="w-6 h-6" aria-hidden="true"></i>
+            </a>
+        </div>
+    </section>
 
     <!-- FOOTER -->
-    <footer class="bg-[#166D99] border-t border-white/10 text-white/70 text-xs py-16 font-light text-center">
+    <footer id="footer" class="bg-[#166D99] border-t border-white/10 text-white/70 text-xs py-16 font-light text-center" style=" border-bottom: 1px solid rgba(255, 107, 0, 0.3) !important;">
         <div class="max-w-7xl mx-auto px-6 sm:px-8 grid grid-cols-1 md:grid-cols-3 gap-12">
             <div class="space-y-4">
-                <span class="text-4xl font-bold tracking-tight text-[#FFFFFF] block text-sombra">U&amp;A</span>
+                <span class="text-4xl  tracking-tight text-[#FFFFFF] block text-sombra">U&amp;A</span>
                 <span class="block text-[13px] tracking-[0.15em] text-[#e9e9e9] leading-none uppercase text-sombra">
                     Urcullú
                     &amp; Asociados
@@ -1116,13 +1159,13 @@
                 </ul>
             </div>
             <!--<div id="politica">
-            <button type="button" id="open-privacy-modal-btn"
-                    class="open-privacy-modal-trigger w-full text-center rounded-lg transition-transform duration-300 hover:scale-105 focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#166D99] pt-2"
-                    aria-haspopup="dialog" aria-label="Ver política de privacidad">
-                <div class="h-28 sm:h-80 md:h-28 bg-contain bg-no-repeat bg-center" style="background-image: url('Balanza.png');" aria-hidden="true"></div>
-                <h4 class="text-sm text-[#cccccc] mb-1 uppercase tracking-wider p-2">Política de privacidad</h4>
-            </button>
-        </div>-->
+                <button type="button" id="open-privacy-modal-btn"
+                        class="open-privacy-modal-trigger w-full text-center rounded-lg transition-transform duration-300 hover:scale-105 focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#166D99] pt-2"
+                        aria-haspopup="dialog" aria-label="Ver política de privacidad">
+                    <div class="h-28 sm:h-80 md:h-28 bg-contain bg-no-repeat bg-center" style="background-image: url('Balanza.png');" aria-hidden="true"></div>
+                    <h4 class="text-sm text-[#cccccc] mb-1 uppercase tracking-wider p-2">Política de privacidad</h4>
+                </button>
+            </div>-->
         </div>
         <div class="max-w-7xl mx-auto px-6 sm:px-8 mt-16 pt-8 border-t border-white/5 text-center text-[18px] text-white/80 tracking-wider text-sombra">
             <!-- Mobile: 3 líneas separadas -->
@@ -1164,55 +1207,55 @@
         //     specialties: ["Félix Urcullú Molina fue una figura fundacional de la Facultad de Ciencias Jurídicas y Sociales de la Universidad Austral de Chile: como primer decano (1989–1991), ayudó a estructurar la nueva unidad académica y a consolidar la Escuela de Derecho en Valdivia.<br /><br />También mantuvo una relación duradera con la Universidad Austral más allá de su decanía: fue ex secretario general de la UACh y luego integró su Directorio, llegando a ejercer como vicepresidente."
         //     ]
         // },
-        "urcullu-steffen": {
-          name: "Félix Urcullú Steffen",
-          charge: "Socio Principal",
-          img: "FelixUrculluSteffen.jpg",
-          // description: "Félix Urcullú Steffen es el pilar estratégico y socio fundador del estudio. Cuenta con una trayectoria de primer nivel en el derecho civil y en la resolución de litigios complejos en el sur de Chile. Reconocido por su capacidad de argumentación y su profundo rigor analítico, ha liderado con éxito defensas de alta complejidad patrimonial ante las cortes más exigentes del país. Su visión del derecho inspira el estándar ético y profesional de toda la firma.",
-          specialtiesTitle: "Especialidades",
-          specialties: [
-            "Derecho civil.",
-            "Derecho sucesorio.",
-            "Gestión de conflictos."
-          ]
-        },
-        "soto-gidi": {
-          name: "Agustín Soto Gidi",
-          charge: "Abogado Asociado",
-          img: "AgustinSotoGidi.jpg",
-          //description: "Agustín Soto Gidi destaca por su enfoque analítico y constitucional del derecho. Especializado en el diseño de defensas constitucionales y el diseño estratégico de litigios, aporta un valor diferencial al estudio en la detección y prevención temprana de brechas de cumplimiento legal corporativo (compliance). Su práctica se caracteriza por estructurar defensas preventivas rigurosas que blindan a las empresas frente a contingencias judiciales de diversa índole.",
-          specialtiesTitle: "Especialidades",
-          specialties: [
-            "Derecho constitucional.",
-            "Derecho de sociedades.",
-            "Gestión de conflictos.",
-            "Procedimientos ante juzgados de policía local."
-          ]
-        },
-        "urcullu-arriagada": {
-          name: "Félix Urcullú Arriagada",
-          charge: "Abogado Asociado",
-          img: "FelixUrculluArriagada.jpg",
-          // description: "Félix Urcullú Arriagada enfoca su práctica en el área de derecho civil y la conducción estratégica de procedimientos judiciales ordinarios. Su dedicación constante al estudio minucioso de la jurisprudencia y su rigurosidad en la preparación probatoria garantizan una representación judicial sólida. Participa activamente en la representación de personas naturales y corporaciones frente a reclamaciones complejas de índole contractual y extracontractual.",
-          specialtiesTitle: "Especialidades",
-          specialties: [
-            "Juicios ejecutivos.",
-            "Derecho sucesorio.",
-            "Gestión de conflictos."
-          ]
-        },
-        "carter-holtehuer": {
-          name: "Nicolás Carter Holtehuer",
-          charge: "Abogado Asociado",
-          img: "NicolasCarterHoltehuer.jpg",
-          //description: "Nicolás Carter Holtehuer lidera el área de derecho ambiental y regulatorio de la firma. Su práctica profesional se centra en la asesoría legal preventiva de proyectos de inversión, la representación ante el Sistema de Evaluación de Impacto Ambiental (SEIA) y la tramitación administrativa ante diversos organismos del Estado. Es clave en el aseguramiento del cumplimiento normativo ambiental y la defensa frente a sanciones del ámbito público.",
-          specialtiesTitle: "Especialidades",
-          specialties: [
-            "Derecho ambiental.",
-            "Derecho administrativo.",
-            "Derecho regulatorio."
-          ]
-      },
+        //   "urcullu-steffen": {
+        //     name: "Félix Urcullú Steffen",
+        //     charge: "Socio",
+        //     img: "FelixUrculluSteffen.jpg",
+        //     // description: "Félix Urcullú Steffen es el pilar estratégico y socio fundador del estudio. Cuenta con una trayectoria de primer nivel en el derecho civil y en la resolución de litigios complejos en el sur de Chile. Reconocido por su capacidad de argumentación y su profundo rigor analítico, ha liderado con éxito defensas de alta complejidad patrimonial ante las cortes más exigentes del país. Su visión del derecho inspira el estándar ético y profesional de toda la firma.",
+        //     specialtiesTitle: "Especialidades",
+        //     specialties: [
+        //       "Derecho civil.",
+        //       "Derecho sucesorio.",
+        //       "Gestión de conflictos."
+        //     ]
+        //   },
+        //   "soto-gidi": {
+        //     name: "Agustín Soto Gidi",
+        //     charge: "Abogado Asociado",
+        //     img: "AgustinSotoGidi.jpg",
+        //     //description: "Agustín Soto Gidi destaca por su enfoque analítico y constitucional del derecho. Especializado en el diseño de defensas constitucionales y el diseño estratégico de litigios, aporta un valor diferencial al estudio en la detección y prevención temprana de brechas de cumplimiento legal corporativo (compliance). Su práctica se caracteriza por estructurar defensas preventivas rigurosas que blindan a las empresas frente a contingencias judiciales de diversa índole.",
+        //     specialtiesTitle: "Especialidades",
+        //     specialties: [
+        //       "Derecho constitucional.",
+        //       "Derecho de sociedades.",
+        //       "Gestión de conflictos.",
+        //       "Procedimientos ante juzgados de policía local."
+        //     ]
+        //   },
+        //   "urcullu-arriagada": {
+        //     name: "Félix Urcullú Arriagada",
+        //     charge: "Abogado Asociado",
+        //     img: "FelixUrculluArriagada.jpg",
+        //     // description: "Félix Urcullú Arriagada enfoca su práctica en el área de derecho civil y la conducción estratégica de procedimientos judiciales ordinarios. Su dedicación constante al estudio minucioso de la jurisprudencia y su rigurosidad en la preparación probatoria garantizan una representación judicial sólida. Participa activamente en la representación de personas naturales y corporaciones frente a reclamaciones complejas de índole contractual y extracontractual.",
+        //     specialtiesTitle: "Especialidades",
+        //     specialties: [
+        //       "Juicios ejecutivos.",
+        //       "Derecho sucesorio.",
+        //       "Gestión de conflictos."
+        //     ]
+        //   },
+        //   "carter-holtehuer": {
+        //     name: "Nicolás Carter Holtehuer",
+        //     charge: "Abogado Asociado",
+        //     img: "NicolasCarterHoltehuer.jpg",
+        //     //description: "Nicolás Carter Holtehuer lidera el área de derecho ambiental y regulatorio de la firma. Su práctica profesional se centra en la asesoría legal preventiva de proyectos de inversión, la representación ante el Sistema de Evaluación de Impacto Ambiental (SEIA) y la tramitación administrativa ante diversos organismos del Estado. Es clave en el aseguramiento del cumplimiento normativo ambiental y la defensa frente a sanciones del ámbito público.",
+        //     specialtiesTitle: "Especialidades",
+        //     specialties: [
+        //       "Derecho ambiental.",
+        //       "Derecho administrativo.",
+        //       "Derecho regulatorio."
+        //     ]
+        // },
       "derecho-penal": {
           name: "Derecho Penal",
           img: "Derecho Penal.jpg",
