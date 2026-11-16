@@ -15,24 +15,24 @@
 
     <style type="text/css">
 
+        /* Fondo global: queda detrás de todo el contenido y conserva la imagen
+           completa en pantallas horizontales y verticales. */
+        html {
+            min-height: 100%;
+            background-color: #176893;
+        }
+
         body {
             margin: 0;
             min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #166D99;
-            background-image: url('U&A_big.jpg');
-            background-size: cover;
-            background-position: center;
-        }
-
-        .logo {
-            max-width: 100%;
-            max-height: 70vh;
-            width: auto;
-            height: auto;
-            display: block;
+            width: 100%;
+            background-color: #176893;
+            background-image: url('ua.jpg');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: contain;
+            background-attachment: fixed;
+            overflow-x: hidden;
         }
 
         #historia, #quienes-somos, #servicios, #nuestros-abogados, #contacto {
@@ -49,10 +49,12 @@
            (no se fuerza 100vh como alto máximo, eso causaba el texto encimado)
            y el body ocupa el 100% del ancho (evita la franja azul a la derecha). */
         @media (max-width: 1023px) {
-            body.logo {
-                max-width: 100%;
+            body {
                 width: 100%;
-                max-height: none;
+                min-height: 100vh;
+                background-attachment: scroll;
+                background-position: center center;
+                background-size: contain;
             }
 
             #historia, #quienes-somos, #servicios, #nuestros-abogados, #contacto, #footer {
@@ -66,7 +68,7 @@
 
 </head>
 
-<body class="logo bg-[#166D99] text-[#001429] overflow-x-hidden selection:bg-[#166D99] selection:text-[#666666]">
+<body class="bg-[#176893] text-[#001429] overflow-x-hidden selection:bg-[#166D99] selection:text-[#666666]">
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
