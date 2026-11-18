@@ -64,6 +64,92 @@
             }
         }
 
+
+        /* Pantallas de 1200px o más */
+        @media (min-height: 1200px) {
+            #historia, #quienes-somos, #servicios, #nuestros-abogados, #contacto {
+                max-height: auto;
+                min-height: 1200px;
+            }
+
+/*            #footer {
+                max-height: 90vh;
+                min-height: 90vh;
+            }*/
+        }
+
+        /* 1080px - 1199px */
+        @media (min-height: 1080px) and (max-height: 1199px) {
+            #historia, #quienes-somos, #servicios, #nuestros-abogados, #contacto {
+                height: auto;
+                max-height: auto;
+                min-height: 1080px;
+            }
+        }
+
+        /* 900px - 1079px */
+        @media (min-height: 900px) and (max-height: 1079px) {
+            #historia, #quienes-somos, #servicios, #nuestros-abogados, #contacto {
+                height: auto;
+                max-height: auto;
+                min-height: 900px;
+            }
+        }
+
+        /* 800px - 899px */
+        @media (min-height: 800px) and (max-height: 899px) {
+            #historia, #quienes-somos, #servicios, #nuestros-abogados, #contacto {
+                height: auto;
+                max-height: auto;
+                min-height: 800px;
+            }
+        }
+
+        /* 700px - 799px */
+        @media (min-height: 700px) and (max-height: 799px) {
+            #historia, #quienes-somos, #servicios, #nuestros-abogados, #contacto {
+                height: auto;
+                max-height: auto;
+                min-height: 700px;
+            }
+        }
+
+        /* 600px - 699px */
+        @media (min-height: 600px) and (max-height: 699px) {
+            #historia, #quienes-somos, #servicios, #nuestros-abogados, #contacto {
+                height: auto;
+                max-height: auto;
+                min-height: 600px;
+            }
+        }
+
+        /* 500px - 599px */
+        @media (min-height: 500px) and (max-height: 599px) {
+            #historia, #quienes-somos, #servicios, #nuestros-abogados, #contacto {
+                height: auto;
+                max-height: auto;
+                min-height: 500px;
+            }
+        }
+
+        /* 400px - 499px */
+        @media (min-height: 400px) and (max-height: 499px) {
+            #historia, #quienes-somos, #servicios, #nuestros-abogados, #contacto {
+                height: auto;
+                max-height: auto;
+                min-height: 400px;
+            }
+        }
+
+        /* Menos de 400px */
+        @media (max-height: 399px) {
+            #historia, #quienes-somos, #servicios, #nuestros-abogados, #contacto {
+                height: auto;
+                max-height: auto;
+                min-height: auto;
+            }
+        }
+
     </style>
 
 </head>
@@ -632,48 +718,58 @@
             <div class="max-w-7xl mx-auto px-6 sm:px-8">
 
                 <div class="text-center max-w-4xl mx-auto mb-2 md:mb-6 space-y-3 md:space-y-2 -mt-[15px] pb-[15px]">
-                    <h2 class="text-4xl sm:text-3xl md:text-5xl text-[#166D99] text-sombra">
+                    <h2 class="text-4xl sm:text-2xl md:text-5xl text-[#166D99] text-sombra">
                         Áreas de práctica
                     </h2>
                 </div>
 
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 max-sm:-mt-[10px]">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5 max-sm:-mt-[10px]">
                     <!-- Derecho Penal -->
-                    <article class="open-modal-trigger group relative overflow-hidden h-[165px] sm:h-[304px] bg-[#9aa7c0] cursor-pointer focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#166D99] border border-gray-100 rounded-lg rounded-lg text-sombra" data-lawyer="derecho-penal" role="button" tabindex="0" aria-haspopup="dialog" aria-label="Ver descripción en mayor detalle" style="border: 4px outset #cccccc">
+                    <article class="open-modal-trigger group relative overflow-hidden h-[165px] sm:h-[304px] lg:h-[220px] bg-[#9aa7c0] cursor-pointer focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#166D99] border border-gray-100 rounded-lg rounded-lg text-sombra" data-lawyer="derecho-penal" role="button" tabindex="0" aria-haspopup="dialog" aria-label="Ver descripción en mayor detalle" style="border: 4px outset #cccccc">
                         <img src="Derecho Penal.jpg" alt="Derecho Penal" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                         <div class="absolute inset-0 bg-[#1f3a6b]/30 group-hover:bg-[#1f3a6b]/45 transition-colors duration-300" aria-hidden="true"></div>
-                        <div class="relative z-10 h-full flex flex-col items-center justify-center px-6 text-center">
-                            <h4 class="text-white font-semibold uppercase tracking-[0.15em] text-lg sm:text-xl leading-relaxed">Derecho Penal</h4>
+                        <div class="relative z-10 h-full flex flex-col items-center justify-center px-6 lg:px-3 text-center">
+                            <h4 class="text-white font-semibold uppercase tracking-[0.15em] text-lg sm:text-xl lg:text-sm lg:tracking-[0.1em] leading-relaxed lg:min-h-[2.9rem] lg:flex lg:items-center lg:justify-center">Derecho Penal</h4>
                             <div class="mt-3 w-[75%] h-px bg-white" aria-hidden="true"></div>
                         </div>
                     </article>
 
                     <!-- Derecho Constitucional -->
-                    <article class="open-modal-trigger group relative overflow-hidden h-[165px] sm:h-[304px] bg-[#9aa7c0] cursor-pointer focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#166D99] border border-gray-100 rounded-lg rounded-lg text-sombra" data-lawyer="derecho-constitucional" role="button" tabindex="0" aria-haspopup="dialog" aria-label="Ver descripción en mayor detalle" style="border: 4px outset #cccccc">
+                    <article class="open-modal-trigger group relative overflow-hidden h-[165px] sm:h-[304px] lg:h-[220px] bg-[#9aa7c0] cursor-pointer focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#166D99] border border-gray-100 rounded-lg rounded-lg text-sombra" data-lawyer="derecho-constitucional" role="button" tabindex="0" aria-haspopup="dialog" aria-label="Ver descripción en mayor detalle" style="border: 4px outset #cccccc">
                         <img src="Derecho Constitucional.jpg" alt="Derecho Constitucional" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                         <div class="absolute inset-0 bg-[#1f3a6b]/30 group-hover:bg-[#1f3a6b]/45 transition-colors duration-300" aria-hidden="true"></div>
-                        <div class="relative z-10 h-full flex flex-col items-center justify-center px-6 text-center">
-                            <h4 class="text-white font-semibold uppercase tracking-[0.15em] text-lg sm:text-xl leading-relaxed">Derecho Constitucional</h4>
+                        <div class="relative z-10 h-full flex flex-col items-center justify-center px-6 lg:px-3 text-center">
+                            <h4 class="text-white font-semibold uppercase tracking-[0.15em] text-lg sm:text-xl lg:text-sm lg:tracking-[0.1em] leading-relaxed lg:min-h-[2.9rem] lg:flex lg:items-center lg:justify-center">Derecho Constitucional</h4>
                             <div class="mt-3 w-[75%] h-px bg-white" aria-hidden="true"></div>
                         </div>
                     </article>
 
                     <!-- Derecho Laboral -->
-                    <article class="open-modal-trigger group relative overflow-hidden h-[165px] sm:h-[304px] bg-[#9aa7c0] cursor-pointer focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#166D99] border border-gray-100 rounded-lg rounded-lg text-sombra" data-lawyer="derecho-laboral" role="button" tabindex="0" aria-haspopup="dialog" aria-label="Ver descripción en mayor detalle" style="border: 4px outset #cccccc">
+                    <article class="open-modal-trigger group relative overflow-hidden h-[165px] sm:h-[304px] lg:h-[220px] bg-[#9aa7c0] cursor-pointer focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#166D99] border border-gray-100 rounded-lg rounded-lg text-sombra" data-lawyer="derecho-laboral" role="button" tabindex="0" aria-haspopup="dialog" aria-label="Ver descripción en mayor detalle" style="border: 4px outset #cccccc">
                         <img src="Derecho Laboral.jpg" alt="Derecho Laboral" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                         <div class="absolute inset-0 bg-[#1f3a6b]/30 group-hover:bg-[#1f3a6b]/45 transition-colors duration-300" aria-hidden="true"></div>
-                        <div class="relative z-10 h-full flex flex-col items-center justify-center px-6 text-center">
-                            <h4 class="text-white font-semibold uppercase tracking-[0.15em] text-lg sm:text-xl leading-relaxed">Derecho Laboral</h4>
+                        <div class="relative z-10 h-full flex flex-col items-center justify-center px-6 lg:px-3 text-center">
+                            <h4 class="text-white font-semibold uppercase tracking-[0.15em] text-lg sm:text-xl lg:text-sm lg:tracking-[0.1em] leading-relaxed lg:min-h-[2.9rem] lg:flex lg:items-center lg:justify-center">Derecho Laboral</h4>
                             <div class="mt-3 w-[85%] h-px bg-white" aria-hidden="true"></div>
                         </div>
                     </article>
 
                     <!-- Derecho Civil -->
-                    <article class="open-modal-trigger group relative overflow-hidden h-[165px] sm:h-[304px] bg-[#9aa7c0] cursor-pointer focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#166D99] border border-gray-100 rounded-lg rounded-lg text-sombra" data-lawyer="derecho-civil" role="button" tabindex="0" aria-haspopup="dialog" aria-label="Ver descripción en mayor detalle" style="border: 4px outset #cccccc">
+                    <article class="open-modal-trigger group relative overflow-hidden h-[165px] sm:h-[304px] lg:h-[220px] bg-[#9aa7c0] cursor-pointer focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#166D99] border border-gray-100 rounded-lg rounded-lg text-sombra" data-lawyer="derecho-civil" role="button" tabindex="0" aria-haspopup="dialog" aria-label="Ver descripción en mayor detalle" style="border: 4px outset #cccccc">
                         <img src="Derecho Civil.jpg" alt="Derecho Civil" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                         <div class="absolute inset-0 bg-[#1f3a6b]/30 group-hover:bg-[#1f3a6b]/45 transition-colors duration-300" aria-hidden="true"></div>
-                        <div class="relative z-10 h-full flex flex-col items-center justify-center px-6 text-center">
-                            <h4 class="text-white font-semibold uppercase tracking-[0.15em] text-lg sm:text-xl leading-relaxed">Derecho Civil</h4>
+                        <div class="relative z-10 h-full flex flex-col items-center justify-center px-6 lg:px-3 text-center">
+                            <h4 class="text-white font-semibold uppercase tracking-[0.15em] text-lg sm:text-xl lg:text-sm lg:tracking-[0.1em] leading-relaxed lg:min-h-[2.9rem] lg:flex lg:items-center lg:justify-center">Derecho Civil</h4>
+                            <div class="mt-3 w-[75%] h-px bg-white" aria-hidden="true"></div>
+                        </div>
+                    </article>
+
+                    <!-- Juzgado de policía -->
+                    <article class="open-modal-trigger group relative overflow-hidden h-[165px] sm:h-[304px] lg:h-[220px] bg-[#9aa7c0] cursor-pointer focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#166D99] border border-gray-100 rounded-lg rounded-lg text-sombra" data-lawyer="juzgado-policia" role="button" tabindex="0" aria-haspopup="dialog" aria-label="Ver descripción en mayor detalle" style="border: 4px outset #cccccc">
+                        <img src="JPL-3.jpg" alt="Juzgado de policía local" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-[#1f3a6b]/30 group-hover:bg-[#1f3a6b]/45 transition-colors duration-300" aria-hidden="true"></div>
+                        <div class="relative z-10 h-full flex flex-col items-center justify-center px-6 lg:px-3 text-center">
+                            <h4 class="text-white font-semibold uppercase tracking-[0.15em] text-lg sm:text-xl lg:text-sm lg:tracking-[0.1em] leading-relaxed lg:min-h-[2.9rem] lg:flex lg:items-center lg:justify-center">Juzgado de policía local</h4>
                             <div class="mt-3 w-[75%] h-px bg-white" aria-hidden="true"></div>
                         </div>
                     </article>
@@ -718,7 +814,8 @@
         </section>
 
         <!-- NUESTRO EQUIPO -->
-        <section id="nuestros-abogados" class="pt-[5.4rem] pb-24 md:pt-[7.2rem] md:pb-32 bg-[#e9e9e9]" style="border-bottom: 1px solid rgba(255, 107, 0, 0.3) !important;">
+        <section id="nuestros-abogados" class="pt-[5.4rem] pb-[96px] md:pt-[7.2rem] md:pb-32 bg-[#e9e9e9] text-sombra" style="border-bottom: 1px solid rgba(255, 107, 0, 0.3) !important;">
+
             <div class="max-w-7xl mx-auto px-6 sm:px-8">
                 <div class="text-center max-w-3xl mx-auto mb-[1.4rem] space-y-4">
                     <!--<span class="text-xs uppercase tracking-[0.25em] text-[#166D99] font-bold block">Abogados</span>-->
@@ -1213,33 +1310,33 @@
                     Urcullú
                     &amp; Asociados
                 </span>
-                <span class="block text-[12px] max-md:text-[13.2px] tracking-[0.25em] text-[#FFFFFF] uppercase mt-1 max-md:mt-[0.275rem] text-sombra">Abogados</span>
+                <span class="block text-[13px] max-md:text-[14.3px] tracking-[0.15em] text-[#e9e9e9] leading-none uppercase text-sombra">Abogados</span>
             </div>
             <div>
-                <h4 class="text-sm font-bold text-white mb-4 uppercase tracking-wider p-2 text-sombra">Enlaces Rápidos</h4>
+                <h4 class="text-sm font-bold text-white mb-4 uppercase tracking-wider p-2 text-sombra">ENLACES RÁPIDOS</h4>
                 <ul class="space-y-2.5">
                     <li>
                         <a href="#quienes-somos"
-                           class="hover:text-[#FFFFFF] text-[12px] tracking-[0.15em] font-semibold font-bold transition-colors focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#eeeeee] text-sombra">
-                            NUESTRO ESTUDIO
+                           class="hover:text-[#FFFFFF] text-[13px] tracking-[0.15em] transition-colors focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#eeeeee] text-sombra">
+                            Nuestro estudio
                         </a>
                     </li>
                     <li>
                         <a href="#servicios"
-                           class="hover:text-[#FFFFFF] text-[12px] tracking-[0.15em] font-semibold transition-colors focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#166D99] text-sombra">
-                            ÁREAS DE PRÁCTICA
+                           class="hover:text-[#FFFFFF] text-[13px] tracking-[0.15em] transition-colors focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#166D99] text-sombra">
+                            Áreas de práctica
                         </a>
                     </li>
                     <li>
                         <a href="#nuestros-abogados"
-                           class="hover:text-[#FFFFFF] text-[12px] tracking-[0.15em] font-semibold transition-colors focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#166D99] text-sombra">
-                            ABOGADOS
+                           class="hover:text-[#FFFFFF] text-[13px] tracking-[0.15em] transition-colors focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#166D99] text-sombra">
+                            Abogados
                         </a>
                     </li>
                     <li>
                         <a href="#oficinas"
-                           class="hover:text-[#FFFFFF] text-[12px] tracking-[0.15em] font-semibold transition-colors focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#166D99] text-sombra">
-                            OFICINAS
+                           class="hover:text-[#FFFFFF] text-[13px] tracking-[0.15em] transition-colors focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#166D99] text-sombra">
+                            Oficinas
                         </a>
                     </li>
                 </ul>
@@ -1250,21 +1347,21 @@
                 <ul class="space-y-4">
                     <li>
                         <a href="tel:+56997780821"
-                           class="hover:text-[#FFFFFF] font-semibold transition-colors focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#2B89B8] text-sombra">
+                           class="hover:text-[#FFFFFF] transition-colors focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#2B89B8] text-sombra">
                             <span class="hidden md:inline" style="font-size: 18px;">+569 9778 0821</span>
                             <span class="md:hidden" style="font-size: 18px;">+569 9778 0821</span>
                         </a>
                     </li>
                     <li>
                         <a href="tel:+56952134108"
-                           class="hover:text-[#FFFFFF] font-semibold transition-colors focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#2B89B8] text-sombra">
+                           class="hover:text-[#FFFFFF] transition-colors focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#2B89B8] text-sombra">
                             <span class="hidden md:inline" style="font-size: 18px;">+569 5213 4108</span>
                             <span class="md:hidden" style="font-size: 18px;">+569 5213 4108</span>
                         </a>
                     </li>
                     <li>
                         <a href="mailto:contacto@urculluyasociados.cl"
-                           class="hover:text-[#FFFFFF] font-semibold transition-colors focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#2B89B8] text-sombra">
+                           class="hover:text-[#FFFFFF] transition-colors focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-[#2B89B8] text-sombra">
                             <span style="font-size: 18px;">contacto@urculluyasociados.cl</span>
                         </a>
                     </li>
@@ -1307,6 +1404,7 @@
 
     <!-- Main scripts -->
     <!--<script type="module" src="app.js"></script>-->
+
 </body>
 
 </html>
@@ -1370,38 +1468,46 @@
         //       "Derecho regulatorio."
         //     ]
         // },
-      "derecho-penal": {
-          name: "Derecho Penal",
-          img: "Derecho Penal.jpg",
-          specialtiesTitle: "Especialidades",
-          specialties: [
-              "Nuestro estudio presta asesoría legal personalizada a personas que han sido acusadas de cometer un delito o han sido víctimas de un delito.<br /><br />Representamos los intereses de nuestros clientes a través de un riguroso análisis de las circunstancias para determinar la mejor estrategia según el caso."
-          ]
-      },
-      "derecho-constitucional": {
-          name: "Derecho Constitucional",
-          img: "Derecho Constitucional.jpg",
-          specialtiesTitle: "Especialidades",
-          specialties: [
-              "Ante vulneraciones de garantías constitucionales por parte de terceros, empresas o instituciones públicas, defendemos los derechos de nuestros clientes mediante la interposición de recursos de protección y otros mecanismos que establece la Constitución Política de la República."
-          ]
-      },
-      "derecho-laboral": {
-          name: "Derecho Laboral",
-          img: "Derecho Laboral.jpg",
-          specialtiesTitle: "Especialidades",
-          specialties: [
-              "Nuestro estudio asesora a clientes en una gran variedad de materias que afectan a los empleadores y a los trabajadores.<br /><br />Prestamos asistencia en la elaboración de contratos de trabajo y finiquitos; representamos a nuestros clientes en juicios ante los tribunales laborales y la Corte de Apelaciones; y tramitamos asuntos ante la Dirección del Trabajo."
-          ]
-      },
-      "derecho-civil": {
-          name: "Derecho Civil",
-          img: "Derecho Civil.jpg",
-          specialtiesTitle: "Especialidades",
-          specialties: [
-              "Entendemos la relevancia de resguardar el patrimonio de nuestros clientes. Los representamos en toda clase de juicios civiles con el objeto de defender sus derechos y nos aseguramos de proteger sus intereses a través de la revisión y redacción de contratos que se ajusten a las necesidades de sus negocios."
-          ]
-      }
+    "derecho-penal": {
+        name: "Derecho Penal",
+        img: "Derecho Penal.jpg",
+        specialtiesTitle: "Especialidades",
+        specialties: [
+            "Nuestro estudio presta asesoría legal personalizada a personas que han sido acusadas de cometer un delito o han sido víctimas de un delito.<br /><br />Representamos los intereses de nuestros clientes a través de un riguroso análisis de las circunstancias para determinar la mejor estrategia según el caso."
+        ]
+    },
+    "derecho-constitucional": {
+        name: "Derecho Constitucional",
+        img: "Derecho Constitucional.jpg",
+        specialtiesTitle: "Especialidades",
+        specialties: [
+            "Ante vulneraciones de garantías constitucionales por parte de terceros, empresas o instituciones públicas, defendemos los derechos de nuestros clientes mediante la interposición de recursos de protección y otros mecanismos que establece la Constitución Política de la República."
+        ]
+    },
+    "derecho-laboral": {
+        name: "Derecho Laboral",
+        img: "Derecho Laboral.jpg",
+        specialtiesTitle: "Especialidades",
+        specialties: [
+            "Nuestro estudio asesora a clientes en una gran variedad de materias que afectan a los empleadores y a los trabajadores.<br /><br />Prestamos asistencia en la elaboración de contratos de trabajo y finiquitos; representamos a nuestros clientes en juicios ante los tribunales laborales y la Corte de Apelaciones; y tramitamos asuntos ante la Dirección del Trabajo."
+        ]
+    },
+    "derecho-civil": {
+        name: "Derecho Civil",
+        img: "Derecho Civil.jpg",
+        specialtiesTitle: "Especialidades",
+        specialties: [
+            "Entendemos la relevancia de resguardar el patrimonio de nuestros clientes.<br /><br />Los representamos en toda clase de juicios civiles con el objeto de defender sus derechos y nos aseguramos de proteger sus intereses a través de la revisión y redacción de contratos que se ajusten a las necesidades de sus negocios."
+        ]
+    },
+    "juzgado-policia": {
+        name: "Juzgado de policía local",
+        img: "JPL-3.jpg",
+        specialtiesTitle: "Especialidades",
+        specialties: [
+            "No especializamos en representar a nuestros clientes en procedimientos infraccionales y civiles ante los Juzgados de Policía Local.<br /><br />Presentamos acciones y defendemos sus intereses en materias de Derecho del Consumidor, Ley de Fraudes Bancarios y accidentes de tránsito que se tramitan."
+        ]
+    }
   };
 
   document.addEventListener("DOMContentLoaded", () => {
