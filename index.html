@@ -629,7 +629,7 @@
         </section>
 
         <!-- HISTORIA -->
-        <section id="historia" class="py-24 md:py-32 bg-[#e9e9e9]" style="border-bottom: 1px solid rgba(255, 107, 0, 0.3) !important;">
+        <section id="historia" class="py-24 md:py-32 bg-[#e9e9e9]" style="border-bottom: 1px solid #166D99 !important;">
             <div class="text-center max-w-3xl mx-auto mb-[1.4rem] space-y-4">
                 <!--<span class="text-xs uppercase tracking-[0.25em] text-[#166D99] font-bold block">Abogados</span>-->
                 <h2 class="relative -top-[15px] text-3xl sm:text-4xl md:text-5xl text-[#166D99] text-sombra">
@@ -675,7 +675,7 @@
         </section>
 
         <!-- QUIÉNES SOMOS -->
-        <section id="quienes-somos" class="py-24 md:py-32 bg-[#e9e9e9]" style="border-bottom: 1px solid rgba(255, 107, 0, 0.3) !important;">
+        <section id="quienes-somos" class="py-24 md:py-32 bg-[#e9e9e9]" style="border-bottom: 1px solid #166D99 !important;">
             <div class="max-w-7xl mx-auto px-6 sm:px-8">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
                     <!-- Subtitle & Main Concept -->
@@ -714,7 +714,7 @@
         </section>
 
         <!-- SERVICIOS -->
-        <section id="servicios" class="py-24 md:py-32 bg-[#e9e9e9]" style="border-bottom: 1px solid rgba(255, 107, 0, 0.3) !important;">
+        <section id="servicios" class="py-24 md:py-32 bg-[#e9e9e9]" style="border-bottom: 1px solid #166D99 !important;">
             <div class="max-w-7xl mx-auto px-6 sm:px-8">
 
                 <div class="text-center max-w-4xl mx-auto mb-2 md:mb-6 space-y-3 md:space-y-2 md:-mt-[35px] -mt-[15px] pb-[15px]">
@@ -814,7 +814,7 @@
         </section>
 
         <!-- NUESTRO EQUIPO -->
-        <section id="nuestros-abogados" class="pt-[5.4rem] pb-[96px] md:pt-[7.2rem] md:pb-32 bg-[#e9e9e9]" style="border-bottom: 1px solid rgba(255, 107, 0, 0.3) !important;">
+        <section id="nuestros-abogados" class="pt-[5.4rem] pb-[96px] md:pt-[7.2rem] md:pb-32 bg-[#e9e9e9]" style="border-bottom: 1px solid #166D99 !important;">
 
             <div class="max-w-7xl mx-auto px-6 sm:px-8">
                 <div class="text-center max-w-3xl mx-auto mb-[1.4rem] space-y-4 text-sombra">
@@ -926,7 +926,7 @@
                     <!-- Formulario Moderno con validaciones -->
                     <div class="lg:col-span-7 p-[1.5rem] md:p-[1.6rem] md:border-r-2 md:border-r-[#cccccc] md:pr-10">
                         
-                        <h2 class="flex flex-nowrap text-3xl sm:text-4xl md:text-4xl text-[#166D99] -mt-2 sm:-mt-3 md:-mt-4  pb-[10px] text-sombra">Contáctanos</h2>
+                        <h2 class="flex flex-nowrap text-3xl sm:text-4xl md:text-4xl text-[#166D99] -mt-2 sm:-mt-3 md:-mt-4 pb-[10px] text-sombra">Contáctanos</h2>
                         <div class="md:hidden">&nbsp;</div>
                         <p class="text-s text-gray-600 mb-[1.35rem] font-semibold">
                             Déjanos tu mensaje y nos pondremos en contacto contigo.
@@ -1412,6 +1412,67 @@
 
 </html>
 <script type="text/javascript">
+
+    // Detección de pantalla completa (API Fullscreen y F11): al entrar o salir, vuelve a #hero
+    (() => {
+        const hero = document.getElementById("hero");
+        if (!hero) return;
+
+        const goToHero = () => {
+            if (location.hash) history.replaceState(null, "", location.pathname + location.search);
+            const jump = () => {
+                const html = document.documentElement;
+                const prev = html.style.scrollBehavior;
+                html.style.scrollBehavior = "auto"; // salto instantáneo, sin animación
+                window.scrollTo(0, 0);
+                html.style.scrollBehavior = prev;
+            };
+            jump();
+            setTimeout(jump, 200); // reintento cuando el layout ya se reacomodó tras el cambio
+        };
+
+        const isFullscreen = () =>
+            !!(document.fullscreenElement || document.webkitFullscreenElement) ||
+            (window.innerWidth === screen.width && window.innerHeight === screen.height); // F11
+
+        let wasFullscreen = isFullscreen();
+        const check = () => {
+            const now = isFullscreen();
+            if (now !== wasFullscreen) {
+                wasFullscreen = now;
+                document.getElementById("historia").style.height = document.getElementById("historia").offsetHeight * 1.2 + "px"; // Ajuste de altura para evitar que el scroll se quede en la mitad de la sección al salir de pantalla completa;
+                document.getElementById("quienes-somos").style.height = document.getElementById("quienes-somos").offsetHeight * 1.2 + "px"; // Ajuste de altura para evitar que el scroll se quede en la mitad de la sección al salir de pantalla completa;
+                document.getElementById("servicios").style.height = document.getElementById("servicios").offsetHeight * 1.2 + "px"; // Ajuste de altura para evitar que el scroll se quede en la mitad de la sección al salir de pantalla completa;
+                document.getElementById("nuestros-abogados").style.height = document.getElementById("nuestros-abogados").offsetHeight * 1.2 + "px"; // Ajuste de altura para evitar que el scroll se quede en la mitad de la sección al salir de pantalla completa;
+                document.getElementById("oficinas").style.height = document.getElementById("oficinas").offsetHeight * 1.2 + "px"; // Ajuste de altura para evitar que el scroll se quede en la mitad de la sección al salir de pantalla completa;
+                document.getElementById("contacto").style.height = document.getElementById("contacto").offsetHeight * 1.2 + "px"; // Ajuste de altura para evitar que el scroll se quede en la mitad de la sección al salir de pantalla completa;
+                document.getElementById("sectionhorariosytelefonos").style.height = document.getElementById("sectionhorariosytelefonos").offsetHeight * 1.2 + "px"; // Ajuste de altura para evitar que el scroll se quede en la mitad de la sección al salir de pantalla completa;
+                document.getElementById("footer").style.height = document.getElementById("footer").offsetHeight * 1.2 + "px"; // Ajuste de altura para evitar que el scroll se quede en la mitad de la sección al salir de pantalla completa;
+                goToHero();
+            }
+            else if (now) {
+                document.getElementById("historia").style.height = document.getElementById("historia").offsetHeight * 1 + "px"; // Ajuste de altura para evitar que el scroll se quede en la mitad de la sección al entrar en pantalla completa;
+                document.getElementById("quienes-somos").style.height = document.getElementById("quienes-somos").offsetHeight * 1 + "px"; // Ajuste de altura para evitar que el scroll se quede en la mitad de la sección al entrar en pantalla completa;
+                document.getElementById("servicios").style.height = document.getElementById("servicios").offsetHeight * 1 + "px"; // Ajuste de altura para evitar que el scroll se quede en la mitad de la sección al entrar en pantalla completa;
+                document.getElementById("nuestros-abogados").style.height = document.getElementById("nuestros-abogados").offsetHeight * 1 + "px"; // Ajuste de altura para evitar que el scroll se quede en la mitad de la sección al entrar en pantalla completa;
+                document.getElementById("oficinas").style.height = document.getElementById("oficinas").offsetHeight * 1 + "px"; // Ajuste de altura para evitar que el scroll se quede en la mitad de la sección al entrar en pantalla completa;
+                document.getElementById("contacto").style.height = document.getElementById("contacto").offsetHeight * 1 + "px"; // Ajuste de altura para evitar que el scroll se quede en la mitad de la sección al entrar en pantalla completa;
+                document.getElementById("sectionhorariosytelefonos").style.height = document.getElementById("sectionhorariosytelefonos").offsetHeight * 1 + "px"; // Ajuste de altura para evitar que el scroll se quede en la mitad de la sección al entrar en pantalla completa;
+                document.getElementById("footer").style.height = document.getElementById("footer").offsetHeight * 1 + "px"; // Ajuste de altura para evitar que el scroll se quede en la mitad de la sección al entrar en pantalla completa;
+            }   
+        };
+
+        document.addEventListener("fullscreenchange", check);
+        document.addEventListener("webkitfullscreenchange", check);
+
+        let resizeTimer;
+        window.addEventListener("resize", () => {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(check, 120);
+        });
+
+    })();
+
     const lawyersData = {
         // "urcullu-molina": {
         //     name: "Félix Urcullú Molina",
@@ -1820,44 +1881,4 @@
     });
   });
 
-  // Detección de pantalla completa (API Fullscreen y F11): al entrar o salir, vuelve a #hero
-  (() => {
-    const hero = document.getElementById("hero");
-    if (!hero) return;
-
-    const goToHero = () => {
-      if (location.hash) history.replaceState(null, "", location.pathname + location.search);
-      const jump = () => {
-        const html = document.documentElement;
-        const prev = html.style.scrollBehavior;
-        html.style.scrollBehavior = "auto"; // salto instantáneo, sin animación
-        window.scrollTo(0, 0);
-        html.style.scrollBehavior = prev;
-      };
-      jump();
-      setTimeout(jump, 200); // reintento cuando el layout ya se reacomodó tras el cambio
-    };
-
-    const isFullscreen = () =>
-      !!(document.fullscreenElement || document.webkitFullscreenElement) ||
-      (window.innerWidth === screen.width && window.innerHeight === screen.height); // F11
-
-    let wasFullscreen = isFullscreen();
-    const check = () => {
-      const now = isFullscreen();
-      if (now !== wasFullscreen) {
-        wasFullscreen = now;
-        goToHero();
-      }
-    };
-
-    document.addEventListener("fullscreenchange", check);
-    document.addEventListener("webkitfullscreenchange", check);
-
-    let resizeTimer;
-    window.addEventListener("resize", () => {
-      clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(check, 120);
-    });
-  })();
 </script>
