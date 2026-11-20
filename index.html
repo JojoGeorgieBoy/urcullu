@@ -1821,43 +1821,43 @@
   });
 
   // Detección de pantalla completa (API Fullscreen y F11): al entrar o salir, vuelve a #hero
-  // (() => {
-  //   const hero = document.getElementById("hero");
-  //   if (!hero) return;
+  (() => {
+    const hero = document.getElementById("hero");
+    if (!hero) return;
 
-  //   const goToHero = () => {
-  //     if (location.hash) history.replaceState(null, "", location.pathname + location.search);
-  //     const jump = () => {
-  //       const html = document.documentElement;
-  //       const prev = html.style.scrollBehavior;
-  //       html.style.scrollBehavior = "auto"; // salto instantáneo, sin animación
-  //       window.scrollTo(0, 0);
-  //       html.style.scrollBehavior = prev;
-  //     };
-  //     jump();
-  //     setTimeout(jump, 200); // reintento cuando el layout ya se reacomodó tras el cambio
-  //   };
+    const goToHero = () => {
+      if (location.hash) history.replaceState(null, "", location.pathname + location.search);
+      const jump = () => {
+        const html = document.documentElement;
+        const prev = html.style.scrollBehavior;
+        html.style.scrollBehavior = "auto"; // salto instantáneo, sin animación
+        window.scrollTo(0, 0);
+        html.style.scrollBehavior = prev;
+      };
+      jump();
+      setTimeout(jump, 200); // reintento cuando el layout ya se reacomodó tras el cambio
+    };
 
-  //   const isFullscreen = () =>
-  //     !!(document.fullscreenElement || document.webkitFullscreenElement) ||
-  //     (window.innerWidth === screen.width && window.innerHeight === screen.height); // F11
+    const isFullscreen = () =>
+      !!(document.fullscreenElement || document.webkitFullscreenElement) ||
+      (window.innerWidth === screen.width && window.innerHeight === screen.height); // F11
 
-  //   let wasFullscreen = isFullscreen();
-  //   const check = () => {
-  //     const now = isFullscreen();
-  //     if (now !== wasFullscreen) {
-  //       wasFullscreen = now;
-  //       goToHero();
-  //     }
-  //   };
+    let wasFullscreen = isFullscreen();
+    const check = () => {
+      const now = isFullscreen();
+      if (now !== wasFullscreen) {
+        wasFullscreen = now;
+        goToHero();
+      }
+    };
 
-  //   document.addEventListener("fullscreenchange", check);
-  //   document.addEventListener("webkitfullscreenchange", check);
+    document.addEventListener("fullscreenchange", check);
+    document.addEventListener("webkitfullscreenchange", check);
 
-  //   let resizeTimer;
-  //   window.addEventListener("resize", () => {
-  //     clearTimeout(resizeTimer);
-  //     resizeTimer = setTimeout(check, 120);
-  //   });
-  // })();
+    let resizeTimer;
+    window.addEventListener("resize", () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(check, 120);
+    });
+  })();
 </script>
