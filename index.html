@@ -1190,7 +1190,7 @@
                         </div>
 
                         <div class="space-y-3">
-                            <span id="modal-lawyer-specialties-title" class="text-[10px] uppercase tracking-[0.4em] text-[#166D99] font-bold block border-b border-black-100"></span>
+                            <span id="modal-lawyer-specialties-title" class="text-[10px] uppercase tracking-[0.4em] text-[#00XX00] font-bold hidden md:block border-b border-black-100"></span>
                             <ul id="modal-lawyer-specialties" class="space-y-2 text-[0.9rem] text-[#001429] leading-relaxed font-light" style="text-align: justify;">
                                 <!-- Dynamically populated -->
                             </ul>
@@ -1574,9 +1574,11 @@
     }
   };
 
-  document.addEventListener("DOMContentLoaded", () => {
+    document.addEventListener("DOMContentLoaded", () => {
+
     // Si Lucide falla al cargar desde el CDN (red lenta, bloqueo, versión distinta),
-    // esto ya NO detiene el resto del script (menú móvil, scroll, modales, formulario).
+        // esto ya NO detiene el resto del script (menú móvil, scroll, modales, formulario).
+     
     try {
       lucide.createIcons();
     } catch (err) {
